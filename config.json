@@ -1,0 +1,17 @@
+{
+    "Region": {
+        "LonMin": 50.00,
+        "LonMax": 52.00,
+        "LatMin": 28.00,
+        "LatMax": 30.00
+    },
+    "Method": "NLLOC",
+    "ErrorOnArrivals": {
+        "P": 0.05,
+        "S": 0.05
+    },
+    "Inputs": {
+        "EqFile": "select.out",
+        "StationFile": "STATION0.HYP"
+    }
+}
