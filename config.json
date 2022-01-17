@@ -7,8 +7,20 @@
     },
     "Method": "NLLOC",
     "ErrorOnArrivals": {
+        "Flag": true,
         "P": 0.05,
-        "S": 0.05
+        "S": 0.07
+    },
+    "VGGRID": {
+        "xNum": 151,
+        "yNum": 151,
+        "zNum": 60
+    },
+    "FirstMotionCalculation": {
+        "Type": "NONE",
+        "Strike": 0,
+        "Dip": 90,
+        "Rake": 0
     },
     "Inputs": {
         "EqFile": "select.out",
