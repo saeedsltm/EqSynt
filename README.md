@@ -1,2 +1,2 @@
 # EqSynt
-Make synthetic earthquakes (catalog + arrival times) base on different scenarios
+Synthetic earthquakes (catalog + arrival times) generator base on different scenarios using NLLOC (http://alomax.free.fr/nlloc/) package.
