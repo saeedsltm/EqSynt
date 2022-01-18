@@ -1,8 +1,11 @@
 from LatLon import lat_lon as ll
 from datetime import datetime as dt
+from datetime import timedelta as td
 from statistics import mean
 from json import load
 from pathlib import Path
+from shutil import copy, move
+from glob import glob
 import os, sys
 
 class Main():
@@ -33,6 +36,14 @@ class Main():
         Path("time").mkdir(parents=True, exist_ok=True)
         Path("model").mkdir(parents=True, exist_ok=True)
         Path("obs").mkdir(parents=True, exist_ok=True)
+        Path("tmp").mkdir(parents=True, exist_ok=True)
+    
+    # Clear existing files
+    def clearExistingFiles(self):
+        for d in ["model", "obs", "time", "tmp"]:
+            for f in glob(os.path.join(d, "*")):
+                os.remove(f)
+        print("+++ Removing prexisting files in 'model', 'obs', 'time' and 'tmp' directories ...")
 
     # Parse velocity model
     def parseVelocityModel(self):
@@ -96,11 +107,14 @@ class Main():
         for i in [6, 8, 11, 12, 13 ,14, 16, 17, 19]:
             if l[i] == " ":
                 l = l[:i]+"0"+l[i+1:]
-        ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f")
-        lat = float(l[24:30])
-        lon = float(l[32:38])
-        dep = float(l[39:43])
-        return ot, lat, lon , dep
+        try:
+            ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f")
+            lat = float(l[24:30])
+            lon = float(l[32:38])
+            dep = float(l[39:43])
+            return ot, lat, lon , dep
+        except ValueError:
+            return None, None, None, None
 
     # Parse earthquake file
     def parseEarthquakeFile(self):
@@ -115,6 +129,7 @@ class Main():
             for l in f:
                 if l.strip() and l[79] == "1":
                     ot, lat, lon, dep = self.parseEventLine(l)
+                    if ot == None: continue 
                     self.earthquakesInfo["OT"].append(ot)
                     self.earthquakesInfo["LAT"].append(lat)
                     self.earthquakesInfo["LON"].append(lon)
@@ -168,15 +183,28 @@ class Main():
             f.write("INCLUDE ./EqInput/stations.dat\n")
             f.write("GT_PLFD  1.0e-9  0\n")
             f.write("\n")
-            # - TIME2EQ STATEMENTS
-            f.write("# +++ TIME2EQ STATEMENTS\n")
-            f.write("EQFILES time/layer obs/SYNEQ.obs\n")
-            f.write("EQMECH {mechType:s} {strike:5.1f} {dip:5.1f} {rake:5.1f}\n".format(
-                mechType=mechType, strike=strike, dip=dip, rake=rake
-            ))
-            f.write("EQMODE SRCE_TO_STA\n")
+            # - Quality to Error Mapping
+            f.write("# +++ Quality to Error Mapping\n")
+            f.write("EQQUAL2ERR 0.1 0.2 0.4 0.8 99999.9\n")
+            # - VpVs
+            f.write("# +++ P Velocity to S Velocity Ratio\n")
+            f.write("EQVPVS {VpVs:5.2f}\n".format(VpVs=self.velocityModel["VpVs"]))
             f.write("\n")
-            for i, (ot, lat, lon, dep, parrivals, sarrivals) in enumerate(zip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):
+        # Run NLLOC for initiation
+        self.runNLloc()
+        # Noe generating synthetics
+        for i, (ot, lat, lon, dep, parrivals, sarrivals) in enumerate(zip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):
+            outConfig = os.path.join("tmp", "nlloc_{i:d}.conf".format(i=i+1))
+            copy("nlloc.conf", outConfig)
+            with open(outConfig, "a") as f:
+                # - TIME2EQ STATEMENTS
+                f.write("# +++ TIME2EQ STATEMENTS\n")
+                f.write("EQFILES time/layer obs/SYNEQ_{i:d}.obs\n".format(i=i+1))
+                f.write("EQMECH {mechType:s} {strike:5.1f} {dip:5.1f} {rake:5.1f}\n".format(
+                    mechType=mechType, strike=strike, dip=dip, rake=rake
+                ))
+                f.write("EQMODE SRCE_TO_STA\n")
+                f.write("\n")                
                 f.write("EQSRCE SYNEQ_{i:d} LATLON {eventLat:7.3f} {eventLon:7.3f} {eventDep:5.1f} 0.0\n".format(
                     i=i, eventLat=lat, eventLon=lon, eventDep=dep
                 ))
@@ -187,13 +215,39 @@ class Main():
                     errorS = self.config["ErrorOnArrivals"]["S"]
                     f.write("EQSTA {staCode:4s} S GAU {errorS:6.2f} GAU  0.00\n".format(staCode=sarrival, errorS=errorS))
                 f.write("\n")
-            # - Quality to Error Mapping
-            f.write("# +++ Quality to Error Mapping\n")
-            f.write("EQQUAL2ERR 0.1 0.2 0.4 0.8 99999.9\n")
-            # - VpVs
-            f.write("# +++ P Velocity to S Velocity Ratio\n")
-            f.write("EQVPVS {VpVs:5.2f}\n".format(VpVs=self.velocityModel["VpVs"]))
+            # - Synthetic arrival times
+            cmd = "Time2EQ {outConfig:s} > /dev/null".format(outConfig=outConfig)
+            os.system(cmd)
+            print("+++ Generating synthetic earthquakes for event number {i}".format(i=i+1))
+            self.correctOT(ot, os.path.join("obs", "SYNEQ_{i:d}.obs".format(i=i+1)))
     
+    # Correct origin time
+    def correctOT(self, ot, syntheticEqFile):
+        with open(syntheticEqFile) as f, open("tmpFile", "w") as g:
+            for i,l in enumerate(f):
+                if i == 0:
+                    line = l.split()
+                    line.append("{0:f}".format(ot.timestamp()));line.pop(-2)
+                    l = " ".join(line)
+                    g.write(l+"\n")
+                elif l.strip() and "#" not in l:
+                    line = l.split()
+                    arrivalTime = " ".join(line[6:9])
+                    arrivalTime = dt.strptime(arrivalTime, "%Y%m%d %H%M %S.%f")
+                    arrivalTime = arrivalTime - dt(1900, 1, 1, 0, 0, 0)
+                    arrivalTime = ot + td(seconds=arrivalTime.total_seconds())
+                    date = arrivalTime.strftime("%Y%m%m")
+                    hourMin = arrivalTime.strftime("%H%M")
+                    sec = arrivalTime.strftime("%S.%f")
+                    g.write(
+                        "{stationName:9s} {instrument:4s} {component:4s} {pPhaseOnset:4s} {PhaseDes:6s} {firstMotion:1s} {date:8s} {hourMin:6s} {sec:7s} {err:3s} {errMag:9s} {codaDur:9s} {amplitude:9s} {period:9s} {priorWt:9s}\n".format(
+                            stationName=line[0], instrument=line[1], component=line[2], pPhaseOnset=line[3],
+                            PhaseDes=line[4], firstMotion=line[5], date=date, hourMin=hourMin, sec=sec, err=line[9],
+                            errMag=line[10], codaDur=line[11], amplitude=line[12], period=line[13], priorWt=line[14]
+                        ))
+                
+        move("tmpFile", syntheticEqFile)
+
     # Run NLLOC
     def runNLloc(self):
         # - Make velocity grid files for P and S 
@@ -209,12 +263,15 @@ class Main():
         cmd = "Grid2Time nlloc.conf"
         os.system(cmd)
         print("+++ P and S travel time grids have been created successfull.")
-        # - Now generate synthetics
-        cmd = "Time2EQ nlloc.conf > /dev/null"
-        os.system(cmd)
-        nEQ = len(self.earthquakesInfo["OT"])
-        print("+++ {nEQ:d} synthetic earthquakes have been generated successfull.".format(nEQ=nEQ))
-
+    
+    # Merge synthetic files
+    def mergeSyntheticFiles(self):
+        syntheticFiles = sorted(glob(os.path.join("obs", "SYNEQ_*.obs")), key=lambda x: int(x.split("_")[1].split(".")[0]))
+        for syntheticFile in syntheticFiles:
+            cmd = "cat {syntheticFile:s} >> obs/SYNEQ.obs".format(syntheticFile=syntheticFile)
+            os.system(cmd)
+        for _ in glob(os.path.join("obs", "SYNEQ_*")):
+            os.remove(_)
 
     # Convert NLLOC to NORDIC
     def convertNLLOC2NORDIC(self):
@@ -224,10 +281,11 @@ if __name__ == "__main__":
     app = Main()
     app.readConfiguration()
     app.checkRequiredFiles()
+    app.clearExistingFiles()
     app.parseVelocityModel()
     app.writeNLlocVelocityModel()
     app.parseStationInfo()
     app.writeNLlocStationFile()
     app.parseEarthquakeFile()
     app.writeNLlocControlFile()
-    app.runNLloc()
+    app.mergeSyntheticFiles()
