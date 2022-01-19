@@ -5,11 +5,10 @@
         "LatMin": 28.00,
         "LatMax": 30.00
     },
-    "Method": "NLLOC",
+    "InputNORDICFileName": "select.out",
     "ErrorOnArrivals": {
-        "Flag": true,
-        "P": 0.05,
-        "S": 0.07
+        "P": 0.10,
+        "S": 0.20
     },
     "VGGRID": {
         "xNum": 151,
