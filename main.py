@@ -7,6 +7,8 @@ from pathlib import Path
 from shutil import copy, move
 from glob import glob
 from tqdm.contrib import tzip
+from math import sqrt
+from visualize.plot import plotHypocenterDiff
 import os
 import sys
 
@@ -313,11 +315,11 @@ class Main():
                         y = int(l[34:38])
                         m = int(l[38:40])
                         d = int(l[40:42])
-                        H = int(l[43:45])
-                        M = int(l[45:47])
-                        S = 0
-                        MS = 0
-                        ot = dt(y, m, d, H, M, S, MS)
+                        hh = int(l[43:45])
+                        mm = int(l[45:47])
+                        ss = 0
+                        ms = 0
+                        ot = dt(y, m, d, hh, mm, ss, ms)
                         line_1 = " %4d %02d%02d %02d%02d %4.1f L                                                         1\n"\
                                  % (ot.year, ot.month, ot.day, ot.hour, ot.minute, ot.second)
                         line_7 = " STAT SP IPHASW D HRMN SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7\n"
@@ -329,19 +331,19 @@ class Main():
                     sta_name = line[0]
                     Instrument = " "
                     comp = " "
-                    Quality_Indicator = " "
-                    Phase_ID = line[4]+"   "
-                    Weighting_Indicator = 0
+                    qualityIndicator = " "
+                    phaseID = line[4]+"   "
+                    weightingIndicator = 0
                     if line[4] == "P":
-                        First_Motion = line[5]
+                        firstMotion = line[5]
                     else:
-                        First_Motion = " "
-                    arival_t = dt(int(line[6][0:4]), int(line[6][4:6]), int(line[6][6:8]),
+                        firstMotion = " "
+                    arrivalTime = dt(int(line[6][0:4]), int(line[6][4:6]), int(line[6][6:8]),
                                   int(line[7][0:2]), int(line[7][2:4]), int(
                                       line[8].split(".")[0]),
                                   int(line[8].split(".")[1]))
                     line_4 = " %-5s%1s%1s %1s%-4s%1d %1s %02d%02d %5.2f                                                   4\n"\
-                             % (sta_name, Instrument, comp, Quality_Indicator, Phase_ID, Weighting_Indicator, First_Motion, arival_t.hour, arival_t.minute, arival_t.second+arival_t.microsecond*1e-6)
+                             % (sta_name, Instrument, comp, qualityIndicator, phaseID, weightingIndicator, firstMotion, arrivalTime.hour, arrivalTime.minute, arrivalTime.second+arrivalTime.microsecond*1e-6)
                     hypo_file.write(line_4)
         hypo_file.write("\n")
         hypo_file.close()
@@ -351,6 +353,7 @@ class Main():
 
     # Relocate data using "hypocenter" program
     def relocateWithHyp(self, targetDir, nordicFileName):
+        print("+++ Relocating using 'hypocenter' program ...")
         root = os.getcwd()
         os.chdir(targetDir)
         with open("hyp.inp", "w") as f:
@@ -377,7 +380,36 @@ class Main():
         self.makeReport(targetDir="EqInput", nordicFileName="select.out")
         self.relocateWithHyp(targetDir="relocation", nordicFileName="synthetic.out")
         self.makeReport(targetDir="relocation", nordicFileName="hyp.out")
-
+        ini = {"Lon":[], "Lat":[], "Dep":[], "Gap":[], "ERH":[], "ERZ":[]}
+        fin = {"Lon":[], "Lat":[], "Dep":[], "Gap":[], "ERH":[], "ERZ":[]}
+        with open(os.path.join("EqInput", "report.out")) as f, open(os.path.join("relocation", "report.out")) as g:
+            next(f)
+            next(g)
+            for l in f:
+                try:
+                    lat = float(l[22:28])
+                    lon = float(l[31:37])
+                    dep = float(l[38:43])
+                    erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
+                    erz = float(l[56:61])
+                    gap = float(l[71:74])
+                    for k,v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
+                        ini[k].append(v)
+                except ValueError:
+                    print("+++ Bad value detected during parsing 'report.out'. Check event {0} for raw data.".format(l[:20]))
+            for l in g:
+                try:
+                    lat = float(l[22:28])
+                    lon = float(l[31:37])
+                    dep = float(l[38:43])
+                    erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
+                    erz = float(l[56:61])
+                    gap = float(l[71:74])
+                    for k,v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
+                        fin[k].append(v)
+                except ValueError:
+                    print("+++ Bad value detected during parsing 'report.out'. Check event {0} for relocated data.".format(l[:20]))
+        plotHypocenterDiff(ini, fin)
 
 # Run application
 if __name__ == "__main__":

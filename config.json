@@ -7,8 +7,8 @@
     },
     "InputNORDICFileName": "select.out",
     "ErrorOnArrivals": {
-        "P": 0.10,
-        "S": 0.20
+        "P": 0.00,
+        "S": 0.00
     },
     "VGGRID": {
         "xNum": 151,
