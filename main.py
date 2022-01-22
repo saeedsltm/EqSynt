@@ -8,7 +8,8 @@ from shutil import copy, move
 from glob import glob
 from tqdm.contrib import tzip
 from math import sqrt
-from visualize.plot import plotHypocenterDiff
+from visualize.plot import plotHypocenterDiff, plotVelocityModels
+import random
 import os
 import sys
 
@@ -72,13 +73,33 @@ class Main():
 
     # Write NLLOC velocity model
     def writeNLlocVelocityModel(self):
-        VPs, Zs, VpVs = self.velocityModel.items()
+        VPs, Zs, VpVs = [item[1] for item in self.velocityModel.items()]
+        if self.config["ErrorOnVelocityModel"]["Flag"]:
+            velocityModels = {"1":{"V":None, "Z":None}, "2":{"V":None, "Z":None}}
+            velocityModels["1"]["V"] = VPs
+            velocityModels["1"]["Z"] = Zs            
+            VelocityerrorPercentage = self.config["ErrorOnVelocityModel"]["VelocityerrorPercentage"]
+            ThiknesserrorPercentage = self.config["ErrorOnVelocityModel"]["ThiknesserrorPercentage"]
+            VPs = self.AddError(VPs, VelocityerrorPercentage)
+            Zs = self.AddError(Zs, ThiknesserrorPercentage)
+            velocityModels["2"]["V"] = VPs
+            velocityModels["2"]["Z"] = Zs
+            plotVelocityModels(velocityModels, self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"])
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
             f.write("#LAYER depth, Vp_top, Vp_grad, Vs_top, Vs_grad, p_top, p_grad\n")
-            for Vp, Z in zip(VPs[1], Zs[1]):
+            for Vp, Z in zip(VPs, Zs):
                 f.write("LAYER {Z:6.2f} {Vp:5.2f} 0.00 {Vs:5.2f} 0.00 2.70 0.00\n".format(
-                    Z=Z, Vp=Vp, Vs=Vp/VpVs[1]
+                    Z=Z, Vp=Vp, Vs=Vp/VpVs
                 ))
+    
+    # Add random error to list items
+    def AddError(self, x, errorPercentage):
+        seed = self.config["ErrorOnVelocityModel"]["Seed"]
+        if seed:
+            random.seed(seed)
+        x = [v + random.gauss(0, v*errorPercentage*1e-2) for v in x]
+        return x
+
 
     # Parse station information
     def parseStationInfo(self):
@@ -320,16 +341,17 @@ class Main():
                         ss = 0
                         ms = 0
                         ot = dt(y, m, d, hh, mm, ss, ms)
-                        line_1 = " %4d %02d%02d %02d%02d %4.1f L                                                         1\n"\
-                                 % (ot.year, ot.month, ot.day, ot.hour, ot.minute, ot.second)
+                        line_1 = " {year:4d} {month:02d}{day:02d} {hour:02d}{minute:02d} {second:4.1f} L                                                         1\n".format(
+                            year=ot.year, month=ot.month, day=ot.day, hour=ot.hour, minute=ot.minute, second=ot.second
+                        )
                         line_7 = " STAT SP IPHASW D HRMN SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7\n"
                         hypo_file.write(line_1)
                         hypo_file.write(line_7)
                         line1_flag = False
                         line7_flag = False
                     line = l.strip().split()
-                    sta_name = line[0]
-                    Instrument = " "
+                    statcionCode = line[0]
+                    instrument = " "
                     comp = " "
                     qualityIndicator = " "
                     phaseID = line[4]+"   "
@@ -339,11 +361,12 @@ class Main():
                     else:
                         firstMotion = " "
                     arrivalTime = dt(int(line[6][0:4]), int(line[6][4:6]), int(line[6][6:8]),
-                                  int(line[7][0:2]), int(line[7][2:4]), int(
-                                      line[8].split(".")[0]),
-                                  int(line[8].split(".")[1]))
-                    line_4 = " %-5s%1s%1s %1s%-4s%1d %1s %02d%02d %5.2f                                                   4\n"\
-                             % (sta_name, Instrument, comp, qualityIndicator, phaseID, weightingIndicator, firstMotion, arrivalTime.hour, arrivalTime.minute, arrivalTime.second+arrivalTime.microsecond*1e-6)
+                                     int(line[7][0:2]), int(line[7][2:4]), int(
+                        line[8].split(".")[0]),
+                        int(line[8].split(".")[1]))
+                    line_4 = " {statcionCode:5s}{instrument:1s}{comp:1s} {qualityIndicator:1s}{phaseID:4s}{weightingIndicator:1d} {firstMotion:1s} {hour:02d}{minute:02d} {second:5.2f}                                                   4\n".format(
+                        statcionCode=statcionCode, instrument=instrument, comp=comp, qualityIndicator=qualityIndicator, phaseID=phaseID, weightingIndicator=weightingIndicator, firstMotion=firstMotion, hour=arrivalTime.hour, minute=arrivalTime.minute, second=arrivalTime.second+arrivalTime.microsecond*1e-6
+                    )
                     hypo_file.write(line_4)
         hypo_file.write("\n")
         hypo_file.close()
@@ -378,10 +401,13 @@ class Main():
     # Compare raw and relocated data
     def compare(self):
         self.makeReport(targetDir="EqInput", nordicFileName="select.out")
-        self.relocateWithHyp(targetDir="relocation", nordicFileName="synthetic.out")
+        self.relocateWithHyp(targetDir="relocation",
+                             nordicFileName="synthetic.out")
         self.makeReport(targetDir="relocation", nordicFileName="hyp.out")
-        ini = {"Lon":[], "Lat":[], "Dep":[], "Gap":[], "ERH":[], "ERZ":[]}
-        fin = {"Lon":[], "Lat":[], "Dep":[], "Gap":[], "ERH":[], "ERZ":[]}
+        ini = {"Lon": [], "Lat": [], "Dep": [],
+               "Gap": [], "ERH": [], "ERZ": []}
+        fin = {"Lon": [], "Lat": [], "Dep": [],
+               "Gap": [], "ERH": [], "ERZ": []}
         with open(os.path.join("EqInput", "report.out")) as f, open(os.path.join("relocation", "report.out")) as g:
             next(f)
             next(g)
@@ -393,10 +419,11 @@ class Main():
                     erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
                     erz = float(l[56:61])
                     gap = float(l[71:74])
-                    for k,v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
+                    for k, v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
                         ini[k].append(v)
                 except ValueError:
-                    print("+++ Bad value detected during parsing 'report.out'. Check event {0} for raw data.".format(l[:20]))
+                    print(
+                        "+++ Bad value detected during parsing 'report.out'. Check event {0} for raw data.".format(l[:20]))
             for l in g:
                 try:
                     lat = float(l[22:28])
@@ -405,11 +432,13 @@ class Main():
                     erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
                     erz = float(l[56:61])
                     gap = float(l[71:74])
-                    for k,v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
+                    for k, v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
                         fin[k].append(v)
                 except ValueError:
-                    print("+++ Bad value detected during parsing 'report.out'. Check event {0} for relocated data.".format(l[:20]))
+                    print(
+                        "+++ Bad value detected during parsing 'report.out'. Check event {0} for relocated data.".format(l[:20]))
         plotHypocenterDiff(ini, fin)
+
 
 # Run application
 if __name__ == "__main__":

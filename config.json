@@ -5,10 +5,16 @@
         "LatMin": 28.00,
         "LatMax": 30.00
     },
-    "InputNORDICFileName": "select.out",
     "ErrorOnArrivals": {
-        "P": 0.00,
-        "S": 0.00
+        "P": 0.05,
+        "S": 0.10
+    },
+    "ErrorOnVelocityModel": {
+        "Flag": true,
+        "Seed": 1,
+        "VelocityerrorPercentage": 5,
+        "ThiknesserrorPercentage": 10,
+        "MaxDepthToPlot": 20
     },
     "VGGRID": {
         "xNum": 151,
