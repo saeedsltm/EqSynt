@@ -39,27 +39,34 @@ def plotHypocenterDiff(ini, fin):
     for v in ["Lon", "Lat", "Dep", "Gap"]:
         r.append(corrcoef(ini[v], fin[v])[0][1])
 
-    axs[0].plot(ini["Lon"], fin["Lon"], color="gray",
-                mec="k", mew=0.5, marker="o", ls="")
+    # axs[0].plot(ini["Lon"], fin["Lon"], color="gray",
+    #             mec="k", mew=0.5, marker="o", ls="")
+    sc = axs[0].scatter(ini["Lon"], fin["Lon"], s=50, marker="o", c=fin["Gap"], lw=0.4, edgecolors="k",
+                        cmap="maroon", vmin=0, vmax=360)
     axs[0].plot([xMin, xMax], [xMin, xMax], color="k", ms=0.5)
     axs[0].set_xlim(xMin, xMax)
     axs[0].set_ylim(xMin, xMax)
     axs[0].format(lrtitle="r={r:f}".format(r=r[0]))
 
-    axs[1].plot(ini["Lat"], fin["Lat"], color="gray",
-                mec="k", mew=0.5, marker="o", ls="")
+    # axs[1].plot(ini["Lat"], fin["Lat"], color="gray",
+    #             mec="k", mew=0.5, marker="o", ls="")
+    axs[1].scatter(ini["Lat"], fin["Lat"], s=50, marker="o", c=fin["Gap"], lw=0.4, edgecolors="k",
+                   cmap="maroon", vmin=0, vmax=360)
     axs[1].plot([yMin, yMax], [yMin, yMax], color="k", ms=0.5)
     axs[1].set_xlim(yMin, yMax)
     axs[1].set_ylim(yMin, yMax)
     axs[1].format(lrtitle="r={r:f}".format(r=r[1]))
 
-    axs[2].plot(ini["Dep"], fin["Dep"], color="gray",
-                mec="k", mew=0.5, marker="o", ls="")
+    # axs[2].plot(ini["Dep"], fin["Dep"], color="gray",
+    #             mec="k", mew=0.5, marker="o", ls="")
+    axs[2].scatter(ini["Dep"], fin["Dep"], s=50, marker="o", c=fin["Gap"], lw=0.4, edgecolors="k",
+                   cmap="maroon", vmin=0, vmax=360)
     axs[2].plot([zMin, zMax], [zMin, zMax], color="k", ms=0.5)
     axs[2].set_xlim(zMin, zMax)
     axs[2].set_ylim(zMin, zMax)
     axs[2].format(lrtitle="r={r:f}".format(r=r[2]))
-
+    fig.colorbar(
+        sc, loc="r", extend="both", label="Azimuthal gap ($\degree$)", shrink=0.9)
     axs[3].plot(ini["Gap"], fin["Gap"], color="gray",
                 mec="k", mew=0.5, marker="o", ls="")
     axs[3].plot([gMin, gMax], [gMin, gMax], color="k", ms=0.5)
