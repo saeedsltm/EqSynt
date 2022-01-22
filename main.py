@@ -75,23 +75,25 @@ class Main():
     def writeNLlocVelocityModel(self):
         VPs, Zs, VpVs = [item[1] for item in self.velocityModel.items()]
         if self.config["ErrorOnVelocityModel"]["Flag"]:
-            velocityModels = {"1":{"V":None, "Z":None}, "2":{"V":None, "Z":None}}
+            velocityModels = {"1": {"V": None, "Z": None},
+                              "2": {"V": None, "Z": None}}
             velocityModels["1"]["V"] = VPs
-            velocityModels["1"]["Z"] = Zs            
+            velocityModels["1"]["Z"] = Zs
             VelocityerrorPercentage = self.config["ErrorOnVelocityModel"]["VelocityerrorPercentage"]
             ThiknesserrorPercentage = self.config["ErrorOnVelocityModel"]["ThiknesserrorPercentage"]
             VPs = self.AddError(VPs, VelocityerrorPercentage)
             Zs = self.AddError(Zs, ThiknesserrorPercentage)
             velocityModels["2"]["V"] = VPs
             velocityModels["2"]["Z"] = Zs
-            plotVelocityModels(velocityModels, self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"])
+            plotVelocityModels(
+                velocityModels, self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"])
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
             f.write("#LAYER depth, Vp_top, Vp_grad, Vs_top, Vs_grad, p_top, p_grad\n")
             for Vp, Z in zip(VPs, Zs):
                 f.write("LAYER {Z:6.2f} {Vp:5.2f} 0.00 {Vs:5.2f} 0.00 2.70 0.00\n".format(
                     Z=Z, Vp=Vp, Vs=Vp/VpVs
                 ))
-    
+
     # Add random error to list items
     def AddError(self, x, errorPercentage):
         seed = self.config["ErrorOnVelocityModel"]["Seed"]
@@ -99,7 +101,6 @@ class Main():
             random.seed(seed)
         x = [v + random.gauss(0, v*errorPercentage*1e-2) for v in x]
         return x
-
 
     # Parse station information
     def parseStationInfo(self):
@@ -444,14 +445,14 @@ class Main():
 if __name__ == "__main__":
     app = Main()
     app.readConfiguration()
-    app.checkRequiredFiles()
-    app.clearExistingFiles()
-    app.parseVelocityModel()
-    app.writeNLlocVelocityModel()
-    app.parseStationInfo()
-    app.writeNLlocStationFile()
-    app.parseEarthquakeFile()
-    app.writeNLlocControlFile()
-    app.mergeSyntheticFiles()
-    app.convertNLLOC2NORDIC()
+    # app.checkRequiredFiles()
+    # app.clearExistingFiles()
+    # app.parseVelocityModel()
+    # app.writeNLlocVelocityModel()
+    # app.parseStationInfo()
+    # app.writeNLlocStationFile()
+    # app.parseEarthquakeFile()
+    # app.writeNLlocControlFile()
+    # app.mergeSyntheticFiles()
+    # app.convertNLLOC2NORDIC()
     app.compare()
