@@ -7,8 +7,9 @@ from pathlib import Path
 from shutil import copy, move
 from glob import glob
 from tqdm.contrib import tzip
-from math import sqrt
-from visualize.plot import plotHypocenterDiff, plotVelocityModels
+from math import ceil
+from util.plot import plotHypocenterDiff, plotVelocityModels
+from util.nordic2xyzm import nordic2xyzm
 import random
 import os
 import sys
@@ -225,11 +226,17 @@ class Main():
             f.write("\n")
         # Run NLLOC for initiation
         self.runNLlocForward()
-        # Noe generating synthetics
+        # Now generating synthetics
         print("+++ Generating synthetic earthquakes ...")
+        # phaseCounterS = 0
+        # phaseCounterP = 0
+        PArrivalsList, SArrivalsList = self.editUsedPhase(list(PArrivalsList), list(SArrivalsList))
         for i, (ot, lat, lon, dep, parrivals, sarrivals) in enumerate(tzip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):
             outConfig = os.path.join("tmp", "nlloc_{i:d}.conf".format(i=i+1))
             copy("nlloc.conf", outConfig)
+            # - Shift each earthquake if requested bu user
+            lat += self.config["LocationShift"]["ShiftInLatitude"]
+            lon += self.config["LocationShift"]["ShiftInLongitude"]
             with open(outConfig, "a") as f:
                 # - TIME2EQ STATEMENTS
                 f.write("# +++ TIME2EQ STATEMENTS\n")
@@ -258,6 +265,18 @@ class Main():
             os.system(cmd)
             self.correctOT(ot, os.path.join(
                 "obs", "SYNEQ_{i:d}.obs".format(i=i+1)))
+
+    # Setting how many phases use 
+    def editUsedPhase(self, PArrivalsList, SArrivalsList):
+        PArrivals = PArrivalsList[1]
+        SArrivals = SArrivalsList[1]
+        percentageP = self.config["UsageOfPhase"]["PercentageUseOfP"]
+        percentageS = self.config["UsageOfPhase"]["PercentageUseOfS"]
+        PArrivals = [random.sample(PArrival, ceil(len(PArrival)*percentageP*1e-2)) for PArrival in PArrivals]
+        SArrivals = [random.sample(SArrival, ceil(len(SArrival)*percentageS*1e-2)) for SArrival in SArrivals]
+        PArrivalsList[1] = PArrivals
+        SArrivalsList[1] = SArrivals
+        return PArrivalsList, SArrivalsList
 
     # Correct origin time
     def correctOT(self, ot, syntheticEqFile):
@@ -388,57 +407,22 @@ class Main():
         os.system(cmd)
         os.chdir(root)
 
-    # Make report
-    def makeReport(self, targetDir, nordicFileName):
+    # Make summary
+    def makeSummaryFile(self, targetDir, nordicFileName):
         root = os.getcwd()
         os.chdir(targetDir)
-        with open("report.inp", "w") as f:
-            f.write("1    2         3  6 4  7 5   8       9    10  11\n")
-        cmd = "report {nordicFileName:s} < report.inp > /dev/null".format(
-            nordicFileName=nordicFileName)
-        os.system(cmd)
+        nordic2xyzm(nordicFileName)
         os.chdir(root)
 
     # Compare raw and relocated data
     def compare(self):
-        self.makeReport(targetDir="EqInput", nordicFileName="select.out")
+        self.makeSummaryFile(targetDir="EqInput", nordicFileName="select.out")
         self.relocateWithHyp(targetDir="relocation",
                              nordicFileName="synthetic.out")
-        self.makeReport(targetDir="relocation", nordicFileName="hyp.out")
-        ini = {"Lon": [], "Lat": [], "Dep": [],
-               "Gap": [], "ERH": [], "ERZ": []}
-        fin = {"Lon": [], "Lat": [], "Dep": [],
-               "Gap": [], "ERH": [], "ERZ": []}
-        with open(os.path.join("EqInput", "report.out")) as f, open(os.path.join("relocation", "report.out")) as g:
-            next(f)
-            next(g)
-            for l in f:
-                try:
-                    lat = float(l[22:28])
-                    lon = float(l[31:37])
-                    dep = float(l[38:43])
-                    erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
-                    erz = float(l[56:61])
-                    gap = float(l[71:74])
-                    for k, v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
-                        ini[k].append(v)
-                except ValueError:
-                    print(
-                        "+++ Bad value detected during parsing 'report.out'. Check event {0} for raw data.".format(l[:20]))
-            for l in g:
-                try:
-                    lat = float(l[22:28])
-                    lon = float(l[31:37])
-                    dep = float(l[38:43])
-                    erh = sqrt(float(l[44:49])**2 + float(l[50:55])**2)
-                    erz = float(l[56:61])
-                    gap = float(l[71:74])
-                    for k, v in zip(["Lon", "Lat", "Dep", "Gap", "ERH", "ERZ"], [lon, lat, dep, gap, erh, erz]):
-                        fin[k].append(v)
-                except ValueError:
-                    print(
-                        "+++ Bad value detected during parsing 'report.out'. Check event {0} for relocated data.".format(l[:20]))
-        plotHypocenterDiff(ini, fin)
+        self.makeSummaryFile(targetDir="relocation", nordicFileName="hyp.out")
+        iniFile = os.path.join("EqInput", "xyzm.dat")
+        finFile = os.path.join("relocation", "xyzm.dat")
+        plotHypocenterDiff(iniFile, finFile)
 
 
 # Run application

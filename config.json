@@ -1,13 +1,22 @@
 {
     "Region": {
-        "LonMin": 50.00,
-        "LonMax": 52.00,
-        "LatMin": 28.00,
-        "LatMax": 30.00
+        "LonMin": 40.00,
+        "LonMax": 55.00,
+        "LatMin": 25.00,
+        "LatMax": 35.00
+    },
+    "LocationShift": {
+        "ShiftInLongitude": 0.00,
+        "ShiftInLatitude": 0.00
     },
     "ErrorOnArrivals": {
-        "P": 0.10,
+        "P": 0.05,
         "S": 0.10
+    },
+    "UsageOfPhase": {
+        "Seed": 1,
+        "PercentageUseOfP": 100,
+        "PercentageUseOfS": 50
     },
     "ErrorOnVelocityModel": {
         "Flag": true,
@@ -17,9 +26,9 @@
         "MaxDepthToPlot": 20
     },
     "VGGRID": {
-        "xNum": 151,
-        "yNum": 151,
-        "zNum": 60
+        "xNum": 201,
+        "yNum": 201,
+        "zNum": 90
     },
     "FirstMotionCalculation": {
         "Type": "NONE",
