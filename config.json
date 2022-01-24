@@ -16,7 +16,7 @@
     "UsageOfPhase": {
         "Seed": 1,
         "PercentageUseOfP": 100,
-        "PercentageUseOfS": 50
+        "PercentageUseOfS": 100
     },
     "ErrorOnVelocityModel": {
         "Flag": true,

@@ -8,8 +8,9 @@ from shutil import copy, move
 from glob import glob
 from tqdm.contrib import tzip
 from math import ceil
-from util.plot import plotHypocenterDiff, plotVelocityModels
+from util.plot import plotHypocentralMap, plotHypocenterDiff, plotVelocityModels
 from util.nordic2xyzm import nordic2xyzm
+from util.logger import myLogger
 import random
 import os
 import sys
@@ -20,17 +21,32 @@ import sys
 class Main():
     # Init
     def __init__(self):
-        pass
-
+        self.resultsPath = os.path.join("results", dt.now().strftime("%Y_%j_%H%M%S"))
+        Path(self.resultsPath).mkdir(parents=True, exist_ok=True)
+        self.report = myLogger(os.path.join(self.resultsPath, "report"), mode="w")
+        self.readConfiguration()
+        self.config2Log()
+        self.checkRequiredFiles()
+        self.clearExistingFiles()        
+        
     # Read configuration parameters
     def readConfiguration(self):
         # - check if configuration file exists
         if not os.path.exists("config.json"):
-            print("+++ Could not find configuration file! Aborting ...")
+            msg = "+++ Could not find configuration file! Aborting ..."
+            print(msg); self.report.info(msg)
             sys.exit()
         with open("config.json") as f:
             self.config = load(f)
-        print("+++ Configuration file was loaded successfully.")
+        msg = "+++ Configuration file was loaded successfully."
+        print(msg); self.report.info(msg)
+    
+    # Write configuration to report file
+    def config2Log(self):
+        for key in self.config:
+            for k,v in self.config[key].items():
+                msg = "+++ Configuration on {key} > {k}: {v}".format(key=key, k=k, v=v)
+                self.report.info(msg)
 
     # Check required input files
     def checkRequiredFiles(self):
@@ -39,24 +55,28 @@ class Main():
         self.stationFile = os.path.join(
             "EqInput", self.config["Inputs"]["StationFile"])
         if not os.path.exists(self.eqFile) or not os.path.exists(self.stationFile):
-            print("+++ Could not find earthquake or station files! Aborting ...")
+            msg = "+++ Could not find earthquake or station files! Aborting ..."
+            print(msg); self.report.info(msg)
             sys.exit()
         # - Create NLloc required directories
         Path("time").mkdir(parents=True, exist_ok=True)
         Path("model").mkdir(parents=True, exist_ok=True)
         Path("obs").mkdir(parents=True, exist_ok=True)
-        Path("relocation").mkdir(parents=True, exist_ok=True)
+        Path(os.path.join(self.resultsPath, "relocation")).mkdir(parents=True, exist_ok=True)
         Path("tmp").mkdir(parents=True, exist_ok=True)
-
+        
     # Clear existing files
     def clearExistingFiles(self):
-        for d in ["model", "obs", "time", "tmp", "relocation"]:
+        for d in ["model", "obs", "time", "tmp"]:
             for f in glob(os.path.join(d, "*")):
                 os.remove(f)
-        print("+++ Removing prexisting files in 'model', 'obs', 'time' and 'tmp' directories ...")
+        msg = "+++ Removing prexisting files in 'model', 'obs', 'time' and 'tmp' directories ..."
+        print(msg); self.report.info(msg)
 
     # Parse velocity model
     def parseVelocityModel(self):
+        msg = "+++ Parsing velocity model ..."
+        self.report.info(msg)
         emptyLines = 0
         self.velocityModel = {"Vp": [], "Z": [], "VpVs": 1.73}
         with open(self.stationFile) as f:
@@ -74,6 +94,8 @@ class Main():
 
     # Write NLLOC velocity model
     def writeNLlocVelocityModel(self):
+        msg = "+++ Writing velocity model in NLLOC format ..."
+        self.report.info(msg)
         VPs, Zs, VpVs = [item[1] for item in self.velocityModel.items()]
         if self.config["ErrorOnVelocityModel"]["Flag"]:
             velocityModels = {"1": {"V": None, "Z": None},
@@ -86,8 +108,8 @@ class Main():
             Zs = self.AddError(Zs, ThiknesserrorPercentage)
             velocityModels["2"]["V"] = VPs
             velocityModels["2"]["Z"] = Zs
-            plotVelocityModels(
-                velocityModels, self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"])
+            maxDepthToPlot = self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"]
+            plotVelocityModels(velocityModels, maxDepthToPlot, self.resultsPath)
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
             f.write("#LAYER depth, Vp_top, Vp_grad, Vs_top, Vs_grad, p_top, p_grad\n")
             for Vp, Z in zip(VPs, Zs):
@@ -105,6 +127,8 @@ class Main():
 
     # Parse station information
     def parseStationInfo(self):
+        msg = "+++ Parsing station information ..."
+        self.report.info(msg)
         emptyLines = 0
         self.stations = {"Code": [], "Lat": [], "Lon": [], "Elv": []}
         with open(self.stationFile) as f:
@@ -123,6 +147,7 @@ class Main():
 
     # Write NLLOC station file
     def writeNLlocStationFile(self):
+        msg = "+++ Writting station information in NLLOC format ..."
         codes, lats, lons, elvs = self.stations.items()
         with open(os.path.join("EqInput", "stations.dat"), "w") as f:
             for code, lat, lon, elv in zip(codes[1], lats[1], lons[1], elvs[1]):
@@ -151,6 +176,8 @@ class Main():
 
     # Parse earthquake file
     def parseEarthquakeFile(self):
+        msg = "+++ Parsing earthquake input file ..."
+        self.report.info(msg)
         self.earthquakesInfo = {
             "OT": [],
             "LAT": [],
@@ -177,8 +204,10 @@ class Main():
                     staCode = l[:5].strip()
                     self.earthquakesInfo["SArrivals"][-1].append(staCode)
 
-    # Write NLLOC control file
+    # Write NLLOC control file and generate synthetics
     def writeNLlocControlFile(self):
+        msg = "+++ Writting NLLOC control file ..."
+        self.report.info(msg)
         lonMin = self.config["Region"]["LonMin"]
         lonMax = self.config["Region"]["LonMax"]
         latMin = self.config["Region"]["LatMin"]
@@ -227,9 +256,8 @@ class Main():
         # Run NLLOC for initiation
         self.runNLlocForward()
         # Now generating synthetics
-        print("+++ Generating synthetic earthquakes ...")
-        # phaseCounterS = 0
-        # phaseCounterP = 0
+        msg = "+++ Generating synthetic earthquakes ..."
+        print(msg); self.report.info(msg)
         PArrivalsList, SArrivalsList = self.editUsedPhase(list(PArrivalsList), list(SArrivalsList))
         for i, (ot, lat, lon, dep, parrivals, sarrivals) in enumerate(tzip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):
             outConfig = os.path.join("tmp", "nlloc_{i:d}.conf".format(i=i+1))
@@ -265,8 +293,9 @@ class Main():
             os.system(cmd)
             self.correctOT(ot, os.path.join(
                 "obs", "SYNEQ_{i:d}.obs".format(i=i+1)))
+        if os.path.exists("nlloc.conf"): os.remove("nlloc.conf")
 
-    # Setting how many phases use 
+    # Setting up how many phases (P, S) will be used 
     def editUsedPhase(self, PArrivalsList, SArrivalsList):
         PArrivals = PArrivalsList[1]
         SArrivals = SArrivalsList[1]
@@ -310,7 +339,8 @@ class Main():
         # - Make velocity grid files for P and S
         cmd = "Vel2Grid nlloc.conf"
         os.system(cmd)
-        print("+++ P and S velocity grids have been created successfull.")
+        msg = "+++ P and S velocity grids have been created successfull ..."
+        print(msg); self.report.info(msg)
         # - Generate P travel time grid files for stations
         cmd = "Grid2Time nlloc.conf"
         os.system(cmd)
@@ -319,10 +349,13 @@ class Main():
         os.system(cmd)
         cmd = "Grid2Time nlloc.conf"
         os.system(cmd)
-        print("+++ P and S travel time grids have been created successfull.")
+        msg = "+++ P and S travel time grids have been created successfull ..."
+        print(msg); self.report.info(msg)
 
     # Merge synthetic files
     def mergeSyntheticFiles(self):
+        msg = "+++ Merging synthetic files ..."
+        self.report.info(msg)
         syntheticFiles = sorted(glob(os.path.join(
             "obs", "SYNEQ_*.obs")), key=lambda x: int(x.split("_")[1].split(".")[0]))
         for syntheticFile in syntheticFiles:
@@ -334,11 +367,14 @@ class Main():
 
     # Convert NLLOC to NORDIC
     def convertNLLOC2NORDIC(self):
+        msg = "+++ Converting NLLOC to NORDIC format ..."
+        self.report.info(msg)
         nllocObsFile = os.path.join("obs/SYNEQ.obs")
         if not nllocObsFile:
-            print("+++ Could not find synthetic earthquake file! Aborting ...")
+            msg = "+++ Could not find synthetic earthquake file! Aborting ..."
+            print(msg); self.report.info(msg)
             sys.exit(0)
-        hypo_file = open(os.path.join("relocation", "synthetic.out"), "w")
+        hypo_file = open(os.path.join(self.resultsPath, "relocation", "synthetic.out"), "w")
         with open(nllocObsFile) as f:
             line1_flag = False
             line7_flag = False
@@ -390,13 +426,13 @@ class Main():
                     hypo_file.write(line_4)
         hypo_file.write("\n")
         hypo_file.close()
-        print("+++ Output file 'nlloc.hyp' has been created.\n")
+        msg = "+++ Output file 'nlloc.hyp' has been created.\n"
+        print(msg)
         # - Copy nordic station file into 'relocation' directory
-        copy(self.stationFile, os.path.join("relocation", "STATION0.HYP"))
+        copy(self.stationFile, os.path.join(self.resultsPath, "relocation", "STATION0.HYP"))
 
     # Relocate data using "hypocenter" program
     def relocateWithHyp(self, targetDir, nordicFileName):
-        print("+++ Relocating using 'hypocenter' program ...")
         root = os.getcwd()
         os.chdir(targetDir)
         with open("hyp.inp", "w") as f:
@@ -407,7 +443,7 @@ class Main():
         os.system(cmd)
         os.chdir(root)
 
-    # Make summary
+    # Make summary on initial and final locations
     def makeSummaryFile(self, targetDir, nordicFileName):
         root = os.getcwd()
         os.chdir(targetDir)
@@ -416,21 +452,22 @@ class Main():
 
     # Compare raw and relocated data
     def compare(self):
+        msg = "+++ Makeing some statistical figures ..."
+        self.report.info(msg)
+        relocationPath = os.path.join(self.resultsPath, "relocation")
         self.makeSummaryFile(targetDir="EqInput", nordicFileName="select.out")
-        self.relocateWithHyp(targetDir="relocation",
+        self.relocateWithHyp(targetDir=relocationPath,
                              nordicFileName="synthetic.out")
-        self.makeSummaryFile(targetDir="relocation", nordicFileName="hyp.out")
+        self.makeSummaryFile(targetDir=relocationPath, nordicFileName="hyp.out")
         iniFile = os.path.join("EqInput", "xyzm.dat")
-        finFile = os.path.join("relocation", "xyzm.dat")
-        plotHypocenterDiff(iniFile, finFile)
+        finFile = os.path.join(relocationPath, "xyzm.dat")
+        plotHypocentralMap(iniFile, finFile, self.stations, self.resultsPath)
+        plotHypocenterDiff(iniFile, finFile, self.resultsPath)
 
 
 # Run application
 if __name__ == "__main__":
     app = Main()
-    app.readConfiguration()
-    app.checkRequiredFiles()
-    app.clearExistingFiles()
     app.parseVelocityModel()
     app.writeNLlocVelocityModel()
     app.parseStationInfo()
