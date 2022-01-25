@@ -1,0 +1,52 @@
+2022-01-25 19:08:17,281 +++ Configuration file was loaded successfully.
+2022-01-25 19:08:17,282 +++ Configuration on Region > LonMin: 40.0
+2022-01-25 19:08:17,282 +++ Configuration on Region > LonMax: 55.0
+2022-01-25 19:08:17,282 +++ Configuration on Region > LatMin: 25.0
+2022-01-25 19:08:17,282 +++ Configuration on Region > LatMax: 35.0
+2022-01-25 19:08:17,282 +++ Configuration on Inputs > EqFile: select.out
+2022-01-25 19:08:17,282 +++ Configuration on Inputs > StationFile: STATION0.HYP
+2022-01-25 19:08:17,282 +++ Configuration on LocationShift > ShiftInLongitude: 0.0
+2022-01-25 19:08:17,282 +++ Configuration on LocationShift > ShiftInLatitude: 0.0
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnArrivals > P: 0.05
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnArrivals > S: 0.1
+2022-01-25 19:08:17,282 +++ Configuration on UsageOfPhase > Seed: 1
+2022-01-25 19:08:17,282 +++ Configuration on UsageOfPhase > PercentageUseOfP: 100
+2022-01-25 19:08:17,282 +++ Configuration on UsageOfPhase > PercentageUseOfS: 50
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnVelocityModel > Flag: True
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnVelocityModel > Seed: 1
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnVelocityModel > VelocityerrorPercentage: 5
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnVelocityModel > ThiknesserrorPercentage: 10
+2022-01-25 19:08:17,282 +++ Configuration on ErrorOnVelocityModel > MaxDepthToPlot: 20
+2022-01-25 19:08:17,282 +++ Configuration on VGGRID > xNum: 201
+2022-01-25 19:08:17,282 +++ Configuration on VGGRID > yNum: 201
+2022-01-25 19:08:17,282 +++ Configuration on VGGRID > zNum: 90
+2022-01-25 19:08:17,282 +++ Configuration on FirstMotionCalculation > Type: NONE
+2022-01-25 19:08:17,282 +++ Configuration on FirstMotionCalculation > Strike: 0
+2022-01-25 19:08:17,282 +++ Configuration on FirstMotionCalculation > Dip: 90
+2022-01-25 19:08:17,282 +++ Configuration on FirstMotionCalculation > Rake: 0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > VelocityMin: 3.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > VelocityMax: 7.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistERHMax: 20.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistERHInc: 1.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistERZMax: 30.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistERZInc: 1.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERHMin: -5.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERHMax: 5.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERHInc: 0.5
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERZMin: -8.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERZMax: 8.0
+2022-01-25 19:08:17,282 +++ Configuration on PlottingPars > HistInsetERZInc: 0.5
+2022-01-25 19:08:17,283 +++ Configuration on PlottingPars > ColorbarGapMax: 360
+2022-01-25 19:08:17,283 +++ Configuration on PlottingPars > ColorbarNearestMax: 10
+2022-01-25 19:08:17,296 +++ Removing prexisting files in 'model', 'obs', 'time' and 'tmp' directories ...
+2022-01-25 19:08:17,296 +++ Parsing velocity model ...
+2022-01-25 19:08:17,296 +++ Writing velocity model in NLLOC format ...
+2022-01-25 19:08:17,810 +++ Parsing station information ...
+2022-01-25 19:08:17,810 +++ Parsing earthquake input file ...
+2022-01-25 19:08:17,819 +++ Writting NLLOC control file ...
+2022-01-25 19:08:17,848 +++ P and S velocity grids have been created successfull ...
+2022-01-25 19:08:18,172 +++ P and S travel time grids have been created successfull ...
+2022-01-25 19:08:18,172 +++ Generating synthetic earthquakes ...
+2022-01-25 19:08:24,380 +++ Merging synthetic files ...
+2022-01-25 19:08:24,700 +++ Converting NLLOC to NORDIC format ...
+2022-01-25 19:08:24,732 +++ Makeing some statistical figures ...

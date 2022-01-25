@@ -5,6 +5,10 @@
         "LatMin": 25.00,
         "LatMax": 35.00
     },
+    "Inputs": {
+        "EqFile": "select.out",
+        "StationFile": "STATION0.HYP"
+    },
     "LocationShift": {
         "ShiftInLongitude": 0.00,
         "ShiftInLatitude": 0.00
@@ -16,7 +20,7 @@
     "UsageOfPhase": {
         "Seed": 1,
         "PercentageUseOfP": 100,
-        "PercentageUseOfS": 100
+        "PercentageUseOfS": 50
     },
     "ErrorOnVelocityModel": {
         "Flag": true,
@@ -36,8 +40,20 @@
         "Dip": 90,
         "Rake": 0
     },
-    "Inputs": {
-        "EqFile": "select.out",
-        "StationFile": "STATION0.HYP"
+    "PlottingPars": {
+        "VelocityMin": 3.0,
+        "VelocityMax": 7.0,
+        "HistERHMax": 20.0,
+        "HistERHInc": 1.0,
+        "HistERZMax": 30.0,
+        "HistERZInc": 1.0,
+        "HistInsetERHMin": -5.0,
+        "HistInsetERHMax": 5.0,
+        "HistInsetERHInc": 0.5,
+        "HistInsetERZMin": -8.0,
+        "HistInsetERZMax": 8.0,
+        "HistInsetERZInc": 0.5,
+        "ColorbarGapMax": 360,
+        "ColorbarNearestMax": 10
     }
 }

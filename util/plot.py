@@ -17,7 +17,9 @@ def getMinMax(*inpList):
     return Min, Max
 
 # plot hypocentral map between initial and final event locations
-def plotHypocentralMap(iniFile, finFile, stationFile, relocationPath):
+
+
+def plotSeismicityMap(iniFile, finFile, stationFile, relocationPath):
     print("+++ Plotting seismicity map ...")
     # - Read input data
     ini = read_csv(iniFile, delim_whitespace=True)
@@ -37,30 +39,40 @@ def plotHypocentralMap(iniFile, finFile, stationFile, relocationPath):
         abc=True, abcloc="ul", suptitle="Seismicity map")
     [ax.grid(ls=":") for ax in axs]
 
-    axs[0].format(xlim=(xMin, xMax), ylim=(yMin, yMax), ylabel="Latitude (deg)", fontsize=7)
-    axs[0].plot(ini["LON"].values, ini["LAT"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="gray", alpha=0.2)
-    axs[0].plot(fin["LON"].values, fin["LAT"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="red")
-    axs[0].plot(sta["Lon"].values, sta["Lat"].values, marker="^", ms=4, mec="k", mew=0.1, ls="", color="blue")
-    
+    axs[0].format(xlim=(xMin, xMax), ylim=(yMin, yMax),
+                  ylabel="Latitude (deg)", fontsize=7)
+    axs[0].plot(ini["LON"].values, ini["LAT"].values, marker="o",
+                ms=4, mec="k", mew=0.1, ls="", color="gray", alpha=0.2)
+    axs[0].plot(fin["LON"].values, fin["LAT"].values, marker="o",
+                ms=4, mec="k", mew=0.1, ls="", color="red")
+    axs[0].plot(sta["Lon"].values, sta["Lat"].values, marker="^",
+                ms=4, mec="k", mew=0.1, ls="", color="blue")
+
     px = axs[0].panel_axes(side="r", width="5em")
     px.grid(ls=":")
-    px.format(xlim=(zMin, zMax), ylim=(yMin, yMax), xlabel="Depth (km)", fontsize=7)
-    px.plot(ini["DEPTH"].values, ini["LAT"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="gray", alpha=0.2)
-    px.plot(fin["DEPTH"].values, fin["LAT"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="red")
+    px.format(xlim=(zMin, zMax), ylim=(yMin, yMax),
+              xlabel="Depth (km)", fontsize=7)
+    px.plot(ini["DEPTH"].values, ini["LAT"].values, marker="o",
+            ms=4, mec="k", mew=0.1, ls="", color="gray", alpha=0.2)
+    px.plot(fin["DEPTH"].values, fin["LAT"].values, marker="o",
+            ms=4, mec="k", mew=0.1, ls="", color="red")
 
     px = axs[0].panel_axes(side="b", width="5em")
     px.grid(ls=":")
-    px.format(xlim=(xMin, xMax), ylim=(zMax, zMin), xlabel="Longitude (deg)", ylabel="Depth (km)", fontsize=7)
-    px.plot(ini["LON"].values, ini["DEPTH"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="gray", alpha=0.2, autoreverse=False)
-    px.plot(fin["LON"].values, fin["DEPTH"].values, marker="o", ms=4, mec="k", mew=0.1, ls="", color="red", autoreverse=False)
+    px.format(xlim=(xMin, xMax), ylim=(zMax, zMin),
+              xlabel="Longitude (deg)", ylabel="Depth (km)", fontsize=7)
+    px.plot(ini["LON"].values, ini["DEPTH"].values, marker="o", ms=4,
+            mec="k", mew=0.1, ls="", color="gray", alpha=0.2, autoreverse=False)
+    px.plot(fin["LON"].values, fin["DEPTH"].values, marker="o", ms=4,
+            mec="k", mew=0.1, ls="", color="red", autoreverse=False)
     # Saving figure
     fig.save(os.path.join(relocationPath, "seismicity.pdf"))
-    
+
 
 # Plot hypocentral dislocation
 
 
-def plotHypocenterDiff(iniFile, finFile, relocationPath):
+def plotHypocenterDiff(iniFile, finFile, relocationPath, config):
     print("+++ Plotting some statistics ...")
     # - Read input data
     ini = read_csv(iniFile, delim_whitespace=True)
@@ -70,8 +82,13 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath):
     yMin, yMax = getMinMax(ini["LAT"], fin["LAT"])
     zMin, zMax = getMinMax(ini["DEPTH"], fin["DEPTH"])
     gMin, gMax = getMinMax(ini["GAP"], fin["GAP"])
-    gapMin, gapMax = 0, 360
-    dMin, dMax = 0, 10
+    gapMin, gapMax = 0, config["PlottingPars"]["ColorbarGapMax"]
+    dMin, dMax = 0, config["PlottingPars"]["ColorbarNearestMax"]
+    HistInsetERHMin, HistInsetERHMax = config["PlottingPars"]["HistInsetERHMin"], config["PlottingPars"]["HistInsetERHMax"]
+    HistInsetERHInc, HistInsetERZInc = config["PlottingPars"]["HistInsetERHInc"], config["PlottingPars"]["HistInsetERZInc"]
+    HistInsetERZMin, HistInsetERZMax = config["PlottingPars"]["HistInsetERZMin"], config["PlottingPars"]["HistInsetERZMax"]
+    HistERHMax, HistERZMax = config["PlottingPars"]["HistERHMax"], config["PlottingPars"]["HistERZMax"]
+    HistERHInc, HistERZInc = config["PlottingPars"]["HistERHInc"], config["PlottingPars"]["HistERZInc"]
     # - Define shape of axis
     axShape = [
         [1, 2, 3],
@@ -96,40 +113,45 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath):
     scr1 = axs[0].scatter(ini["LON"], fin["LON"], s=50, marker="o", c=fin["GAP"], lw=0.4, edgecolors="k",
                           cmap="lajolla", vmin=gapMin, vmax=gapMax)
     axs[0].plot([xMin, xMax], [xMin, xMax], color="k", ms=0.5)
-    axs[0].format(lrtitle="r={r:f}".format(r=r[0]), xlim=(xMin, xMax), ylim=(xMin, xMax))
+    axs[0].format(lrtitle="r={r:f}".format(r=r[0]),
+                  xlim=(xMin, xMax), ylim=(xMin, xMax))
     ix = axs[0].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
     ix.format(title="raw-rel (km)", fontsize=8)
     ix.grid(ls=":")
     ix.spines["right"].set_visible(False)
     ix.spines["top"].set_visible(False)
     data = d2k(ini["LON"].values-fin["LON"].values)
-    ix.hist(data, arange(-5, 6, 0.4), filled=True, alpha=0.7, edgecolor="k", color="gray")
-    
+    ix.hist(data, arange(HistInsetERHMin, HistInsetERHMax+1, HistInsetERHInc),
+            filled=True, alpha=0.7, edgecolor="k", color="gray")
 
     axs[1].scatter(ini["LAT"], fin["LAT"], s=50, marker="o", c=fin["GAP"], lw=0.4, edgecolors="k",
                    cmap="lajolla", vmin=gapMin, vmax=gapMax)
     axs[1].plot([yMin, yMax], [yMin, yMax], color="k", ms=0.5)
     axs[1].set_xlim(yMin, yMax)
-    axs[1].format(lrtitle="r={r:f}".format(r=r[1]), xlim=(yMin, yMax), ylim=(yMin, yMax))
+    axs[1].format(lrtitle="r={r:f}".format(r=r[1]),
+                  xlim=(yMin, yMax), ylim=(yMin, yMax))
     ix = axs[1].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
     ix.format(title="raw-rel (km)", fontsize=8)
     ix.grid(ls=":")
     ix.spines["right"].set_visible(False)
     ix.spines["top"].set_visible(False)
     data = d2k(ini["LAT"].values-fin["LAT"].values)
-    ix.hist(data, arange(-5, 6, 0.4), filled=True, alpha=0.7, edgecolor="k", color="gray")
+    ix.hist(data, arange(HistInsetERHMin, HistInsetERHMax+1, HistInsetERHInc),
+            filled=True, alpha=0.7, edgecolor="k", color="gray")
 
     axs[2].scatter(ini["DEPTH"], fin["DEPTH"], s=50, marker="o", c=fin["GAP"], lw=0.4, edgecolors="k",
                    cmap="lajolla", vmin=gapMin, vmax=gapMax)
     axs[2].plot([zMin, zMax], [zMin, zMax], color="k", ms=0.5)
-    axs[2].format(lrtitle="r={r:f}".format(r=r[2]), xlim=(zMin, zMax), ylim=(zMin, zMax))
+    axs[2].format(lrtitle="r={r:f}".format(r=r[2]),
+                  xlim=(zMin, zMax), ylim=(zMin, zMax))
     ix = axs[2].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
     ix.format(title="raw-rel (km)", fontsize=8)
     ix.grid(ls=":")
     ix.spines["right"].set_visible(False)
     ix.spines["top"].set_visible(False)
     data = ini["DEPTH"].values-fin["DEPTH"].values
-    ix.hist(data, arange(-5, 6, 0.5), filled=True, alpha=0.7, edgecolor="k", color="gray")
+    ix.hist(data, arange(HistInsetERZMin, HistInsetERZMax+1, HistInsetERZInc),
+            filled=True, alpha=0.7, edgecolor="k", color="gray")
 
     scr2 = axs[3].scatter(ini["LON"], fin["LON"], s=50, marker="o", c=fin["MIND"], lw=0.4, edgecolors="k",
                           cmap="lajolla", vmin=dMin, vmax=dMax)
@@ -160,11 +182,11 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath):
     axs[6].format(lrtitle="r={r:f}".format(r=r[3]))
 
     d = array([ini["ERH"], fin["ERH"]])
-    axs[7].hist(d.T, arange(0, 8, 0.2), filled=True, alpha=0.7, edgecolor="k",
+    axs[7].hist(d.T, arange(0, HistERHMax+1, HistERHInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=["raw", "relocated"], legend="ur", legend_kw={"ncol": 1})
 
     d = array([ini["ERZ"], fin["ERZ"]])
-    axs[8].hist(d.T, arange(0, 8, 0.2), filled=True, alpha=0.7, edgecolor="k",
+    axs[8].hist(d.T, arange(0, HistERZMax+1, HistERZInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=["raw", "relocated"], legend="ur", legend_kw={"ncol": 1})
 
     # - Colorbars
@@ -180,19 +202,20 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath):
 # Plot velocity models
 
 
-def plotVelocityModels(velocityModels, maxDep, relocationPath):
+def plotVelocityModels(velocityModels, maxDep, relocationPath, config):
     v1 = velocityModels["1"]["V"]
     v2 = velocityModels["2"]["V"]
     z1 = velocityModels["1"]["Z"]
     z2 = velocityModels["2"]["Z"]
     z1.append(maxDep)
     z2.append(maxDep)
+    VelocityMin, VelocityMax = config["PlottingPars"]["VelocityMin"], config["PlottingPars"]["VelocityMax"]
     axShape = [
         [1]
     ]
     fig, axs = plt.subplots(axShape, share=False)
     axs.format(
-        suptitle="Velocity models", xlabel="Velocity (km/s)", ylabel="Depth (km)")
+        suptitle="Velocity models", xlabel="Velocity (km/s)", ylabel="Depth (km)", xlim=(VelocityMin, VelocityMax))
     [ax.grid(ls=":") for ax in axs]
     for v, z, c in zip([v2, v1], [z2, z1], ["cyan7", "red7"]):
         for x, y1, y2 in zip(v, z[:-1], z[1:]):
@@ -202,6 +225,5 @@ def plotVelocityModels(velocityModels, maxDep, relocationPath):
     custom_lines = [Line2D([0], [0], color="cyan7", lw=3),
                     Line2D([0], [0], color="red7", lw=3)]
     axs[0].invert_yaxis()
-    axs[0].set_xlim(3, 7)
     axs[0].legend(custom_lines, ["Raw", "Relocation"], loc="ll", ncol=1)
     fig.save(os.path.join(relocationPath, "velocityModel.pdf"))

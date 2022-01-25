@@ -8,7 +8,7 @@ from shutil import copy, move
 from glob import glob
 from tqdm.contrib import tzip
 from math import ceil
-from util.plot import plotHypocentralMap, plotHypocenterDiff, plotVelocityModels
+from util.plot import plotSeismicityMap, plotHypocenterDiff, plotVelocityModels
 from util.nordic2xyzm import nordic2xyzm
 from util.logger import myLogger
 import random
@@ -109,7 +109,7 @@ class Main():
             velocityModels["2"]["V"] = VPs
             velocityModels["2"]["Z"] = Zs
             maxDepthToPlot = self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"]
-            plotVelocityModels(velocityModels, maxDepthToPlot, self.resultsPath)
+            plotVelocityModels(velocityModels, maxDepthToPlot, self.resultsPath, self.config)
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
             f.write("#LAYER depth, Vp_top, Vp_grad, Vs_top, Vs_grad, p_top, p_grad\n")
             for Vp, Z in zip(VPs, Zs):
@@ -461,8 +461,8 @@ class Main():
         self.makeSummaryFile(targetDir=relocationPath, nordicFileName="hyp.out")
         iniFile = os.path.join("EqInput", "xyzm.dat")
         finFile = os.path.join(relocationPath, "xyzm.dat")
-        plotHypocentralMap(iniFile, finFile, self.stations, self.resultsPath)
-        plotHypocenterDiff(iniFile, finFile, self.resultsPath)
+        plotSeismicityMap(iniFile, finFile, self.stations, self.resultsPath)
+        plotHypocenterDiff(iniFile, finFile, self.resultsPath, self.config)
 
 
 # Run application
