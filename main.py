@@ -41,7 +41,7 @@ class Main():
         msg = "+++ Configuration file was loaded successfully."
         print(msg); self.report.info(msg)
     
-    # Write configuration to report file
+    # Write configuration to log file
     def config2Log(self):
         for key in self.config:
             for k,v in self.config[key].items():
@@ -65,7 +65,7 @@ class Main():
         Path(os.path.join(self.resultsPath, "relocation")).mkdir(parents=True, exist_ok=True)
         Path("tmp").mkdir(parents=True, exist_ok=True)
         
-    # Clear existing files
+    # Clear pre-existing files
     def clearExistingFiles(self):
         for d in ["model", "obs", "time", "tmp"]:
             for f in glob(os.path.join(d, "*")):
