@@ -44,8 +44,12 @@ class Main():
     # Write configuration to log file
     def config2Log(self):
         for key in self.config:
-            for k,v in self.config[key].items():
-                msg = "+++ Configuration on {key} > {k}: {v}".format(key=key, k=k, v=v)
+            if isinstance(self.config[key], dict):
+                for k,v in self.config[key].items():
+                    msg = "+++ Configuration on {key} > {k}: {v}".format(key=key, k=k, v=v)
+                    self.report.info(msg)
+            else:
+                msg = "+++ {v} :".format(v=self.config[key])
                 self.report.info(msg)
 
     # Check required input files
@@ -70,7 +74,7 @@ class Main():
         for d in ["model", "obs", "time", "tmp"]:
             for f in glob(os.path.join(d, "*")):
                 os.remove(f)
-        msg = "+++ Removing prexisting files in 'model', 'obs', 'time' and 'tmp' directories ..."
+        msg = "+++ Removing preexisting files in 'model', 'obs', 'time' and 'tmp' directories ..."
         print(msg); self.report.info(msg)
 
     # Parse velocity model
@@ -106,8 +110,8 @@ class Main():
             ThiknesserrorPercentage = self.config["ErrorOnVelocityModel"]["ThiknesserrorPercentage"]
             VPs = self.AddError(VPs, VelocityerrorPercentage)
             Zs = self.AddError(Zs, ThiknesserrorPercentage)
-            velocityModels["2"]["V"] = VPs
-            velocityModels["2"]["Z"] = Zs
+            velocityModels["2"]["V"] = VPs  # type: ignore
+            velocityModels["2"]["Z"] = Zs  # type: ignore
             maxDepthToPlot = self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"]
             plotVelocityModels(velocityModels, maxDepthToPlot, self.resultsPath, self.config)
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
@@ -147,7 +151,7 @@ class Main():
 
     # Write NLLOC station file
     def writeNLlocStationFile(self):
-        msg = "+++ Writting station information in NLLOC format ..."
+        msg = "+++ Writing station information in NLLOC format ..."
         codes, lats, lons, elvs = self.stations.items()
         with open(os.path.join("EqInput", "stations.dat"), "w") as f:
             for code, lat, lon, elv in zip(codes[1], lats[1], lons[1], elvs[1]):
@@ -206,7 +210,7 @@ class Main():
 
     # Write NLLOC control file and generate synthetics
     def writeNLlocControlFile(self):
-        msg = "+++ Writting NLLOC control file ..."
+        msg = "+++ Writing NLLOC control file ..."
         self.report.info(msg)
         lonMin = self.config["Region"]["LonMin"]
         lonMax = self.config["Region"]["LonMax"]
@@ -259,7 +263,7 @@ class Main():
         msg = "+++ Generating synthetic earthquakes ..."
         print(msg); self.report.info(msg)
         PArrivalsList, SArrivalsList = self.editUsedPhase(list(PArrivalsList), list(SArrivalsList))
-        for i, (ot, lat, lon, dep, parrivals, sarrivals) in enumerate(tzip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):
+        for i, (ot, lat, lon, dep, pArrivals, sarrivals) in enumerate(tzip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):  # type: ignore
             outConfig = os.path.join("tmp", "nlloc_{i:d}.conf".format(i=i+1))
             copy("nlloc.conf", outConfig)
             # - Shift each earthquake if requested bu user
@@ -278,10 +282,10 @@ class Main():
                 f.write("EQSRCE SYNEQ_{i:d} LATLON {eventLat:7.3f} {eventLon:7.3f} {eventDep:5.1f} 0.0\n".format(
                     i=i, eventLat=lat, eventLon=lon, eventDep=dep
                 ))
-                for parrival in parrivals:
+                for pArrival in pArrivals:
                     errorP = self.config["ErrorOnArrivals"]["P"]
                     f.write("EQSTA {staCode:4s} P GAU {errorP:6.2f} GAU {errorP:6.2f}\n".format(
-                        staCode=parrival, errorP=errorP))
+                        staCode=pArrival, errorP=errorP))
                 for sarrival in sarrivals:
                     errorS = self.config["ErrorOnArrivals"]["S"]
                     f.write("EQSTA {staCode:4s} S GAU {errorS:6.2f} GAU {errorS:6.2f}\n".format(
@@ -349,7 +353,7 @@ class Main():
         os.system(cmd)
         cmd = "Grid2Time nlloc.conf"
         os.system(cmd)
-        msg = "+++ P and S travel time grids have been created successfull ..."
+        msg = "+++ P and S travel time grids have been created successfully ..."
         print(msg); self.report.info(msg)
 
     # Merge synthetic files
@@ -406,7 +410,7 @@ class Main():
                         line1_flag = False
                         line7_flag = False
                     line = l.strip().split()
-                    statcionCode = line[0]
+                    stationCode = line[0]
                     instrument = " "
                     comp = " "
                     qualityIndicator = " "
@@ -420,8 +424,8 @@ class Main():
                                      int(line[7][0:2]), int(line[7][2:4]), int(
                         line[8].split(".")[0]),
                         int(line[8].split(".")[1]))
-                    line_4 = " {statcionCode:5s}{instrument:1s}{comp:1s} {qualityIndicator:1s}{phaseID:4s}{weightingIndicator:1d} {firstMotion:1s} {hour:02d}{minute:02d} {second:5.2f}                                                   4\n".format(
-                        statcionCode=statcionCode, instrument=instrument, comp=comp, qualityIndicator=qualityIndicator, phaseID=phaseID, weightingIndicator=weightingIndicator, firstMotion=firstMotion, hour=arrivalTime.hour, minute=arrivalTime.minute, second=arrivalTime.second+arrivalTime.microsecond*1e-6
+                    line_4 = " {stationCode:5s}{instrument:1s}{comp:1s} {qualityIndicator:1s}{phaseID:4s}{weightingIndicator:1d} {firstMotion:1s} {hour:02d}{minute:02d} {second:5.2f}                                                   4\n".format(
+                        stationCode=stationCode, instrument=instrument, comp=comp, qualityIndicator=qualityIndicator, phaseID=phaseID, weightingIndicator=weightingIndicator, firstMotion=firstMotion, hour=arrivalTime.hour, minute=arrivalTime.minute, second=arrivalTime.second+arrivalTime.microsecond*1e-6
                     )
                     hypo_file.write(line_4)
         hypo_file.write("\n")
@@ -452,7 +456,7 @@ class Main():
 
     # Compare raw and relocated data
     def compare(self):
-        msg = "+++ Makeing some statistical figures ..."
+        msg = "+++ Making some statistical figures ..."
         self.report.info(msg)
         relocationPath = os.path.join(self.resultsPath, "relocation")
         self.makeSummaryFile(targetDir="EqInput", nordicFileName="select.out")
@@ -468,12 +472,12 @@ class Main():
 # Run application
 if __name__ == "__main__":
     app = Main()
-    app.parseVelocityModel()
-    app.writeNLlocVelocityModel()
     app.parseStationInfo()
-    app.writeNLlocStationFile()
-    app.parseEarthquakeFile()
-    app.writeNLlocControlFile()
-    app.mergeSyntheticFiles()
-    app.convertNLLOC2NORDIC()
-    app.compare()
+    # app.parseVelocityModel()
+    # app.writeNLlocVelocityModel()
+    # app.writeNLlocStationFile()
+    # app.parseEarthquakeFile()
+    # app.writeNLlocControlFile()
+    # app.mergeSyntheticFiles()
+    # app.convertNLLOC2NORDIC()
+    # app.compare()
