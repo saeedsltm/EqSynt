@@ -33,7 +33,7 @@ def plotSeismicityMap(iniFile, finFile, stationFile, relocationPath):
     axShape = [
         [1]
     ]
-    # - Somepreproccessing on figure
+    # - Some preprocessing on figure
     fig, axs = plt.subplots(axShape, share=False)
     axs.format(
         abc=True, abcloc="ul", suptitle="Seismicity map")
@@ -95,7 +95,7 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath, config):
         [4, 5, 6],
         [7, 8, 9],
     ]
-    # - Somepreproccessing on figure
+    # - Some preprocessing on figure
     fig, axs = plt.subplots(axShape, share=False)
     axs.format(
         abc=True, abcloc="ul", suptitle="Dislocation plots")
@@ -189,7 +189,7 @@ def plotHypocenterDiff(iniFile, finFile, relocationPath, config):
     axs[8].hist(d.T, arange(0, HistERZMax+1, HistERZInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=["raw", "relocated"], legend="ur", legend_kw={"ncol": 1})
 
-    # - Colorbars
+    # - Colorbar
     fig.colorbar(
         scr1, row=1, loc="r", extend="both", label="Azimuthal gap ($\degree$)", shrink=0.9)
     fig.colorbar(
@@ -209,7 +209,7 @@ def plotVelocityModels(velocityModels, maxDep, relocationPath, config):
     z2 = velocityModels["2"]["Z"]
     z1.append(maxDep)
     z2.append(maxDep)
-    VelocityMin, VelocityMax = config["PlottingPars"]["VelocityMin"], config["PlottingPars"]["VelocityMax"]
+    VelocityMin, VelocityMax = config["FGS"]["VelocityMin"], config["FGS"]["VelocityMax"]
     axShape = [
         [1]
     ]

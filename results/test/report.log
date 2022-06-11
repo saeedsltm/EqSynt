@@ -1,0 +1,46 @@
+2022-06-11 18:07:29,991 +++ Configuration file was loaded successfully.
+2022-06-11 18:07:29,991 +++ +++ Define study region :
+2022-06-11 18:07:29,991 +++ Configuration on Region > LonMin: 50.5
+2022-06-11 18:07:29,991 +++ Configuration on Region > LonMax: 51.5
+2022-06-11 18:07:29,991 +++ Configuration on Region > LatMin: 35.0
+2022-06-11 18:07:29,991 +++ Configuration on Region > LatMax: 36.0
+2022-06-11 18:07:29,991 +++ ============================ Full Synthetic Scenario (FSS) :
+2022-06-11 18:07:29,991 +++ Configuration on FSS > flag: True
+2022-06-11 18:07:29,991 +++ Configuration on FSS > /Comment#002_01: +++ Define station coordinate
+2022-06-11 18:07:29,991 +++ Configuration on FSS > Station: {'StationFile': '', 'StationBoundLonMin': 51.0, 'StationBoundLonMax': 52.0, 'StationBoundLatMin': 36.0, 'StationBoundLatMax': 37.0, 'NumberOfStations': 10, 'GaussianDistribution': False, 'UniformDistribution': True, 'FaultDistribution': False}
+2022-06-11 18:07:29,991 +++ Configuration on FSS > /Comment#002_02: +++ Define velocity model
+2022-06-11 18:07:29,991 +++ Configuration on FSS > Model: {'Fault': {'Type': 'DOUBLE', 'Strike': 0, 'Dip': 90, 'Rake': 0}, 'Vp': [4.5, 5.0, 5.4, 6.0, 6.8], 'Z': [0.0, 4.0, 10.0, 18.0, 26.0, 56.0], 'Interfaces': ['', '', '', 'B', '', 'N'], 'VpVs': 1.75, 'xNear': 75.0, 'xFar': 500.0, 'trialDepth': 10.0}
+2022-06-11 18:07:29,991 +++ Configuration on FSS > /Comment#002_03: +++ Define catalog of events
+2022-06-11 18:07:29,991 +++ Configuration on FSS > Catalog: {'CatalogBoundLonMin': 51.0, 'CatalogBoundLonMax': 52.0, 'CatalogBoundLatMin': 36.0, 'CatalogBoundLatMax': 37.0, 'NumberOfEvents': 10, 'GaussianDistribution': False, 'UniformDistribution': True}
+2022-06-11 18:07:29,991 +++ ============================ Real-Case Synthetic Scenario (RSS) :
+2022-06-11 18:07:29,991 +++ Configuration on RSS > flag: False
+2022-06-11 18:07:29,991 +++ Configuration on RSS > /Comment#003_01: +++ Define input files for station, model and catalog
+2022-06-11 18:07:29,992 +++ Configuration on RSS > Inputs: {'EqFile': 'select.out', 'StationFile': 'STATION0.HYP'}
+2022-06-11 18:07:29,992 +++ ============================ ForwardPass Settings (FPS) :
+2022-06-11 18:07:29,992 +++ Configuration on FPS > /Comment#004_01: +++ Travel Time Grid
+2022-06-11 18:07:29,992 +++ Configuration on FPS > VGGRID: {'xNum': 201, 'yNum': 201, 'zNum': 90}
+2022-06-11 18:07:29,992 +++ Configuration on FPS > /Comment#004_02: +++ How much the forward velocity model should differ from initial model (in percent)?
+2022-06-11 18:07:29,992 +++ Configuration on FPS > ErrorOnVelocityModel: {'Flag': True, 'Seed': 1, 'VelocityerrorPercentage': 5, 'ThiknesserrorPercentage': 10, 'MaxDepthToPlot': 20}
+2022-06-11 18:07:29,992 +++ Configuration on FPS > /Comment#004_03: +++ How much error (in seconds) add to travel times?
+2022-06-11 18:07:29,992 +++ Configuration on FPS > ErrorOnArrivals: {'P': 0.05, 'S': 0.1}
+2022-06-11 18:07:29,992 +++ Configuration on FPS > /Comment#004_04: +++ How much of phases should be used (in percent)?
+2022-06-11 18:07:29,992 +++ Configuration on FPS > UsageOfPhase: {'Seed': 1, 'PercentageUseOfP': 100, 'PercentageUseOfS': 50}
+2022-06-11 18:07:29,992 +++ Configuration on FPS > /Comment#004_05: +++ Make horizontal shift in epicenters if needed (in degree)?
+2022-06-11 18:07:29,992 +++ Configuration on FPS > LocationShift: {'ShiftInLongitude': 0.5, 'ShiftInLatitude': 0.5}
+2022-06-11 18:07:29,992 +++ ============================ Relocation Settings (RLS) :
+2022-06-11 18:07:29,992 +++ ============================ Figure Settings (FGS) :
+2022-06-11 18:07:29,992 +++ Configuration on FGS > VelocityMin: 3.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > VelocityMax: 7.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistERHMax: 20.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistERHInc: 1.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistERZMax: 30.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistERZInc: 1.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERHMin: -5.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERHMax: 5.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERHInc: 0.5
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERZMin: -8.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERZMax: 8.0
+2022-06-11 18:07:29,992 +++ Configuration on FGS > HistInsetERZInc: 0.5
+2022-06-11 18:07:29,992 +++ Configuration on FGS > ColorbarGapMax: 360
+2022-06-11 18:07:29,992 +++ Configuration on FGS > ColorbarNearestMax: 10
+2022-06-11 18:07:29,993 +++ Removing preexisting files in 'model', 'obs', 'time' and 'tmp' directories ...

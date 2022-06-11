@@ -6,8 +6,9 @@
         "LatMin": 35.00,
         "LatMax": 36.00
     },
-    "/Comment#002": "++++++++++++++++++++++++++++ Full Synthetic Scenario (FSS)",
+    "/Comment#002": "============================ Full Synthetic Scenario (FSS)",
     "FSS": {
+        "flag": true,
         "/Comment#002_01": "+++ Define station coordinate",
         "Station": {
             "StationFile": "",
@@ -23,6 +24,7 @@
         "/Comment#002_02": "+++ Define velocity model",
         "Model": {
             "Fault": {
+                "Type": "DOUBLE",
                 "Strike": 0,
                 "Dip": 90,
                 "Rake": 0
@@ -39,9 +41,21 @@
                 4.0,
                 10.0,
                 18.0,
-                26.0
+                26.0,
+                56.0
             ],
-            "VpVs": 1.75
+            "Interfaces": [
+                "",
+                "",
+                "",
+                "B",
+                "",
+                "N"
+            ],
+            "VpVs": 1.75,
+            "xNear": 75.0,
+            "xFar": 500.0,
+            "trialDepth": 10.0
         },
         "/Comment#002_03": "+++ Define catalog of events",
         "Catalog": {
@@ -54,15 +68,16 @@
             "UniformDistribution": true
         }
     },
-    "/Comment#003": "++++++++++++++++++++++++++++ Real-Case Synthetic Scenario (RSS)",
+    "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
     "RSS": {
+        "flag": false,
         "/Comment#003_01": "+++ Define input files for station, model and catalog",
         "Inputs": {
             "EqFile": "select.out",
             "StationFile": "STATION0.HYP"
         }
     },
-    "/Comment#004": "++++++++++++++++++++++++++++ ForwardPass Settings (FPS)",
+    "/Comment#004": "============================ ForwardPass Settings (FPS)",
     "FPS": {
         "/Comment#004_01": "+++ Travel Time Grid",
         "VGGRID": {
@@ -89,24 +104,29 @@
             "PercentageUseOfP": 100,
             "PercentageUseOfS": 50
         },
-        "/Comment#005": "++++++++++++++++++++++++++++ Relocation Settings (RLS)",
-        "RLS": {},
-        "/Comment#006": "++++++++++++++++++++++++++++ Figure Settings (FGS)",
-        "FGS": {
-            "VelocityMin": 3.0,
-            "VelocityMax": 7.0,
-            "HistERHMax": 20.0,
-            "HistERHInc": 1.0,
-            "HistERZMax": 30.0,
-            "HistERZInc": 1.0,
-            "HistInsetERHMin": -5.0,
-            "HistInsetERHMax": 5.0,
-            "HistInsetERHInc": 0.5,
-            "HistInsetERZMin": -8.0,
-            "HistInsetERZMax": 8.0,
-            "HistInsetERZInc": 0.5,
-            "ColorbarGapMax": 360,
-            "ColorbarNearestMax": 10
+        "/Comment#004_05": "+++ Make horizontal shift in epicenters if needed (in degree)?",
+        "LocationShift": {
+            "ShiftInLongitude": 0.5,
+            "ShiftInLatitude": 0.5
         }
+    },
+    "/Comment#005": "============================ Relocation Settings (RLS)",
+    "RLS": {},
+    "/Comment#006": "============================ Figure Settings (FGS)",
+    "FGS": {
+        "VelocityMin": 3.0,
+        "VelocityMax": 7.0,
+        "HistERHMax": 20.0,
+        "HistERHInc": 1.0,
+        "HistERZMax": 30.0,
+        "HistERZInc": 1.0,
+        "HistInsetERHMin": -5.0,
+        "HistInsetERHMax": 5.0,
+        "HistInsetERHInc": 0.5,
+        "HistInsetERZMin": -8.0,
+        "HistInsetERZMax": 8.0,
+        "HistInsetERZInc": 0.5,
+        "ColorbarGapMax": 360,
+        "ColorbarNearestMax": 10
     }
 }

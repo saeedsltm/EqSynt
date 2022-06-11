@@ -1,7 +1,8 @@
 from LatLon import lat_lon as ll
 from datetime import datetime as dt
 from datetime import timedelta as td
-from statistics import mean
+from statistics import mean, stdev
+from string import ascii_uppercase
 from json import load
 from pathlib import Path
 from shutil import copy, move
@@ -21,7 +22,8 @@ import sys
 class Main():
     # Init
     def __init__(self):
-        self.resultsPath = os.path.join("results", dt.now().strftime("%Y_%j_%H%M%S"))
+        # self.resultsPath = os.path.join("results", dt.now().strftime("%Y_%j_%H%M%S"))
+        self.resultsPath = os.path.join("results", "test")
         Path(self.resultsPath).mkdir(parents=True, exist_ok=True)
         self.report = myLogger(os.path.join(self.resultsPath, "report"), mode="w")
         self.readConfiguration()
@@ -55,14 +57,16 @@ class Main():
     # Check required input files
     def checkRequiredFiles(self):
         # - check earthquake arrivals and station files
-        self.eqFile = os.path.join("EqInput", self.config["Inputs"]["EqFile"])
-        self.stationFile = os.path.join(
-            "EqInput", self.config["Inputs"]["StationFile"])
-        if not os.path.exists(self.eqFile) or not os.path.exists(self.stationFile):
-            msg = "+++ Could not find earthquake or station files! Aborting ..."
-            print(msg); self.report.info(msg)
-            sys.exit()
-        # - Create NLloc required directories
+        if self.config["FSS"]["flag"] and not self.config["RSS"]["flag"]:
+            self.createNewStationFile()
+        elif not self.config["FSS"]["flag"] and self.config["RSS"]["flag"]:
+            self.eqFile = os.path.join("EqInput", self.config["RSS"]["Inputs"]["EqFile"])
+            self.stationFile = os.path.join(
+                "EqInput", self.config["RSS"]["Inputs"]["StationFile"])
+            if not os.path.exists(self.eqFile) or not os.path.exists(self.stationFile):
+                msg = "+++ Could not find earthquake or station files! Aborting ..."
+                print(msg); self.report.info(msg)
+                sys.exit()        # - Create NLloc required directories
         Path("time").mkdir(parents=True, exist_ok=True)
         Path("model").mkdir(parents=True, exist_ok=True)
         Path("obs").mkdir(parents=True, exist_ok=True)
@@ -77,6 +81,57 @@ class Main():
         msg = "+++ Removing preexisting files in 'model', 'obs', 'time' and 'tmp' directories ..."
         print(msg); self.report.info(msg)
 
+    # Create new station file
+    def createNewStationFile(self):
+        stationCodes, stationLats, stationLons = [], [], []
+        if self.config["FSS"]["Station"]["StationFile"] != "":
+            pass
+        else:
+            nStations = self.config["FSS"]["Station"]["NumberOfStations"]
+            stationCodes = ["".join(random.choices(ascii_uppercase, k=4)) for _ in range(nStations)]
+            xMin = self.config["FSS"]["Station"]["StationBoundLonMin"]
+            xMax = self.config["FSS"]["Station"]["StationBoundLonMax"]
+            yMin = self.config["FSS"]["Station"]["StationBoundLatMin"]
+            yMax = self.config["FSS"]["Station"]["StationBoundLatMax"]            
+            Vp = self.config["FSS"]["Model"]["Vp"]
+            Z = self.config["FSS"]["Model"]["Z"]
+            Interfaces = self.config["FSS"]["Model"]["Interfaces"]
+            VpVs = self.config["FSS"]["Model"]["VpVs"]
+            xNear = self.config["FSS"]["Model"]["xNear"]
+            xFar = self.config["FSS"]["Model"]["xFar"]
+            trialDepth = self.config["FSS"]["Model"]["trialDepth"]
+            if self.config["FSS"]["Station"]["GaussianDistribution"]:
+                meanLon, stdLon = mean([xMin, xMax]), stdev([xMin, xMax])
+                meanLat, stdLat = mean([yMin, yMax]), stdev([yMin, yMax])
+                stationLons = [random.gauss(meanLon, stdLon) for _ in range(nStations)]
+                stationLats = [random.gauss(meanLat, stdLat) for _ in range(nStations)]
+            elif self.config["FSS"]["Station"]["UniformDistribution"]:
+                stationLons = [random.uniform(xMin, xMax) for _ in range(nStations)]
+                stationLats = [random.uniform(yMin, yMax) for _ in range(nStations)]
+            elif self.config["FSS"]["Station"]["FaultDistribution"]:
+                pass
+            with open(os.path.join("files", "resets.dat")) as f, open(os.path.join("files", "STATION0.HYP"), "w") as g:
+                for l in f:
+                    g.write(l)
+                g.write("\n")
+                g.write("\n")
+                for code, lat, lon in zip(stationCodes, stationLats, stationLons):
+                    lat = ll.Latitude(lat)
+                    lon = ll.Longitude(lon)
+                    g.write("  {code:4s}{latDeg:2.0f}{latMin:5.2f}N {lonDeg:2.0f}{lonMin:5.2f}E{elv:4.0f}\n".format(
+                        code=code, latDeg=lat.decimal_degree, latMin=lat.decimal_minute, lonDeg=lon.decimal_degree, lonMin=lon.decimal_minute, elv=0.0
+                    ))
+                g.write("\n")
+                for v, z, i in zip(Vp, Z, Interfaces):
+                    g.write(" {v:5.2f}  {z:6.3f}       {i:1s}     \n".format(
+                        v=v, z=z, i=i
+                    ))
+                g.write("\n")
+                g.write("{trialDepth:4.0f}.{xFar:4.0f}.{xNear:4.0f}. {VpVs:4.2f}".format(
+                    trialDepth=trialDepth, xNear=xNear, xFar=xFar, VpVs=VpVs 
+                ))
+                g.write("\nNew")
+                
     # Parse velocity model
     def parseVelocityModel(self):
         msg = "+++ Parsing velocity model ..."
@@ -101,18 +156,18 @@ class Main():
         msg = "+++ Writing velocity model in NLLOC format ..."
         self.report.info(msg)
         VPs, Zs, VpVs = [item[1] for item in self.velocityModel.items()]
-        if self.config["ErrorOnVelocityModel"]["Flag"]:
+        if self.config["FPS"]["ErrorOnVelocityModel"]["Flag"]:
             velocityModels = {"1": {"V": None, "Z": None},
                               "2": {"V": None, "Z": None}}
             velocityModels["1"]["V"] = VPs
             velocityModels["1"]["Z"] = Zs
-            VelocityerrorPercentage = self.config["ErrorOnVelocityModel"]["VelocityerrorPercentage"]
-            ThiknesserrorPercentage = self.config["ErrorOnVelocityModel"]["ThiknesserrorPercentage"]
+            VelocityerrorPercentage = self.config["FPS"]["ErrorOnVelocityModel"]["VelocityerrorPercentage"]
+            ThiknesserrorPercentage = self.config["FPS"]["ErrorOnVelocityModel"]["ThiknesserrorPercentage"]
             VPs = self.AddError(VPs, VelocityerrorPercentage)
             Zs = self.AddError(Zs, ThiknesserrorPercentage)
             velocityModels["2"]["V"] = VPs  # type: ignore
             velocityModels["2"]["Z"] = Zs  # type: ignore
-            maxDepthToPlot = self.config["ErrorOnVelocityModel"]["MaxDepthToPlot"]
+            maxDepthToPlot = self.config["FPS"]["ErrorOnVelocityModel"]["MaxDepthToPlot"]
             plotVelocityModels(velocityModels, maxDepthToPlot, self.resultsPath, self.config)
         with open(os.path.join("EqInput", "model.dat"), "w") as f:
             f.write("#LAYER depth, Vp_top, Vp_grad, Vs_top, Vs_grad, p_top, p_grad\n")
@@ -123,7 +178,7 @@ class Main():
 
     # Add random error to list items
     def AddError(self, x, errorPercentage):
-        seed = self.config["ErrorOnVelocityModel"]["Seed"]
+        seed = self.config["FPS"]["ErrorOnVelocityModel"]["Seed"]
         if seed:
             random.seed(seed)
         x = [v + random.gauss(0, v*errorPercentage*1e-2) for v in x]
@@ -216,15 +271,15 @@ class Main():
         lonMax = self.config["Region"]["LonMax"]
         latMin = self.config["Region"]["LatMin"]
         latMax = self.config["Region"]["LatMax"]
-        yNum = self.config["VGGRID"]["yNum"]
-        zNum = self.config["VGGRID"]["zNum"]
+        yNum = self.config["FPS"]["VGGRID"]["yNum"]
+        zNum = self.config["FPS"]["VGGRID"]["zNum"]
         lonOrig = mean([lonMin, lonMax])
         latOrig = mean([latMin, latMax])
         OTs, LATs, LONs, Deps, PArrivalsList, SArrivalsList = self.earthquakesInfo.items()
-        mechType = self.config["FirstMotionCalculation"]["Type"]
-        strike = self.config["FirstMotionCalculation"]["Strike"]
-        dip = self.config["FirstMotionCalculation"]["Dip"]
-        rake = self.config["FirstMotionCalculation"]["Rake"]
+        mechType = self.config["FSS"]["Model"]["Fault"]["Type"]
+        strike = self.config["FSS"]["Model"]["Fault"]["Strike"]
+        dip = self.config["FSS"]["Model"]["Fault"]["Dip"]
+        rake = self.config["FSS"]["Model"]["Fault"]["Rake"]
         with open("nlloc.conf", "w") as f:
             # - GENERIC CONTROL STATEMENT
             f.write("# +++ GENERIC CONTROL STATEMENT\n")
@@ -266,9 +321,9 @@ class Main():
         for i, (ot, lat, lon, dep, pArrivals, sarrivals) in enumerate(tzip(OTs[1], LATs[1], LONs[1], Deps[1], PArrivalsList[1], SArrivalsList[1])):  # type: ignore
             outConfig = os.path.join("tmp", "nlloc_{i:d}.conf".format(i=i+1))
             copy("nlloc.conf", outConfig)
-            # - Shift each earthquake if requested bu user
-            lat += self.config["LocationShift"]["ShiftInLatitude"]
-            lon += self.config["LocationShift"]["ShiftInLongitude"]
+            # - Shift each earthquake if requested by user
+            lat += self.config["FPS"]["LocationShift"]["ShiftInLatitude"]
+            lon += self.config["FPS"]["LocationShift"]["ShiftInLongitude"]
             with open(outConfig, "a") as f:
                 # - TIME2EQ STATEMENTS
                 f.write("# +++ TIME2EQ STATEMENTS\n")
@@ -283,11 +338,11 @@ class Main():
                     i=i, eventLat=lat, eventLon=lon, eventDep=dep
                 ))
                 for pArrival in pArrivals:
-                    errorP = self.config["ErrorOnArrivals"]["P"]
+                    errorP = self.config["FPS"]["ErrorOnArrivals"]["P"]
                     f.write("EQSTA {staCode:4s} P GAU {errorP:6.2f} GAU {errorP:6.2f}\n".format(
                         staCode=pArrival, errorP=errorP))
                 for sarrival in sarrivals:
-                    errorS = self.config["ErrorOnArrivals"]["S"]
+                    errorS = self.config["FPS"]["ErrorOnArrivals"]["S"]
                     f.write("EQSTA {staCode:4s} S GAU {errorS:6.2f} GAU {errorS:6.2f}\n".format(
                         staCode=sarrival, errorS=errorS))
                 f.write("\n")
@@ -303,8 +358,8 @@ class Main():
     def editUsedPhase(self, PArrivalsList, SArrivalsList):
         PArrivals = PArrivalsList[1]
         SArrivals = SArrivalsList[1]
-        percentageP = self.config["UsageOfPhase"]["PercentageUseOfP"]
-        percentageS = self.config["UsageOfPhase"]["PercentageUseOfS"]
+        percentageP = self.config["FPS"]["UsageOfPhase"]["PercentageUseOfP"]
+        percentageS = self.config["FPS"]["UsageOfPhase"]["PercentageUseOfS"]
         PArrivals = [random.sample(PArrival, ceil(len(PArrival)*percentageP*1e-2)) for PArrival in PArrivals]
         SArrivals = [random.sample(SArrival, ceil(len(SArrival)*percentageS*1e-2)) for SArrival in SArrivals]
         PArrivalsList[1] = PArrivals
@@ -472,7 +527,7 @@ class Main():
 # Run application
 if __name__ == "__main__":
     app = Main()
-    app.parseStationInfo()
+    # app.parseStationInfo()
     # app.parseVelocityModel()
     # app.writeNLlocVelocityModel()
     # app.writeNLlocStationFile()
