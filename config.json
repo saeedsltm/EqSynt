@@ -1,16 +1,26 @@
 {
     "/Comment#001": "+++ Define study region",
     "Region": {
-        "LonMin": 50.50,
-        "LonMax": 51.50,
+        "LonMin": 50.00,
+        "LonMax": 54.00,
         "LatMin": 35.00,
-        "LatMax": 36.00
+        "LatMax": 38.00
+    },
+    "TravelTimeGenerator": {
+        "flag": true,
+        "numXGrid": 500,
+        "numZGrid": 70,
+        "velocityXGridIntervals": 1.0,
+        "velocityYGridIntervals": 1.0,
+        "velocityZGridIntervals": 1.0,
+        "decimationFactor": 0
     },
     "/Comment#002": "============================ Full Synthetic Scenario (FSS)",
     "FSS": {
         "flag": true,
         "/Comment#002_01": "+++ Define station coordinate",
         "Station": {
+            "SeedRandomID": 1,
             "StationFile": "",
             "StationBoundLonMin": 51.00,
             "StationBoundLonMax": 52.00,
@@ -18,8 +28,7 @@
             "StationBoundLatMax": 37.00,
             "NumberOfStations": 10,
             "GaussianDistribution": false,
-            "UniformDistribution": true,
-            "FaultDistribution": false
+            "UniformDistribution": true
         },
         "/Comment#002_02": "+++ Define velocity model",
         "Model": {
@@ -34,7 +43,8 @@
                 5.0,
                 5.4,
                 6.0,
-                6.8
+                6.8,
+                8.1
             ],
             "Z": [
                 0.0,
@@ -48,8 +58,8 @@
                 "",
                 "",
                 "",
-                "B",
                 "",
+                "B",
                 "N"
             ],
             "VpVs": 1.75,
@@ -59,13 +69,18 @@
         },
         "/Comment#002_03": "+++ Define catalog of events",
         "Catalog": {
+            "SeedRandomID": 2,
+            "CatalogFile": "",
             "CatalogBoundLonMin": 51.00,
             "CatalogBoundLonMax": 52.00,
             "CatalogBoundLatMin": 36.00,
             "CatalogBoundLatMax": 37.00,
+            "CatalogBoundDepMin": 5.00,
+            "CatalogBoundDepMax": 20.00,
             "NumberOfEvents": 10,
             "GaussianDistribution": false,
-            "UniformDistribution": true
+            "UniformDistribution": true,
+            "FaultDistribution": false
         }
     },
     "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
@@ -93,10 +108,11 @@
             "ThiknesserrorPercentage": 10,
             "MaxDepthToPlot": 20
         },
-        "/Comment#004_03": "+++ How much error (in seconds) add to travel times?",
+        "/Comment#004_03": "+++ How much error (stdDev in seconds) add to travel times?",
         "ErrorOnArrivals": {
-            "P": 0.05,
-            "S": 0.10
+            "P": 1.00,
+            "S": 1.00,
+            "ActivateWeightingBasedOnError": true
         },
         "/Comment#004_04": "+++ How much of phases should be used (in percent)?",
         "UsageOfPhase": {

@@ -1,441 +1,190 @@
- 2017 1210 0725 35.9 L  35.780  50.952 24.4  ABA  3 0.2 3.6LABA                1
- GAP=123        0.40       2.0     1.4  3.0 -0.2934E-01 -0.2291E+01  0.3760E+00E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   0725 42.1                              129   -0.1410 27.9 248 
- MHD  SN ESg  0   0725 47.0                              129    0.0910 27.9 248 
- MHD  SZ E    0   0725 47.22     31295.0 0.24                          27.9 248 
- HSB  BN EPg  0   0725 44.8                              111   -0.11 9 48.0 142 
- DMV  SZ EPg  0   0725 53.4                               91    0.31 7  100 103 
- DMV  SZ E    0   0725 53.98      1915.1 0.28                           100 103 
- DMV  SE ESg  0   0726 6.0                                91    0.32 7  100 103 
- RAZ  SZ EPg  0   0725 53.2                               91   -0.04 7  102 246 
- RAZ  SN ESg  0   0726 6.2                                91    0.26 7  102 246 
- QOM  SZ EPg  0   0725 53.5                               91   -0.10 7  105 174 
- QOM  SN ESg  0   0726 6.5                                91   -0.06 7  105 174 
- VRN  BZ EPg  0   0725 54.8                               91    0.02 7  112 141 
- VRN  BZ E    0   0726 11.22      2003.0 0.28                           112 141 
- JIR1 BZ EPg  0   0726 0.1                                90   -0.02 6  146 315 
- JIR1 BZ E    0   0726 19.66      2511.6 0.24                           146 315 
- FIR  BZ EPg  0   0726 2.7                                90   -0.29 5  164  95 
- FIR  BZ E    0   0726 25.06       784.5 0.32                           164  95 
- ALA  SZ EPg  0   0726 3.7                                90   -0.44 5  171  78 
- ALA  SZ E    0   0726 30.50       890.9 0.36                           171  78 
- LAS  SZ EPg  0   0726 6.6                                90    0.04 4  187 103 
- LAS  SZ E    0   0726 33.68       737.6 0.16                           187 103 
- HAGD BZ EPn  0   0726 9.0                                              196 238 
- HAGD BZ E    0   0726 34.12       454.8 0.24                           196 238 
- SFB  BZ EPg  0   0726 7.7                                90   -0.39 4  197 143 
- SFB  BZ E    0   0726 34.28       662.1 0.36                           197 143 
- QAMS SZ E    0   0726 43.74       792.0 0.24                           230 170 
- KLH  SZ EPn  0   0726 19.1                                             279 168 
- KLH  SZ E    0   0726 54.97       495.4 0.16                           279 168 
+ 2022  612 1620 36.2 L  36.956  51.956  0.0       5 0.0 2.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162036     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ OIXZ    EP   4   162052.154                                           98.8     
+ OIXZ    ES   0   162054.277                                           98.8     
+ VGNX    EP   2   162059.887                                            132     
+ VGNX    ES   2   162058.542                                            132     
+ TYAW    EP   4   162052.107                                           72.2     
+ TYAW    ES   3   162049.214                                           72.2     
+ PAMN    EP   4   162047.188                                           65.6     
+ PAMN    ES   3   162049.988                                           65.6     
+ MZGD    EP   1   162054.790                                           99.9     
+ MZGD    ES   2   162055.007                                           99.9     
                                                                                 
- 2017 1212 1948 54.6 L  35.756  50.953 24.0  ABA  8 0.4 3.8LABA-1.1CABA        1
- GAP= 64        0.62       1.6     1.6  3.3 -0.2045E+00 -0.3171E+00 -0.8354E+00E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   1949 0.7                               131   -0.1910 27.1 253 
- MHD  SN ESg  0   1949 5.5                               131    0.0410 27.1 253 
- MHD  SZ E    0   1949  5.86    513776.0 0.12                          27.1 253 
- TEH  BZ EPg  0   1949 2.7                               119    0.2210 39.4  90 
- TEH  BN ESg  0   1949 8.1                               119   -0.1110 39.4  90 
- HSB  BZ EPg  0   1949 3.5                               115    0.15 9 45.8 140 
- HSB  BE ESg  0   1949 9.3                               115   -0.42 9 45.8 140 
- KLST BZ EPg  0   1949 9.4                               102   -0.14 8 85.2   6 
- MZPU BZ EPg  0   1949 11.2                              100    0.35 8 94.0  36 
- MZPU BE ESg  0   1949 22.6                              100   -0.09 8 94.0  36 
- DMV  SZ EPg  0   1949 11.8                               99    0.01 7 99.6 101 
- DMV  SZ E    0   1949 26.86      5262.7 0.16                          99.6 101 
- RAZ  SZ EPg  0   1949 11.7                               99   -0.19 7  101 248 
- RAZ  SN ESg  0   1949 24.8                               99    0.31 7  101 248 
- QOM  SZ EPg  0   1949 12.1                               99    0.11 7  102 174 
- QOM  SE ESg  0   1949 25.0                               99    0.35 7  102 174 
- QOM  SZ E    0   1949 25.48     12285.8 0.12                           102 174 
- VRN  BZ EPg  0   1949 13.6                               98    0.34 7  110 140 
- VRN  BZ E    0   1949 29.68      6059.4 0.28                           110 140 
- PRN  SZ EPg  0   1949 17.8                               96    0.35 6  136  66 
- PRN  SZ E    0   1949 41.60      3190.4 0.92                           136  66 
- JIR1 BZ EPg  0   1949 19.1                               95   -0.27 6  148 316 
- JIR1 BZ E    0   1949 42.74      8108.7 0.32                           148 316 
- FIR  BZ EPg  4   1949 21.6                               94   -0.32 0  163  94 
- FIR  BZ E    0   1949 43.70      2095.3 0.44                           163  94 
- LHJ2 BZ EPg  0   1949 24.2                               94    0.54 5  176 333 
- QSDN BZ EPg  0   1949 23.8                               94   -0.81 4  180 298 
- LAS  SZ EPn  4   1949 25.4                               51   -1.39 0  186 102 
- LAS  SZ E    0   1949 50.81      1507.4  0.2                           186 102 
- HAGD BZ EPg  0   1949 27.0                               93    0.12 4  195 238 
- HAGD BZ E    0   1949 52.70      1870.8 0.28                           195 238 
- SFB  BZ EPn  0   1949 26.6                               51   -1.19 4  195 143 
- KRSH BN EPn  4   1949 30.7                               51   -1.01 0  226 151 
- QAMS SN EPn  0   1949 30.8                               51   -1.24 3  228 170 
- QAMS SZ E    0   1950  0.12      1317.6 0.44                           228 170 
- ANJ  SZ EPn  4   1949 36.1                               51   -1.21 0  270  96 
- ANJ  SZ E    0   1950 19.26       569.3 0.28                           270  96 
- GLO  SZ E    0   1950 18.46      1295.7 0.56                           272  71 
- KLH  SE EPn  4   1949 37.5                               51   -0.62 0  276 168 
- KLH  SZ E    0   1950 13.49      1308.8  0.2                           276 168 
- ZEF  SZ E    0   1950 40.31       421.3 0.52                           341 158 
- SRB  SZ EPn  4   1949 48.4                               51   -1.75 0  373 309 
- SRB  SZ E    0   1950 45.05       391.4 0.32                           373 309 
- ANAR BZ E    0   1950 47.62       239.2 0.56                           382 137 
- HRS  SZ EPn  4   1949 57.9                               51   -1.84 0  449 310 
- HRS  SZ E    0   1950 14.90       183.9  0.4                           449 310 
+
+ 2022  612 1621 36.2 L  36.948  51.948  0.0       6 0.0 3.0l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162136     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ ESZY    EP   4   162153.198                                            115     
+ ESZY    ES   0   162156.598                                            115     
+ YOPU    EP   1   162156.526                                            115     
+ YOPU    ES   2   162156.252                                            115     
+ TYAW    EP   4   162151.327                                           71.0     
+ TYAW    ES   4   162148.820                                           71.0     
+ CIDP    EP   0   162158.345                                            127     
+ CIDP    ES   4   162156.391                                            127     
+ OIXZ    EP   0   162154.620                                          100.0     
+ OIXZ    ES   4   162152.717                                          100.0     
+ PAMN    EP   4   162147.127                                           64.4     
+ PAMN    ES   4   162151.073                                           64.4     
                                                                                 
- 2017 1218 2246 48.7 L  35.751  50.952 24.2  ABA  4 0.3 3.8LABA-2.2CABA        1
- GAP= 93        0.56       2.5     1.4  3.2 -0.5645E-01 -0.1173E+00 -0.1196E+01E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   2246 54.8                              130   -0.1410 26.8 254 
- MHD  SN ESg  0   2246 59.5                              130   -0.0010 26.8 254 
- MHD  SZ E    0   2246 59.92    215630.0 0.16                          26.8 254 
- TEH  BZ EPg  0   2246 56.5                              117   -0.0710 39.5  90 
- TEH  BN ESg  0   2247 2.5                               117    0.1810 39.5  90 
- HSB  BZ EPg  0   2246 57.7                              112    0.32 9 45.4 140 
- HSB  BE ESg  0   2247 3.2                               112   -0.52 9 45.4 140 
- HSB  BZ E    0   2247  4.28     25980.6 0.08                          45.4 140 
- DMV  SZ EPg  0   2247 6.0                                91    0.17 7 99.6 101 
- DMV  SZ E    0   2247  6.58      3689.2 0.28                          99.6 101 
- RAZ  SZ EPg  0   2247 5.9                                91    0.01 7  100 248 
- RAZ  SE ESg  0   2247 18.6                               91    0.16 7  100 248 
- RAZ  SZ E    0   2247 19.92     13048.6 0.24                           100 248 
- QOM  SZ EPg  0   2247 6.1                                91    0.16 7  101 174 
- QOM  SZ E    0   2247 19.44      7434.2 0.16                           101 174 
- VRN  BZ EPg  4   2247 7.6                                90    0.37 0  109 140 
- VRN  BZ E    0   2247 23.54      7793.3 0.08                           109 140 
- PRN  SZ EPg  0   2247 11.3                               90   -0.14 6  136  66 
- PRN  SZ E    0   2247 32.24      3314.2 0.36                           136  66 
- JIR1 BZ EPg  0   2247 13.1                               90   -0.23 6  148 316 
- FIR  BZ EPg  0   2247 15.5                               90   -0.30 5  164  94 
- FIR  BZ E    0   2247 17.04      1634.7 0.12                           164  94 
- ALA  SZ EPg  0   2247 17.6                               90    0.51 5  172  77 
- ALA  SZ E    0   2247 43.10      2031.3 0.36                           172  77 
- LHJ2 BZ EPg  2   2247 17.9                               90    0.36 2  176 333 
- QSDN BZ EPg  0   2247 17.9                               90   -0.54 4  181 298 
- LAS  SZ EPg  4   2247 19.4                               90    0.11 0  186 102 
- LAS  SZ E    0   2247 44.67      1185.5  0.2                           186 102 
- HAGD BZ EPg  0   2247 21.4                               90    0.82 4  194 239 
- HAGD BZ E    0   2247 46.64      1141.8  0.4                           194 239 
- SFB  BZ EPn  4   2247 20.5                                             195 142 
- SFB  BZ E    0   2247 46.90      1221.4 0.28                           195 142 
- KRSH BN EPn  4   2247 24.9                                             225 151 
- KRSH BN E    0   2247 53.22      2043.6 0.32                           225 151 
- QAMS SZ EPn  0   2247 25.2                                             227 170 
- QAMS SZ E    0   2247 56.34      1345.6 0.24                           227 170 
- ANJ  SZ E    0   2248 10.46       474.2 0.44                           270  96 
- GLO  SZ EPn  4   2247 30.3                                             272  71 
- GLO  SZ E    0   2248 12.42       593.1 0.52                           272  71 
- KLH  SZ EPn  4   2247 31.9                                             276 168 
- KLH  SZ E    0   2248  7.66       768.3 0.32                           276 168 
- ZEF  SZ E    0   2248 34.35       210.1 0.36                           341 158 
- SRB  SZ EPn  4   2247 42.4                                             373 309 
- SRB  SZ E    0   2248 39.08       192.4 0.28                           373 309 
- HRS  SZ E    0   2248  8.93       107.4 0.36                           450 310 
+
+ 2022  612 1622 36.2 L  36.057  51.057  0.0      10 0.0 5.0l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162236     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ YOPU    EP   2   162316.558                                            242     
+ YOPU    ES   3   162316.202                                            242     
+ OIXZ    EP   3   162315.562                                            227     
+ OIXZ    ES   2   162314.268                                            227     
+ HSDK    EP   0   162317.463                                            246     
+ HSDK    ES   4   162316.393                                            246     
+ TYAW    EP   4   162246.422                                           56.1     
+ TYAW    ES   1   162248.230                                           56.1     
+ PAMN    EP   4   162250.863                                           62.7     
+ PAMN    ES   2   162248.484                                           62.7     
+ CIDP    EP   4   162319.909                                            254     
+ CIDP    ES   4   162317.106                                            254     
+ MZGD    EP   4   162241.010                                           28.4     
+ MZGD    ES   4   162241.142                                           28.4     
+ AURM    EP   3   162237.043                                           5.33     
+ AURM    ES   0   162237.994                                           5.33     
+ VGNX    EP   2   162238.274                                           4.03     
+ VGNX    ES   4   162235.903                                           4.03     
+ ESZY    EP   4   162237.804                                           11.1     
+ ESZY    ES   1   162238.452                                           11.1     
                                                                                 
- 2017 1218 2329 38.8 L  35.430  50.787 24.2  ABA  2 0.6 3.7LABA                1
- GAP=115        0.99       6.6     4.5  7.5  0.2649E+01  0.6999E-01  0.1866E+02E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   2329 44.8                              126   -0.6310 30.3 339 
- MHD  SZ E    0   2329 49.92     65638.3 0.08                          30.3 339 
- HSB  BZ EPg  0   2329 47.2                              113   -0.10 9 44.4  89 
- HSB  BZ E    0   2329 47.44     67009.5 0.08                          44.4  89 
- TEH  BZ EPg  0   2329 50.1                              101   -0.34 9 65.2  57 
- TEH  BZ E    0   2330  0.22      6082.2 0.08                          65.2  57 
- RAZ  SZ EPg  0   2329 52.5                               96    0.05 8 77.9 268 
- RAZ  SZ E    0   2329 52.74      4108.1  0.2                          77.9 268 
- DMV  SZ EPg  0   2329 58.3                               90    0.14 7  114  81 
- DMV  SZ E    0   2330 14.14      2085.9 0.28                           114  81 
- HAGD BZ EPg  0   2330 7.0                                90    1.02 5  165 246 
- PRN  SZ E    0   2330 34.16       742.8 0.52                           167  57 
- JIR1 BZ EPg  0   2330 7.1                                90    0.73 5  167 328 
- JIR1 BZ E    0   2330 29.16      1448.8 0.24                           167 328 
- PRN  SZ EPg  0   2330 7.7                                90    1.46 5  167  57 
- SFB  BZ EPg  0   2330 8.1                                90   -0.01 4  179 132 
- FIR  BZ EPg  0   2330 8.9                                90    0.47 4  180  82 
- FIR  BZ E    0   2330 36.16       483.1 0.28                           180  82 
- QSDN BZ EPn  0   2330 9.9                                              188 310 
- QSDN BZ E    0   2330 33.40      2345.5 0.08                           188 310 
- QAMS SZ EPn  0   2330 10.5                                             196 163 
- QAMS SZ E    0   2330 36.86      1584.0 0.24                           196 163 
- ALA  SZ EPn  0   2330 12.0                                             197  68 
- ALA  SZ E    0   2330 37.86       669.0 0.24                           197  68 
- LAS  SZ EPn  0   2330 11.4                                             197  91 
- LAS  SZ E    0   2330 42.88       599.2 0.16                           197  91 
- LHJ2 BZ EPn  0   2330 12.9                                             203 342 
- LHJ2 BZ E    0   2330 41.86      2405.3 0.24                           203 342 
- KRSH BN EPn  0   2330 11.7                                             204 142 
- KRSH BN E    0   2330 40.36       645.0  0.2                           204 142 
- KLH  SZ EPn  0   2330 18.0                                             245 163 
- KLH  SZ E    0   2330 48.37       944.1 0.16                           245 163 
- ZEF  SZ EPn  0   2330 26.6                                             315 153 
- ZEF  SZ E    0   2331  7.93       167.1 0.36                           315 153 
+
+ 2022  612 1623 36.2 L  36.085  51.085  0.0       9 0.0 4.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162336     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ PAMN    EP   2   162348.889                                           58.6     
+ PAMN    ES   1   162347.987                                           58.6     
+ MZGD    EP   0   162341.507                                           24.3     
+ MZGD    ES   1   162341.170                                           24.3     
+ HSDK    EP   1   162416.468                                            242     
+ HSDK    ES   2   162416.270                                            242     
+ VGNX    EP   1   162338.744                                           8.08     
+ VGNX    ES   4   162340.465                                           8.08     
+ YOPU    EP   3   162417.361                                            238     
+ YOPU    ES   3   162417.159                                            238     
+ OIXZ    EP   1   162414.524                                            223     
+ OIXZ    ES   2   162413.474                                            223     
+ ESZY    EP   2   162338.787                                           7.07     
+ ESZY    ES   4   162340.278                                           7.07     
+ CIDP    EP   4   162416.738                                            250     
+ CIDP    ES   2   162418.884                                            250     
+ AURM    EP   3   162338.533                                           1.28     
+ AURM    ES   0   162337.792                                           1.28     
                                                                                 
- 2017 1220 1957 37.1 L  35.674  50.948 24.3  ABA  9 0.4 5.6LABA-2.1CABA        1
- GAP= 67        0.72       2.8     2.5  6.7 -0.5542E+00  0.2580E+00 -0.1837E+01E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   1957 42.5                              132   -0.6510 25.5 273 
- MHD  SE ESg  4   1957 46.4                              132   -1.20 0 25.5 273 
- HSB  BZ EPg  0   1957 44.6                              117   -0.32 9 39.6 131 
- HSB  BN ESg  4   1957 50.2                              117   -0.46 0 39.6 131 
- TEH  BZ EPg  0   1957 44.9                              116   -0.22 9 40.8  78 
- TEH  BN ESg  4   1957 50.5                              116   -0.51 0 40.8  78 
- QOM  SZ EPg  0   1957 53.4                               91    0.41 8 92.9 174 
- QOM  SZ E    0   1958  5.44     2014760 0.36                          92.9 174 
- KLST BZ EPg  0   1957 53.4                               91    0.04 7 94.2   6 
- KLST BZ E    0   1957 54.32    627275.0 0.28                          94.2   6 
- RAZ  SZ EPg  0   1957 54.0                               91    0.26 7 97.1 252 
- RAZ  SN ESg  0   1958 6.1                                91    0.18 7 97.1 252 
- DMV  SZ EPg  0   1957 54.0                               91   -0.06 7 98.8  96 
- MZPU BZ EPg  0   1957 54.5                               91    0.04 7  102  33 
- VRN  BZ EPg  0   1957 54.9                               91    0.26 7  103 137 
- PRN  SZ EPg  0   1958 1.0                                90    0.57 6  140  63 
- PRN  SZ E    0   1958 27.02    492749.0  0.8                           140  63 
- JIR1 BZ EPg  0   1958 2.8                                90    0.18 5  154 318 
- FIR  BZ EPg  4   1958 3.9                                90   -0.26 0  164  91 
- FIR  BZ E    0   1958 26.60    183146.0 0.28                           164  91 
- ALA  SZ EPg  0   1958 6.1                                90    0.26 5  174  74 
- ALA  SZ E    0   1958 34.22    290782.0 0.84                           174  74 
- QSDN BZ EPg  0   1958 7.3                                90   -0.10 4  184 300 
- QSDN BZ E    0   1958 32.12    421744.0 0.44                           184 300 
- LHJ2 BZ EPg  0   1958 8.1                                90    1.03 4  184 335 
- LAS  SZ EPg  4   1958 7.6                                90    0.14 0  185 100 
- LAS  SZ E    0   1958 36.75    183838.0  0.4                           185 100 
- SFB  BZ EPn  0   1958 7.9                                              188 141 
- SFB  BZ E    0   1958 33.96    176111.0 0.48                           188 141 
- HAGD BZ EPg  0   1958 8.6                                90    0.38 4  190 241 
- HAGD BZ E    0   1958 35.18    520493.0 0.36                           190 241 
- KRSH BZ EPn  4   1958 11.6                                             218 150 
- QAMS SZ EPn  4   1958 12.1                                             219 169 
- QAMS SZ E    0   1958 41.88    360362.0 0.28                           219 169 
- CSN1 BZ EPn  4   1958 18.1                                             267 322 
- KLH  SZ EPn  4   1958 18.5                                             268 167 
- KLH  SZ E    0   1958 59.11    127968.0  0.4                           268 167 
- HALM SZ EPn  4   1958 18.8                                             269 251 
- HALM SZ E    0   1959  5.02    131903.0 0.84                           269 251 
- ANJ  SZ EPn  4   1958 18.6                                             270  94 
- ANJ  SZ E    0   1958 54.82    166043.0  0.8                           270  94 
- GLO  SZ EPn  4   1958 20.6                                             275  70 
- GLO  SZ E    0   1959 14.94    175311.0 0.84                           275  70 
- BZA  BZ EPn  4   1958 24.8                                             312 246 
- PIR  SZ EPn  4   1958 28.0                                             332 181 
- PIR  SZ E    0   1959 16.26     97710.5 0.68                           332 181 
- ZEF  SZ EPn  4   1958 27.0                                             333 157 
- ZEF  SZ E    0   1959  9.78     91478.0    1                           333 157 
- GAS1 BZ EPn  4   1958 28.4                                             355 329 
- KOM  BZ EPn  4   1958 30.7                                             355 243 
- KOM  BZ E    0   1959 24.80     88441.7 1.12                           355 243 
- KFM  BZ EPn  4   1958 32.6                                             371 231 
- LIN  BZ EPn  4   1958 32.0                                             372 258 
- LIN  BZ E    0   1959 25.90     65634.2 0.68                           372 258 
- ANAR BZ EPn  4   1958 32.0                                             376 136 
- ANAR BZ E    0   1959 35.90     55547.2  0.8                           376 136 
- GAR  SZ E    0   1959 38.18     29149.3 0.64                           376 164 
- HSH  SZ EPn  4   1958 31.2                                             376 300 
- HSH  SZ E    0   1958 41.55     80850.0 0.44                           376 300 
- GAR  SZ EPn  4   1958 33.4                                             376 164 
- SRB  SZ EPn  4   1958 32.0                                             378 310 
- SRB  SZ E    0   1958 46.47     93255.9 0.92                           378 310 
- JHBN BZ EPn  4   1958 33.9                                             383 184 
- JHBN BZ E    0   1959 42.86     57311.9 0.88                           383 184 
- KCHF BZ EPn  4   1958 34.5                                             389 248 
- KCHF BZ E    0   1959 44.56     52345.9 0.68                           389 248 
- ZNGN BZ EPn  4   1958 35.0                                             395 181 
- BRJ  SZ EPn  4   1958 38.3                                             419 176 
- BRJ  SZ E    0   2000  2.78     31555.9 0.96                           419 176 
- GHG  SZ EPn  4   1958 39.0                                             427 251 
- GHG  SZ E    0   1959 50.06     63042.7 0.84                           427 251 
- DHR  BZ EPn  4   1958 39.0                                             429 257 
- DHR  BZ E    0   1959 56.94     29808.1  1.2                           429 257 
- MND  BZ EPn  4   1958 38.4                                             434  65 
- MND  BZ E    0   1959 47.88     20882.8 0.96                           434  65 
- GRMI BZ EPn  4   1958 39.8                                             441 323 
- GRMI BZ E    0   1959 52.60       -99.0 0.76                           441 323 
- RAM  SZ EPn  4   1958 41.7                                             449 162 
- RAM  SZ E    0   2000  4.12     19755.5 0.84                           449 162 
- HRS  SZ EPn  4   1958 41.1                                             455 311 
- HRS  SZ E    0   1958 57.22     33513.3 0.56                           455 311 
- AMIS BZ EPn  0   1958 44.3                                             471 200 
- AMIS BZ E    0   2000  6.12     32755.6 1.04                           471 200 
- MAHB BZ EPn  4   1958 45.0                                             487 286 
- MAHB BZ E    0   1959  3.30     20715.4  0.6                           487 286 
- SAD  SZ EPn  4   1958 46.8                                             488 148 
- SAD  SZ E    0   2000  5.70     25803.0 0.64                           488 148 
- ILBA BZ EPn  4   1958 44.9                                             490 244 
- ILBA BZ E    0   2000  8.90       -99.0 0.72                           490 244 
- SDS1 BZ EPn  4   1958 47.1                                             496 278 
- AZR  SZ EPn  4   1958 46.6                                             496 298 
- SDS1 BZ E    0   2000 10.38     21285.6 0.84                           496 278 
- AZR  SZ E    0   2000  8.12     51703.6 1.04                           496 298 
- CHK  SZ EPn  4   1958 47.2                                             497 139 
- CHK  SZ E    0   2000 16.03     23924.6 0.68                           497 139 
- KGS1 BZ EPn  4   1958 47.7                                             506 257 
- KGS1 BZ E    0   2000  9.26     21177.8  0.8                           506 257 
- MRVT BZ EPn  4   1958 48.0                                             510  63 
- TBZ  SZ EPn  4   1958 47.3                                             513 305 
- TBZ  SZ E    0   2000 15.59     12621.4 0.64                           513 305 
- KLNJ BZ EPn  4   1958 49.5                                             521 173 
- KLNJ BZ E    0   2000 21.96     20120.3    1                           521 173 
- TNSJ BZ EPn  4   1958 53.0                                             551 109 
- SHB  SZ EPn  4   1958 52.3                                             556 303 
- SHB  SZ E    0   1959 16.03     18848.4 0.56                           556 303 
- MRD  SZ EPn  4   1958 57.2                                             575 307 
- MRD  SZ E    0   2000 31.20     33723.9  0.8                           575 307 
- MEH  SZ EPn  4   1958 57.5                                             584 143 
- MEH  SZ E    0   2000 37.77     18774.1  0.8                           584 143 
- TPRV BZ EPn  4   1959 0.3                                              604 117 
- SBZV BZ EPn  4   1959 0.3                                              606  81 
- TKDS BZ EPn  4   1959 0.7                                              610 110 
- BAF  SZ EPn  4   1959 3.0                                              623 135 
- SHI  BZ EPn  4   1959 10.2                                             685 167 
- MAKU BZ EPn  4   1959 9.5                                              688 308 
- AKL  SZ EPn  4   1959 13.8                                             710  79 
- EMG  SZ EPn  4   1959 15.2                                             716  72 
- PAY  SZ EPn  4   1959 16.6                                             729  81 
- ZRDN BZ EPn  4   1959 17.1                                             737 134 
- TBHD SZ EPn  4   1959 18.9                                             752  90 
- AHRM BN EPn  4   1959 18.3                                             755 179 
- MOG  SZ EPn  4   1959 19.8                                             759  84 
- KRD  SZ EPn  4   1959 22.9                                             780  78 
- AFRZ BZ EPn  4   1959 21.8                                             781 106 
- TEG  SZ EPn  4   1959 22.2                                             781 111 
- KHGB BZ EPn  4   1959 22.7                                             782 137 
- KOO  SZ EPn  4   1959 27.9                                             826 114 
- MYA  SZ EPn  4   1959 30.2                                             828  82 
- TVBK BZ EPn  4   1959 29.5                                             833 138 
- JRKH BZ EPn  4   1959 31.3                                             850  86 
- TBJM BZ EPn  4   1959 30.9                                             852  90 
- BSRN BZ EPn  4   1959 31.7                                             861 116 
- NGRK BZ EPn  4   1959 32.2                                             861 139 
- DAH  SZ EPn  4   1959 34.5                                             884 109 
- SHRT BZ EPn  4   1959 34.8                                             885 102 
- CHMN BZ EPn  4   1959 36.8                                             892 134 
- NHDN BZ EPn  4   1959 46.2                                             969 117 
- KBAM BZ EPn  4   1959 52.7                                            1011 134 
- GENO BZ EPn  4   1959 54.8                                            1042 150 
- KHNJ BZ EPn  4   1959 58.6                                            1068 141 
- ZHDN BZ EPn  4   2000 9.1                                             1157 124 
- JASK BZ EPn  4   2000 23.0                                            1272 147 
+
+ 2022  612 1624 36.2 L  36.835  51.835  0.0       5 0.0 2.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162436     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ MZGD    EP   4   162453.600                                           82.8     
+ MZGD    ES   1   162452.260                                           82.8     
+ ESZY    EP   3   162455.414                                            100     
+ ESZY    ES   0   162454.754                                            100     
+ CIDP    EP   0   1625 1.307                                            143     
+ CIDP    ES   2   1625 0.541                                            143     
+ AURM    EP   2   162456.123                                            105     
+ AURM    ES   4   162456.906                                            105     
+ OIXZ    EP   0   162456.776                                            115     
+ OIXZ    ES   0   162457.195                                            115     
                                                                                 
- 2017 1221 0109 19.6 L  35.669  50.937 18.4  ABA  1 0.2 3.8LABA                1
- GAP=112        0.35       1.8     1.5  4.6  0.9156E+00 -0.1359E+01 -0.4308E+01E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   0109 24.9                              125   -0.0510 24.5 274 
- MHD  SZ E    0   0109 30.70     58840.0 0.04                          24.5 274 
- HSB  BZ EPg  0   0109 27.2                              110    0.10 9 40.0 130 
- HSB  BN ESg  0   0109 32.6                              110    0.00 9 40.0 130 
- HSB  BZ E    0   0109 32.86     27043.6 0.04                          40.0 130 
- TEH  BZ EPg  0   0109 27.4                              109   -0.02 9 41.9  77 
- TEH  BZ E    0   0109 35.92      5423.4 0.24                          41.9  77 
- KLST BZ EPg  0   0109 35.8                               94   -0.08 7 94.9   7 
- KLST BZ E    0   0109 47.76      2486.2 0.32                          94.9   7 
- RAZ  SZ EPg  0   0109 36.1                               94    0.11 7 96.0 253 
- RAZ  SZ E    0   0109 37.28      4610.1 0.12                          96.0 253 
- DMV  SZ EPg  0   0109 36.7                               93    0.06 7 99.7  96 
- DMV  SZ E    0   0109 55.44      1837.7 0.24                          99.7  96 
- MZPU BZ EPg  0   0109 37.2                               93    0.13 7  103  33 
- MZPU BZ E    0   0109 50.68      1295.0 0.44                           103  33 
- FIR  BZ EPg  0   0109 46.8                               91   -0.19 5  165  91 
- FIR  BZ E    0   0110  9.66      1470.8  0.2                           165  91 
- SFB  BZ EPg  0   0109 50.1                               91   -0.58 4  188 140 
+
+ 2022  612 1625 36.2 L  36.736  51.736  0.0       6 0.0 3.0l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162536     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ YOPU    EP   1   1626 1.282                                            146     
+ YOPU    ES   4   1626 2.671                                            146     
+ ESZY    EP   1   162552.145                                           85.8     
+ ESZY    ES   4   162553.782                                           85.8     
+ AURM    EP   0   162553.294                                           91.6     
+ AURM    ES   0   162553.348                                           91.6     
+ VGNX    EP   0   162554.828                                            100     
+ VGNX    ES   4   162555.926                                            100     
+ PAMN    EP   1   162543.332                                           34.3     
+ PAMN    ES   1   162543.349                                           34.3     
+ HSDK    EP   1   1626 2.488                                            149     
+ HSDK    ES   0   1626 1.946                                            149     
                                                                                 
- 2017 1226 2124 33.6 L  35.683  50.925 22.7  ABA 10 0.5 4.7LABA-2.9CABA        1
- GAP= 61        0.76       2.1     2.7  4.9  0.2452E+00 -0.6622E+01  0.5589E-01E
- Iranian Seismological Center, Institute of Geophysics, University of Tehran   6
- STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO SNR AR TRES  W DIS CAZ7
- MHD  SZ EPg  0   2124 39.1                              134   -0.1410 23.3 271 
- MHD  SN ESg  0   2124 42.9                              134   -0.4710 23.3 271 
- HSB  BZ EPg  0   2124 41.3                              116   -0.33 9 41.9 130 
- TEH  BZ EPg  0   2124 41.6                              115   -0.19 9 42.7  80 
- QOM  SZ EPg  0   2124 49.9                               98    0.23 7 94.1 172 
- QOM  SN ESg  0   2125 1.6                                98    0.18 7 94.1 172 
- QOM  SZ E    0   2125  2.10    187274.0 0.28                          94.1 172 
- RAZ  SZ EPg  0   2124 50.4                               99    0.44 7 95.4 251 
- RAZ  SZ E    0   2125  3.72    120912.0 0.24                          95.4 251 
- DMV  SZ EPg  0   2124 51.0                               98    0.10 7  101  96 
- DMV  SZ E    0   2125  4.98     76805.3  0.2                           101  96 
- MZPU BZ EPg  0   2124 51.4                               98    0.37 7  102  34 
- MZPU BE ESg  0   2125 3.7                                98   -0.07 7  102  34 
- VRN  BZ EPg  0   2124 51.6                               97    0.11 7  106 136 
- VRN  BN ESg  0   2125 4.8                                97    0.22 7  106 136 
- PRN  SZ EPg  0   2124 57.7                               94    0.42 6  142  64 
- PRN  SZ E    0   2125 23.60     38544.1  0.8                           142  64 
- JIR1 BZ EPg  0   2124 59.6                               94    0.66 5  152 319 
- FIR  BE EPg  4   2125 0.9                                94   -0.29 0  166  91 
- FIR  BZ E    0   2125 24.10     46904.8  0.2                           166  91 
- ALA  SZ EPg  0   2125 3.0                                93    0.15 4  176  75 
- ALA  SZ E    0   2125 31.26     40260.6 0.24                           176  75 
- LHJ2 BZ EPg  0   2125 4.7                                93    1.14 4  182 335 
- QSDN BZ EPn  0   2125 3.9                                51   -1.49 4  182 301 
- LAS  SZ EPg  4   2125 4.8                                93    0.21 0  188 100 
- HAGD BZ EPg  0   2125 5.1                                93    0.32 4  188 240 
- LAS  SZ E    0   2125 28.75     31839.2 0.24                           188 100 
- HAGD BZ E    0   2125 31.10     16701.4 0.24                           188 240 
- SFB  BZ EPg  4   2125 4.7                                93   -0.30 0  190 140 
- SFB  BZ E    0   2125 30.82     22986.5 0.24                           190 140 
- QAMS SZ EPn  4   2125 8.9                                51   -1.27 0  220 169 
- KRSH BZ EPn  0   2125 8.9                                51   -1.16 3  220 149 
- QAMS SZ E    0   2125 39.72     26706.0  0.4                           220 169 
- KIA  SZ EPn  0   2125 13.6                               51   -0.99 2  256  76 
- KIA  SZ E    0   2125 19.76      8276.6 0.28                           256  76 
- CSN1 BZ EPn  4   2125 14.7                               51   -0.79 0  265 322 
- HALM SZ EPn  4   2125 15.8                               51   -0.23 0  267 251 
- HALM SZ E    0   2125 21.00     11529.9  0.2                           267 251 
- HSAM BZ EPn  0   2125 15.9                               51   -0.21 1  268 233 
- HSAM BZ E    0   2125 55.36      9253.2 0.64                           268 233 
- KLH  SZ EPn  4   2125 15.6                               51   -0.67 0  269 167 
- KLH  SZ E    0   2125 49.66     18491.9  0.2                           269 167 
- ANJ  SZ EPn  4   2125 15.9                               51   -0.70 0  272  94 
- ANJ  SZ E    0   2125 53.51     13639.9  0.4                           272  94 
- GLO  SZ E    0   2125 21.76     10010.4 0.64                           277  70 
- BZA  BZ EPn  4   2125 21.8                               51    0.38 0  310 245 
- PIR  SE EPn  4   2125 25.0                               51    0.73 0  333 181 
- PIR  SZ E    0   2126  8.92      4220.6 0.28                           333 181 
- ZEF  SZ EPn  4   2125 24.0                               51   -0.53 0  335 157 
- ZEF  SZ E    0   2126 15.51      3909.6 0.32                           335 157 
- GAS1 BZ EPn  4   2125 25.4                               51   -1.02 0  353 329 
- KOM  BZ EPn  4   2125 26.7                               51   -0.07 0  354 243 
- KOM  BZ E    0   2126 21.04      3504.0 1.08                           354 243 
- KFM  BZ E    0   2126 31.50      6616.8 1.04                           370 231 
- LIN  BZ EPn  4   2125 29.0                               51    0.11 0  370 258 
- KFM  BZ EPn  0   2125 28.3                               51   -0.53 0  370 231 
- HSH  SZ EPn  4   2125 28.0                               51   -1.39 0  374 300 
- HSH  SZ E    0   2126 35.84      3892.6 0.56                           374 300 
- SRB  SZ EPn  4   2125 28.8                               51   -0.79 0  376 310 
- SRB  SZ E    0   2126 24.39      4473.8 0.32                           376 310 
- JHBN BZ EPn  4   2125 31.3                               51    0.65 0  384 184 
- JHBN BZ E    0   2126 28.46      3524.9 0.48                           384 184 
- KCHF BZ EPn  4   2125 30.7                               51   -0.31 0  388 247 
- KCHF BZ E    0   2125 43.92      2543.1 0.64                           388 247 
- ZNGN BZ EPn  4   2125 31.8                               51   -0.34 0  396 181 
- GHG  SZ EPn  4   2125 35.5                               51   -0.25 0  425 251 
- GHG  SZ E    0   2126  3.10      2954.0 0.76                           425 251 
- DHR  BZ EPn  4   2125 35.8                               51   -0.21 0  427 257 
- DHR  BZ E    0   2125 49.60      2147.9  0.4                           427 257 
- GRMI BZ EPn  4   2125 36.7                               51   -0.67 0  439 323 
- RAM  SZ EPn  4   2125 39.2                               51    0.30 0  450 162 
- HRS  SZ EPn  4   2125 38.7                               51   -0.51 0  453 311 
- HRS  SZ E    0   2126  2.86      2002.2  0.4                           453 311 
- AMIS BZ EPn  0   2125 40.4                               51   -0.84 0  471 199 
- ILBA BN EPn  4   2125 42.4                               51   -1.16 0  489 244 
- SAD  SZ E    0   2125 46.98      1491.4 0.32                           490 148 
- AZR  SZ EPn  4   2125 43.9                               51   -0.49 0  494 298 
- AZR  SZ E    0   2127  2.80      1879.4 0.68                           494 298 
- CHK  SE EPn  4   2125 44.4                               51   -0.52 0  499 139 
- CHK  SZ E    0   2127 12.98      1785.2  0.4                           499 139 
- KGS1 BZ EPn  4   2125 44.7                               51   -0.64 0  504 257 
- MRVT BZ EPn  4   2125 45.4                               51   -0.94 0  511  63 
- KLNJ BZ EPn  4   2125 47.1                               51   -0.86 0  522 173 
- SHB  SZ E    0   2127 10.76      1103.0 0.32                           553 303 
- MRD  SZ E    0   2127 27.48      2517.7 0.92                           573 308 
- MEH  SZ EPn  4   2125 54.9                               51   -1.01 0  586 143 
- MEH  SZ E    0   2127 38.38       722.4 0.68                           586 143 
- TPRV BZ EPn  4   2125 56.6                               51   -1.64 0  606 117 
- BAF  SZ EPn  4   2125 59.5                               51   -1.22 0  626 135 
- AFRZ BZ EPn  4   2126 19.1                               51   -1.35 0  783 106 
- KOO  SZ EPn  4   2126 24.9                               51   -1.26 0  828 114 
- TBJM BZ EPn  4   2126 27.6                               51   -1.78 0  854  90 
- BSRN BZ EPn  4   2126 28.9                               51   -1.56 0  863 116 
+
+ 2022  612 1626 36.2 L  36.670  51.670  0.0       8 0.0 4.0l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162636     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ CIDP    EP   2   1627 4.229                                            167     
+ CIDP    ES   0   1627 4.732                                            167     
+ ESZY    EP   2   162651.861                                           76.4     
+ ESZY    ES   0   162650.918                                           76.4     
+ HSDK    EP   3   1627 2.738                                            158     
+ HSDK    ES   2   1627 2.913                                            158     
+ OIXZ    EP   4   1627 1.973                                            139     
+ OIXZ    ES   0   1627 0.847                                            139     
+ VGNX    EP   0   162653.838                                           91.5     
+ VGNX    ES   1   162653.885                                           91.5     
+ PAMN    EP   2   162642.641                                           24.8     
+ PAMN    ES   0   162642.185                                           24.8     
+ MZGD    EP   4   162649.377                                           59.2     
+ MZGD    ES   3   162649.012                                           59.2     
+ TYAW    EP   4   162640.324                                           31.4     
+ TYAW    ES   0   162643.036                                           31.4     
                                                                                 
+
+ 2022  612 1627 36.2 L  36.308  51.308  0.0       3 0.0 1.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162736     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ MZGD    EP   1   162739.130                                           7.59     
+ MZGD    ES   0   162738.946                                           7.59     
+ VGNX    EP   0   162744.908                                           40.0     
+ VGNX    ES   4   162746.421                                           40.0     
+ HSDK    EP   2   162811.147                                            210     
+ HSDK    ES   2   162811.156                                            210     
+                                                                                
+
+ 2022  612 1628 36.2 L  36.606  51.606  0.0       9 0.0 4.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162836     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ PAMN    EP   1   162840.093                                           15.7     
+ PAMN    ES   0   162840.488                                           15.7     
+ AURM    EP   0   162850.800                                           73.1     
+ AURM    ES   0   162850.759                                           73.1     
+ ESZY    EP   0   162849.667                                           67.3     
+ ESZY    ES   1   162849.194                                           67.3     
+ CIDP    EP   4   1629 7.703                                            176     
+ CIDP    ES   0   1629 6.460                                            176     
+ HSDK    EP   4   1629 3.820                                            168     
+ HSDK    ES   1   1629 5.361                                            168     
+ MZGD    EP   4   162845.390                                           50.1     
+ MZGD    ES   4   162847.538                                           50.1     
+ VGNX    EP   0   162852.246                                           82.5     
+ VGNX    ES   2   162851.516                                           82.5     
+ TYAW    EP   1   162841.922                                           22.3     
+ TYAW    ES   3   162840.570                                           22.3     
+ YOPU    EP   4   1629 5.815                                            164     
+ YOPU    ES   0   1629 4.668                                            164     
+                                                                                
+
+ 2022  612 1629 36.2 L  36.607  51.607  0.0       9 0.0 4.5l                   1
+ Action:ARG 22-06-12 20:49 OP:OBSP STATUS:               ID:20220612162936     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ AURM    EP   2   162950.025                                           73.2     
+ AURM    ES   2   162950.131                                           73.2     
+ YOPU    EP   3   1630 5.431                                            164     
+ YOPU    ES   0   1630 4.372                                            164     
+ CIDP    EP   4   1630 7.724                                            176     
+ CIDP    ES   0   1630 6.396                                            176     
+ TYAW    EP   2   162942.267                                           22.4     
+ TYAW    ES   2   162942.086                                           22.4     
+ MZGD    EP   3   162947.326                                           50.2     
+ MZGD    ES   4   162945.262                                           50.2     
+ VGNX    EP   4   162953.312                                           82.6     
+ VGNX    ES   0   162952.329                                           82.6     
+ ESZY    EP   3   162948.710                                           67.4     
+ ESZY    ES   2   162950.300                                           67.4     
+ PAMN    EP   1   162940.884                                           15.9     
+ PAMN    ES   4   162941.826                                           15.9     
+ OIXZ    EP   2   1630 2.865                                            148     
+ OIXZ    ES   1   1630 2.499                                            148     
+                                                                                
+
