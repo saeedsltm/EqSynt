@@ -1,0 +1,1209 @@
+ Input File: select_weighted.out                     
+
+ 
+ Reset test(  2)=  500.0000
+ Reset test(  7)=   -3.0000
+ Reset test(  8)=    2.6000
+ Reset test(  9)=    0.0010
+ Reset test( 11)=   99.0000
+ Reset test( 13)=    5.0000
+ Reset test( 34)=    1.5000
+ Reset test( 35)=    2.5000
+ Reset test( 36)=    0.0000
+ Reset test( 41)=20000.0000
+ Reset test( 43)=    5.0000
+ Reset test( 51)=    3.6000
+ Reset test( 50)=    1.0000
+ Reset test( 56)=    1.0000
+ Reset test( 58)=99990.0000
+ Reset test( 40)=    0.0000
+ Reset test( 60)=    0.0000
+ Reset test( 71)=    1.0000
+ Reset test( 75)=    1.0000
+ Reset test( 76)=    0.9100
+ Reset test( 77)=    0.0009
+ Reset test( 78)=   -1.6700
+ Reset test( 79)=    1.0000
+ Reset test( 80)=    3.0000
+ Reset test( 81)=    1.0000
+ Reset test( 82)=    1.0000
+ Reset test( 83)=    1.0000
+ Reset test( 88)=    1.0000
+ Reset test( 85)=    0.1000
+ Reset test( 91)=    0.1000
+    
+ ESZY 3648.390N 5330.820E    0  0.00 0.00
+ CIDP 3639.640N 5249.980E    0  0.00 0.00
+ YOPU 3516.330N 5216.420E    0  0.00 0.00
+ MZGD 3645.560N 5333.110E    0  0.00 0.00
+ PAMN 3655.270N 52 6.050E    0  0.00 0.00
+ TYAW 3520.910N 5227.740E    0  0.00 0.00
+ OIXZ 3652.710N 5253.880E    0  0.00 0.00
+ HSDK 3639.130N 5221.510E    0  0.00 0.00
+ AURM 3643.340N 5256.730E    0  0.00 0.00
+ VGNX 3611.060N 52 0.800E    0  0.00 0.00
+
+     --------- HYPOCENTER Version 4.0  1998 -----------
+
+
+
+ Maximum elev. station: ESZY    3648.39N  5330.82E   elevation =     0 m
+
+
+ Trial depth = 10.00  Vp/Vs =  1.75
+
+ Velocity Model
+
+ Depth, km   Vp, km/s   Vs, km/s
+      0.00       4.50       2.57    
+      4.00       5.00       2.86    
+     10.00       5.40       3.09    
+     18.00       6.00       3.43    
+     26.00       6.80       3.89   B
+     56.00       8.10       4.63   N
+
+ EVENT #      1
+
+ 2020  1 1  0 1 40.0 L  35.972  51.792 19.3       9 0.0 4.5l                   1
+
+   First arrival: VGNX 2020  1 1    0  1 47.91
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.27   52.12    5.39
+Starting location   10.0 km from closest station and rms    36.09   52.12    2.87
+Starting location   10.0 km from closest station and rms    36.27   51.90    4.72
+Starting location   10.0 km from closest station and rms    36.09   51.90    2.48
+Starting location   50.0 km from closest station and rms    36.63   52.57   14.14
+Starting location   50.0 km from closest station and rms    35.73   52.57    6.89
+Starting location   50.0 km from closest station and rms    36.63   51.46    8.05
+Starting location   50.0 km from closest station and rms    35.73   51.46    3.74
+Starting location  150.0 km from closest station and rms    37.54   53.68   24.76
+Starting location  150.0 km from closest station and rms    34.83   53.68   10.75
+Starting location  150.0 km from closest station and rms    37.54   50.35   13.19
+Starting location  150.0 km from closest station and rms    34.83   50.35   10.58
+
+ maximum multi-station phase: P          7
+
+
+   9 multiple-phase stations
+
+        VGNX  P -S         54.6 km
+        YOPU  P -S        114.6 km
+        HSDK  P -S        160.7 km
+        TYAW  P -S        125.2 km
+        PAMN  P -S        142.7 km
+        CIDP  P -S        166.1 km
+        OIXZ  P -S        205.4 km
+        ESZY  P -S        251.5 km
+        MZGD  P -S        221.8 km
+
+ Starting location from 2 distances:   35.86   51.43
+ rms =     2.56
+ Starting location from 2 distances:   36.08   52.61
+ rms =     9.40
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    41.02 36 5.65N  5154.13E  10.0  11  2   2.55   0.005   0.0   0.0   0.0
+    2    39.19 3557.98N  5149.33E  10.0  11  2   0.92   0.005  27.5  10.9   0.0
+    3    39.32 3557.45N  5150.37E  10.0  11  2   0.89   0.005   9.3   3.6   0.0
+    4    39.38 3557.45N  5150.66E  10.0  11  2   0.89   0.005   9.1   3.4   0.0
+    4    39.39 3557.45N  5150.73E  10.0  11  2   0.89   0.005   9.1   3.3   0.0
+ depth freed: icd=   3
+    5    39.47 3556.76N  5143.02E  27.1  11  3   0.68   0.005  19.2   4.2  19.2
+    6    38.77 3558.17N  5146.65E  10.7  11  3   0.94   0.010   9.5   4.2  40.6
+    7    40.00 3557.54N  5146.29E  23.9  11  3   0.38   0.007  13.0   4.6  12.8
+    8    40.17 3558.03N  5147.51E  22.6  11  3   0.31   0.005   5.2   2.2   4.8
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  0 1 40.17 3558.03N  51 47.5E  22.6   11 3   0.31 0.000  4.4  1.9  4.2  3
+
+ Origin time error:       0.50
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.13      0.14      0.37      0.43      0.10      0.15
+
+ Resolution matrix: k =      0.005
+
+                             Long     Lat   Depth
+                     Long   0.994   0.001   0.002
+                      Lat   0.001   0.995  -0.002
+                    Depth   0.002  -0.002   0.994
+
+ Azimuthal Gap in Station Coverage 224 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ VGNX    31  39.6115.6 3 P   3   PG       0 1 47.9   7.74   7.35   0.40 0.26  3
+ VGNX    31  39.6115.6 2 S   2   SG       0 1 53.0  12.80  12.85  -0.05 0.52 28
+ YOPU    89 150.3 61.9 1 P   1   PN5      0 1 56.3  16.18  16.30  -0.12 0.76*10
+ YOPU    89 150.3 61.9 4 S   4   SN5      0 2  7.0  26.79  28.53  -1.74 0.00  0
+ HSDK    91  33.6 61.9 0 P   0   PN5      0 1 56.9  16.73  16.72   0.01 1.00* 4
+ HSDK    91  33.6 61.9 4 S   4   SN5      0 2 11.8  31.62  29.27   2.35 0.00  0
+ TYAW    92 138.3 61.9 2 P   2   PN5      0 1 57.8  17.59  16.75   0.84 0.50* 3
+ TYAW    92 138.3 61.9 1 S   1   SN5      0 2  9.3  29.18  29.31  -0.13 0.75*16
+ PAMN   109  14.6 61.9 0 P   0   PN5      0 1 59.6  19.42  19.36   0.06 0.96*13
+ PAMN   109  14.6 61.9 4 S   4   SN5      0 2 12.8  32.63  33.89  -1.25 0.00  0
+ CIDP   121  50.2 61.9 1 P   1   PN5      0 2  0.8  20.66  21.08  -0.43 0.70* 0
+ CIDP   121  50.2 61.9 4 S   4   SN5      0 2 16.2  36.04  36.89  -0.86 0.00  0
+ OIXZ   142  44.1 61.9 4 P   4   PN5      0 2  2.4  22.24  24.10  -1.87 0.00  0
+ OIXZ   142  44.1 61.9 4 S   4   SN5      0 2 21.4  41.26  42.18  -0.93 0.00  0
+ ESZY   180  58.4 61.9 3 P   3   PN5      0 2  9.2  29.02  29.80  -0.78 0.20* 0
+ ESZY   180  58.4 61.9 0 S   0   SN5      0 2 32.5  52.32  52.15   0.16 0.78*11
+ MZGD   181  60.4 61.9 0 S   0   SN5      0 2 32.4  52.24  52.25  -0.00 0.78*11
+ MZGD   181  60.4 61.9 4 P   4   PN5      0 2 11.9  31.71  29.86   1.85 0.00  0
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.2 sec dx=    -0.0 km dy=    -0.5 km dz=     3.3 km drms=  0.31
+
+ unweighted rms =     1.06
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      2
+
+ 2020  1 1  0 3 20.0 L  36.820  50.932 19.2       5 0.0 2.5l                   1
+
+   First arrival: VGNX 2020  1 1    0  3 41.22
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.27   52.12    5.35
+Starting location   10.0 km from closest station and rms    36.09   52.12    6.45
+Starting location   10.0 km from closest station and rms    36.27   51.90    4.48
+Starting location   10.0 km from closest station and rms    36.09   51.90    5.88
+Starting location   50.0 km from closest station and rms    36.63   52.57   11.37
+Starting location   50.0 km from closest station and rms    35.73   52.57    9.54
+Starting location   50.0 km from closest station and rms    36.63   51.46    2.24
+Starting location   50.0 km from closest station and rms    35.73   51.46    6.33
+Starting location  150.0 km from closest station and rms    37.54   53.68   16.68
+Starting location  150.0 km from closest station and rms    34.83   53.68   16.13
+Starting location  150.0 km from closest station and rms    37.54   50.35    3.79
+Starting location  150.0 km from closest station and rms    34.83   50.35   11.90
+
+ maximum multi-station phase: P          3
+
+
+   5 multiple-phase stations
+
+        PAMN  P -S        177.9 km
+        VGNX  P -S        158.2 km
+        CIDP  P -S        242.3 km
+        ESZY  P -S        323.6 km
+        MZGD  P -S        288.7 km
+
+ Starting location from 2 distances:   36.13   50.26
+ rms =     5.27
+ Starting location from 2 distances:   35.86   53.76
+ rms =    17.24
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    28.22 3638.09N  5127.46E  10.0   6  2   2.20   0.005   2.9   1.2   0.0
+    2    18.87 3645.44N  5055.98E  10.0   6  2   0.55   0.005  61.3  30.5   0.0
+    3    19.06 3650.67N  5057.28E  10.0   6  2   0.23   0.005  17.9  17.5   0.0
+    4    19.12 3650.64N  5057.50E  10.0   6  2   0.23   0.320   3.3   3.8   0.0
+ depth freed: icd=   3
+    5    19.20 3650.47N  5057.59E  10.3   6  3   0.24   0.427   2.5   5.4   3.3
+    6    19.19 3650.48N  5057.53E  10.4   6  3   0.24   0.284   2.3   4.9   3.6
+    7    19.19 3650.49N  5057.45E  10.5   6  3   0.24   0.190   2.6   5.6   4.2
+    8    19.19 3650.52N  5057.33E  10.7   6  3   0.24   0.126   3.0   6.3   4.7
+    9    19.19 3650.56N  5057.17E  11.1   6  3   0.24   0.084   3.7   6.8   5.4
+   10    19.19 3650.61N  5056.93E  11.5   6  3   0.24   0.056   4.7   7.3   6.3
+   11    19.19 3650.68N  5056.62E  12.1   6  3   0.23   0.037   6.3   7.6   7.7
+   12    19.19 3650.78N  5056.21E  12.9   6  3   0.23   0.025   8.5   8.0   9.8
+   13    19.19 3651.02N  5055.18E  14.9   6  3   0.23   0.006  23.8   9.8  24.9
+   14    19.19 3651.18N  5054.45E  16.3   6  3   0.23   0.005  27.1  10.4  28.2
+   15    19.19 3651.28N  5054.03E  17.1   6  3   0.23   0.005  26.9  10.4  28.1
+   16    19.19 3651.33N  5053.78E  17.5   6  3   0.23   0.005  26.9  10.5  28.1
+   17    19.19 3651.36N  5053.64E  17.8   6  3   0.23   0.005  26.8  10.5  28.0
+   18    19.19 3651.38N  5053.55E  18.0   6  3   0.23   0.005  26.8  10.5  28.0
+   19    19.19 3651.40N  5053.50E  18.1   6  3   0.23   0.005  26.8  10.5  28.0
+   20    19.18 3651.40N  5053.47E  18.1   6  3   0.23   0.005  26.8  10.5  28.0
+   21    19.19 3651.41N  5053.46E  18.2   6  3   0.23   0.010  26.8  10.5  40.2
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  0 3 19.18 3651.40N  50 53.5E  18.1    6 3   0.23 0.000 73.6 19.2109.3  3
+
+ Origin time error:       0.43
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.18      0.13      0.08      0.06      0.06      0.06
+
+ Resolution matrix: k =      0.010
+
+                             Long     Lat   Depth
+                     Long   0.559   0.090   0.372
+                      Lat   0.090   0.965  -0.065
+                    Depth   0.372  -0.065   0.668
+
+ Azimuthal Gap in Station Coverage 320 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ PAMN   108  85.8 61.9 4 P   4   PN5      0 3 36.8  17.64  19.52  -1.87 0.00  0
+ PAMN   108  85.8 61.9 0 S   0   SN5      0 3 53.3  34.11  34.15  -0.04 1.00*22
+ VGNX   125 126.3 61.9 0 P   0   PN5      0 3 41.2  22.04  22.03   0.01 0.96*24
+ VGNX   125 126.3 61.9 4 S   4   SN5      0 3 55.9  36.69  38.56  -1.87 0.00  0
+ CIDP   175  96.6 61.9 1 P   1   PN5      0 3 48.1  28.94  29.32  -0.38 0.62*12
+ CIDP   175  96.6 61.9 1 S   1   SN5      0 4 10.6  51.37  51.31   0.06 0.62*28
+ ESZY   234  90.6 61.9 4 P   4   PN5      0 3 56.3  37.16  38.04  -0.88 0.00  0
+ ESZY   234  90.6 61.9 3 S   3   SN5      0 4 26.3  67.12  66.56   0.56 0.17* 1
+ MZGD   238  91.8 61.9 0 P   0   PN5      0 3 58.1  38.90  38.57   0.32 0.67*14
+ MZGD   238  91.8 61.9 4 S   4   SN5      0 4 24.8  65.64  67.51  -1.87 0.00  0
+      
+
+ Difference from previous solution:
+
+ dorigin=    -0.8 sec dx=    -3.6 km dy=     4.1 km dz=    -1.1 km drms=  0.23
+
+ unweighted rms =     1.09
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      3
+
+ 2020  1 1  0 5  0.0 L  35.579  51.103  5.8       3 0.0 1.5l                   1
+
+   First arrival: VGNX 2020  1 1    0  5 20.32
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.27   52.12    7.06
+Starting location   10.0 km from closest station and rms    36.09   52.12    5.64
+Starting location   10.0 km from closest station and rms    36.27   51.90    7.52
+Starting location   10.0 km from closest station and rms    36.09   51.90    6.29
+Starting location   50.0 km from closest station and rms    36.63   52.57   10.28
+Starting location   50.0 km from closest station and rms    35.73   52.57    7.20
+Starting location   50.0 km from closest station and rms    36.63   51.46    7.60
+Starting location   50.0 km from closest station and rms    35.73   51.46    1.75
+Starting location  150.0 km from closest station and rms    37.54   53.68   14.65
+Starting location  150.0 km from closest station and rms    34.83   53.68    9.55
+Starting location  150.0 km from closest station and rms    37.54   50.35   12.65
+Starting location  150.0 km from closest station and rms    34.83   50.35    4.76
+
+ maximum multi-station phase: P          2
+
+
+   3 multiple-phase stations
+
+        VGNX  P -S        164.4 km
+        TYAW  P -S        194.3 km
+        CIDP  P -S        251.7 km
+
+ Starting location from 2 distances:   35.41   50.34
+ rms =     4.06
+ Starting location from 2 distances:   36.60   53.69
+ rms =    12.13
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1     6.73 3544.03N  5127.46E  10.0   4  2   1.79   0.005   4.2   2.6   0.0
+    2     0.83 3536.47N  51 7.67E  10.0   4  2   0.48   0.005  40.9  19.3   0.0
+    3     0.22 3534.65N  51 6.07E  10.0   4  2   0.44   0.005  15.4  11.4   0.0
+    3     0.21 3534.62N  51 6.08E  10.0   4  2   0.44   0.005  14.6  11.2   0.0
+ depth freed: icd=   3
+    4     0.07 3533.86N  51 2.38E  15.7   4  3   0.45   0.010  15.2  12.7  14.2
+    5     0.17 3533.59N  51 1.15E  19.2   4  3   0.44   0.007   9.3  13.1  12.1
+    6     0.21 3533.28N  5059.69E  23.6   4  3   0.44   0.005   9.4  13.3  17.4
+    7     0.18 3533.07N  5058.67E  26.3   4  3   0.44   0.010   8.4  13.5  16.3
+    8    59.53 3533.07N  5058.67E  18.6   4  3   0.51 218.453   0.1   0.1  33.4
+    9    59.54 3533.06N  5058.69E  18.7   4  3   0.51 145.636   0.1   0.1   0.2
+   10    59.55 3533.06N  5058.71E  18.8   4  3   0.51  97.090   0.2   0.1   0.3
+   11    59.57 3533.05N  5058.75E  18.9   4  3   0.50  64.727   0.3   0.2   0.4
+   12    59.59 3533.04N  5058.80E  19.0   4  3   0.50  43.151   0.4   0.3   0.6
+   13    59.62 3533.03N  5058.87E  19.3   4  3   0.49  28.768   0.5   0.5   0.9
+   14    59.67 3533.01N  5058.97E  19.6   4  3   0.48  19.178   0.8   0.7   1.2
+   15    59.73 3533.00N  5059.10E  20.0   4  3   0.47  12.786   1.1   1.0   1.8
+   16    59.80 3532.99N  5059.25E  20.4   4  3   0.46   8.524   1.5   1.4   2.5
+   17    59.88 3532.99N  5059.42E  21.0   4  3   0.45   5.682   2.0   2.0   3.3
+   18    59.97 3533.01N  5059.58E  21.5   4  3   0.45   3.788   2.7   2.7   4.4
+   19     0.05 3533.06N  5059.72E  22.0   4  3   0.44   2.526   3.4   3.6   5.7
+   20     0.11 3533.13N  5059.82E  22.4   4  3   0.44   1.684   4.1   4.7   7.0
+   21     0.16 3533.21N  5059.87E  22.7   4  3   0.44   1.122   4.8   6.0   8.5
+   22     0.19 3533.26N  5059.89E  22.9   4  3   0.44   0.748   5.5   7.3   9.8
+   23     0.20 3533.30N  5059.89E  23.0   4  3   0.44   0.499   6.0   8.6  11.1
+   24     0.21 3533.31N  5059.88E  23.1   4  3   0.44   0.333   6.5   9.8  12.2
+   25     0.21 3533.31N  5059.85E  23.1   4  3   0.44   0.222   6.8  10.8  13.1
+   26     0.21 3533.30N  5059.82E  23.2   4  3   0.44   0.148   7.0  11.6  13.7
+   27     0.21 3533.29N  5059.76E  23.4   4  3   0.44   0.099   7.2  12.2  14.2
+   28     0.21 3533.28N  5059.68E  23.6   4  3   0.44   0.066   7.3  12.6  14.6
+   29     0.21 3533.21N  5059.37E  24.4   4  3   0.44   0.016   7.6  13.3  15.3
+   30     0.13 3533.02N  5058.45E  26.9   4  3   0.44   0.010   8.3  13.6  16.1
+   31    59.14 3533.02N  5058.46E  15.7   4  3   0.59  54.613   0.5   0.5  44.5
+   32    59.19 3533.00N  5058.57E  15.9   4  3   0.58  36.409   0.5   0.4   0.5
+   33    59.25 3532.97N  5058.71E  16.3   4  3   0.56  24.273   0.7   0.6   0.8
+   34    59.34 3532.94N  5058.90E  16.7   4  3   0.54  16.182   1.0   0.9   1.1
+   35    59.45 3532.91N  5059.14E  17.2   4  3   0.52  10.788   1.3   1.2   1.5
+   36    59.58 3532.90N  5059.42E  17.8   4  3   0.49   7.192   1.8   1.7   2.0
+   37    59.70 3532.91N  5059.71E  18.5   4  3   0.47   4.795   2.4   2.3   2.7
+   38    59.85 3532.96N  5059.98E  19.4   4  3   0.46   3.196   3.0   3.1   5.0
+   39    59.98 3533.05N  51 0.20E  20.2   4  3   0.45   2.131   3.7   4.1   6.3
+   40     0.08 3533.17N  51 0.33E  20.8   4  3   0.44   1.421   4.4   5.2   7.7
+   41     0.15 3533.29N  51 0.40E  21.2   4  3   0.44   0.947   5.1   6.5   9.1
+   42     0.19 3533.37N  51 0.43E  21.4   4  3   0.44   0.631   5.7   7.8  10.4
+   43     0.20 3533.41N  51 0.43E  21.5   4  3   0.44   0.421   6.2   9.0  11.6
+   44     0.21 3533.42N  51 0.41E  21.6   4  3   0.44   0.281   6.6  10.1  12.6
+   45     0.21 3533.42N  51 0.37E  21.7   4  3   0.44   0.187   6.9  11.0  13.4
+   46     0.21 3533.41N  51 0.32E  21.9   4  3   0.44   0.125   7.1  11.7  14.0
+   47     0.21 3533.40N  51 0.25E  22.1   4  3   0.44   0.083   7.3  12.3  14.4
+   48     0.21 3533.37N  51 0.14E  22.4   4  3   0.44   0.055   7.4  12.7  14.8
+   49     0.21 3533.34N  5059.98E  22.8   4  3   0.44   0.037   7.5  12.9  15.0
+   50     0.21 3533.29N  5059.75E  23.4   4  3   0.44   0.025   7.5  13.1  15.2
+   51     0.21 3533.22N  5059.43E  24.3   4  3   0.44   0.016   7.6  13.3  15.3
+   52     0.21 3533.13N  5059.00E  25.4   4  3   0.44   0.011   7.7  13.5  15.4
+   53     0.07 3532.97N  5058.21E  27.5   4  3   0.44   0.010   8.1  13.6  15.9
+   54    59.59 3532.97N  5058.22E  20.5   4  3   0.50  54.613   0.5   0.5  25.8
+   55    59.62 3532.95N  5058.28E  20.7   4  3   0.49  36.409   0.4   0.4   0.7
+   56    59.66 3532.94N  5058.37E  20.9   4  3   0.49  24.273   0.6   0.6   1.0
+   57    59.70 3532.92N  5058.48E  21.3   4  3   0.48  16.182   0.9   0.8   1.4
+   58    59.77 3532.91N  5058.61E  21.7   4  3   0.47  10.788   1.3   1.2   2.0
+   59    59.84 3532.90N  5058.77E  22.2   4  3   0.46   7.192   1.7   1.6   2.8
+   60    59.93 3532.90N  5058.94E  22.8   4  3   0.45   4.795   2.3   2.3   3.8
+   61     0.01 3532.93N  5059.09E  23.3   4  3   0.44   3.196   3.0   3.1   4.9
+   62     0.08 3532.99N  5059.21E  23.7   4  3   0.44   2.131   3.7   4.1   6.2
+   63     0.14 3533.06N  5059.29E  24.1   4  3   0.44   1.421   4.4   5.3   7.6
+   64     0.17 3533.12N  5059.33E  24.3   4  3   0.44   0.947   5.1   6.6   9.1
+   65     0.20 3533.17N  5059.34E  24.4   4  3   0.44   0.631   5.7   7.9  10.4
+   66     0.21 3533.19N  5059.33E  24.5   4  3   0.44   0.421   6.2   9.2  11.6
+   67     0.21 3533.20N  5059.32E  24.6   4  3   0.44   0.281   6.6  10.3  12.6
+   68     0.21 3533.19N  5059.30E  24.6   4  3   0.44   0.187   6.9  11.2  13.3
+   69     0.21 3533.19N  5059.26E  24.7   4  3   0.44   0.125   7.1  11.9  13.9
+   70     0.21 3533.18N  5059.21E  24.9   4  3   0.44   0.083   7.3  12.4  14.4
+   71     0.21 3533.16N  5059.13E  25.1   4  3   0.44   0.055   7.4  12.8  14.7
+   72     0.21 3533.14N  5059.02E  25.4   4  3   0.44   0.037   7.5  13.1  14.9
+   73     0.16 3533.05N  5058.58E  26.5   4  3   0.44   0.018   7.7  13.6  15.4
+   74    59.32 3533.05N  5058.59E  16.9   4  3   0.55 100.908   0.3   0.3  40.7
+   75    59.34 3533.04N  5058.63E  17.0   4  3   0.55  67.272   0.3   0.2   0.3
+   76    59.37 3533.02N  5058.70E  17.2   4  3   0.54  44.848   0.4   0.3   0.4
+   77    59.41 3533.01N  5058.80E  17.4   4  3   0.53  29.899   0.5   0.5   0.6
+   78    59.47 3532.98N  5058.93E  17.6   4  3   0.52  19.932   0.8   0.7   0.9
+   79    59.55 3532.96N  5059.10E  18.0   4  3   0.50  13.288   1.1   1.0   1.2
+   80    59.63 3532.95N  5059.30E  18.5   4  3   0.49   8.859   1.5   1.4   1.7
+   81    59.74 3532.94N  5059.54E  19.2   4  3   0.47   5.906   2.0   1.9   3.3
+   82    59.86 3532.97N  5059.77E  20.0   4  3   0.45   3.937   2.6   2.6   4.4
+   83    59.98 3533.03N  5059.97E  20.7   4  3   0.45   2.625   3.3   3.5   5.6
+   84     0.07 3533.13N  51 0.11E  21.3   4  3   0.44   1.750   4.1   4.6   6.9
+   85     0.14 3533.23N  51 0.19E  21.7   4  3   0.44   1.167   4.8   5.8   8.3
+   86     0.18 3533.31N  51 0.22E  21.9   4  3   0.44   0.778   5.4   7.2   9.7
+   87     0.20 3533.36N  51 0.23E  22.1   4  3   0.44   0.518   6.0   8.4  11.0
+   88     0.21 3533.38N  51 0.21E  22.1   4  3   0.44   0.346   6.4   9.6  12.1
+   89     0.21 3533.38N  51 0.19E  22.2   4  3   0.44   0.230   6.8  10.6  13.0
+   90     0.21 3533.37N  51 0.15E  22.3   4  3   0.44   0.154   7.0  11.4  13.7
+   91     0.21 3533.36N  51 0.09E  22.5   4  3   0.44   0.102   7.2  12.1  14.2
+   92     0.21 3533.35N  51 0.01E  22.7   4  3   0.44   0.068   7.3  12.5  14.6
+   93     0.21 3533.32N  5059.88E  23.1   4  3   0.44   0.046   7.4  12.8  14.9
+   94     0.21 3533.28N  5059.70E  23.5   4  3   0.44   0.030   7.5  13.1  15.1
+   95     0.21 3533.23N  5059.45E  24.2   4  3   0.44   0.020   7.6  13.3  15.2
+   96     0.21 3533.15N  5059.10E  25.2   4  3   0.44   0.013   7.6  13.4  15.3
+   97     0.17 3533.06N  5058.64E  26.4   4  3   0.44   0.018   7.8  13.6  15.5
+   98     0.18 3533.06N  5058.64E  26.2   4  3   0.443142.711   0.0   0.0   0.9
+
+ ******* Maximum Iterations Exceeded
+
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  0 5  0.21 3533.14N  50 59.0E  25.4    4 3   0.44 0.000 42.1 22.0999.9  5
+
+ Origin time error:       0.42
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.07      0.11      0.10      0.09      0.00      0.04
+
+ Resolution matrix: k =   3142.711
+
+                             Long     Lat   Depth
+                     Long   0.000  -0.000  -0.000
+                      Lat  -0.000   0.000  -0.000
+                    Depth  -0.000  -0.000   0.000
+
+ Azimuthal Gap in Station Coverage 314 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ VGNX   116  52.7 61.9 1 P   1   PN5      0 5 20.3  20.11  20.19  -0.08 0.68* 7
+ VGNX   116  52.7 61.9 3 S   3   SN5      0 5 35.5  35.33  35.33   0.00 0.23*30
+ TYAW   136  99.1 61.9 4 P   4   PN5      0 5 22.6  22.39  23.08  -0.69 0.00  0
+ TYAW   136  99.1 61.9 3 S   3   SN5      0 5 40.6  40.38  40.38  -0.00 0.21*31
+ CIDP   207  53.0 61.9 4 S   4   SN5      0 5 58.2  57.99  58.63  -0.64 0.00  0
+ CIDP   207  53.0 61.9 3 P   3   PN5      0 5 34.9  34.68  33.50   1.18 0.17*32
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.2 sec dx=   -10.8 km dy=    -3.0 km dz=    19.6 km drms=  0.44
+
+ unweighted rms =     0.62
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      4
+
+ 2020  1 1  0 6 40.0 L  35.377  52.251  6.3       6 0.0 3.0l                   1
+
+   First arrival: YOPU 2020  1 1    0  6 42.81
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    35.36   52.38    1.06
+Starting location   10.0 km from closest station and rms    35.18   52.38    1.76
+Starting location   10.0 km from closest station and rms    35.36   52.16    0.59
+Starting location   10.0 km from closest station and rms    35.18   52.16    1.76
+Starting location   50.0 km from closest station and rms    35.72   52.82   10.20
+Starting location   50.0 km from closest station and rms    34.82   52.82    4.55
+Starting location   50.0 km from closest station and rms    35.72   51.72    8.50
+Starting location   50.0 km from closest station and rms    34.82   51.72    3.92
+Starting location  150.0 km from closest station and rms    36.62   53.92   27.64
+Starting location  150.0 km from closest station and rms    33.92   53.92   11.50
+Starting location  150.0 km from closest station and rms    36.62   50.63   15.82
+Starting location  150.0 km from closest station and rms    33.92   50.63   10.40
+
+ maximum multi-station phase: S          6
+
+
+   6 multiple-phase stations
+
+        YOPU  P -S         31.5 km
+        VGNX  P -S        148.1 km
+        HSDK  P -S        197.0 km
+        AURM  P -S        214.5 km
+        PAMN  P -S        228.4 km
+        MZGD  P -S        269.7 km
+
+ Starting location from 2 distances:   34.81   52.35
+ rms =     2.47
+ Starting location from 2 distances:   34.70   52.38
+ rms =     2.98
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    39.74 3521.74N  52 9.83E  10.0  10  2   0.57   0.005   0.0   0.0   0.0
+    2    39.98 3521.46N  5213.30E  10.0  10  2   0.34   0.005   8.4   3.0   0.0
+    3    39.97 3521.37N  5213.54E  10.0  10  2   0.34   0.320   3.3   1.0   0.0
+ depth freed: icd=   3
+    4    39.97 3521.33N  5213.65E  10.0  10  3   0.34   0.427   4.2   0.7   0.8
+    5    40.16 3521.34N  5213.62E  10.0  10  3   0.43   0.569   4.0   0.7   0.8
+    6    39.79 3520.89N  5213.49E   9.2  10  3   0.48   0.759   5.5   1.0   1.0
+    7    39.92 3521.22N  5213.40E   9.9  10  3   0.36   0.506   4.4   0.8   0.9
+    8    39.94 3521.27N  5213.43E  10.0  10  3   0.35   1.348   2.1   0.4   0.5
+    9    39.99 3521.45N  5213.62E  10.0  10  2   0.34   0.020   3.1   1.4   0.0
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  0 6 39.99 3521.45N  52 13.6E  10.0   10 3   0.34 0.000 13.5 20.1 20.7  3
+
+ Origin time error:       0.55
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.10      0.16      0.60      0.55      0.43      0.48
+
+ Resolution matrix: k =      0.020
+
+                             Long     Lat   Depth
+                     Long   0.958  -0.080   0.070
+                      Lat  -0.080   0.546   0.418
+                    Depth   0.070   0.418   0.585
+
+ Azimuthal Gap in Station Coverage 192 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ YOPU    10 155.8131.7 0 P   0   PG       0 6 42.8   2.82   3.01  -0.19 1.00 16
+ YOPU    10 155.8131.7 2 S   2   SG       0 6 45.7   5.73   5.26   0.47 0.50 13
+ VGNX    94 348.2 56.4 1 P   1   PN4      0 6 58.0  18.02  18.17  -0.14 0.72* 6
+ VGNX    94 348.2 56.4 1 S   1   SN4      0 7 11.7  31.74  31.79  -0.06 0.72*22
+ HSDK   144   4.7 47.3 4 P   4   PN5      0 7  7.0  27.00  25.73   1.26 0.00  0
+ HSDK   144   4.7 47.3 0 S   0   SN5      0 7 25.2  45.24  45.03   0.20 0.84* 7
+ AURM   165  22.9 47.3 4 P   4   PN5      0 7 10.7  30.71  28.76   1.96 0.00  0
+ AURM   165  22.9 47.3 0 S   0   SN5      0 7 30.6  50.58  50.32   0.25 0.79*12
+ PAMN   174 356.3 47.3 2 P   2   PN5      0 7 10.9  30.88  30.11   0.77 0.38* 8
+ PAMN   174 356.3 47.3 3 S   3   SN5      0 7 32.0  52.03  52.69  -0.66 0.19* 2
+ MZGD   196  37.1 47.3 1 P   1   PN5      0 7 13.0  33.03  33.37  -0.34 0.54* 4
+ MZGD   196  37.1 47.3 1 S   1   SN5      0 7 38.0  58.00  58.40  -0.40 0.54*11
+      
+
+ Difference from previous solution:
+
+ dorigin=    -0.0 sec dx=    -2.2 km dy=    -2.2 km dz=     3.7 km drms=  0.34
+
+ unweighted rms =     0.77
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      5
+
+ 2020  1 1  0 8 20.0 L  35.545  51.471 17.5       6 0.0 3.0l                   1
+
+   First arrival: PAMN 2020  1 1    0  8 48.56
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    37.01   52.21    8.45
+Starting location   10.0 km from closest station and rms    36.83   52.21    8.41
+Starting location   10.0 km from closest station and rms    37.01   51.99    8.99
+Starting location   10.0 km from closest station and rms    36.83   51.99    8.88
+Starting location   50.0 km from closest station and rms    37.37   52.66    6.26
+Starting location   50.0 km from closest station and rms    36.47   52.66    8.26
+Starting location   50.0 km from closest station and rms    37.37   51.54    5.78
+Starting location   50.0 km from closest station and rms    36.47   51.54    5.23
+Starting location  150.0 km from closest station and rms    38.27   53.78    8.29
+Starting location  150.0 km from closest station and rms    35.57   53.78   10.54
+Starting location  150.0 km from closest station and rms    38.27   50.42    5.74
+Starting location  150.0 km from closest station and rms    35.57   50.42    4.43
+
+ maximum multi-station phase: P          5
+
+
+   6 multiple-phase stations
+
+        PAMN  P -S        218.2 km
+        CIDP  P -S        210.9 km
+        AURM  P -S        253.7 km
+        OIXZ  P -S        254.7 km
+        MZGD  P -S        311.0 km
+        ESZY  P -S        323.6 km
+
+ Starting location from 2 distances:   34.79   51.75
+ rms =     3.36
+ Starting location from 2 distances:   38.25   53.67
+ rms =     7.67
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    11.45 3458.48N  5145.27E  10.0  10  2   3.39   0.005   0.7   0.2   0.0
+    2    19.68 3532.89N  5131.73E  10.0  10  2   0.47   0.005  81.5  45.9   0.0
+    3    20.46 3534.83N  5132.96E  10.0  10  2   0.39   0.005   7.5   5.8   0.0
+    3    20.46 3534.85N  5132.97E  10.0  10  2   0.39   0.005   6.3   4.9   0.0
+ depth freed: icd=   3
+    4    20.47 3535.93N  5133.91E   7.5  10  3   0.39   0.005  20.0  22.3  27.4
+    5    20.49 3536.67N  5134.54E   5.8  10  3   0.39   0.005  20.0  22.3  27.5
+    6    20.49 3537.16N  5134.96E   4.6  10  3   0.39   0.005  20.0  22.3  27.5
+    7    20.49 3537.48N  5135.24E   3.9  10  3   0.39   0.005  20.0  22.4  27.5
+    8    20.50 3537.70N  5135.42E   3.5  10  3   0.39   0.005  20.0  22.4  22.4
+    9    20.50 3537.83N  5135.54E   3.3  10  3   0.39   0.005  20.0  22.4  22.4
+   10    20.50 3537.92N  5135.61E   3.1  10  3   0.39   0.005  20.0  22.4  22.4
+   11    20.51 3537.98N  5135.66E   3.0  10  3   0.39   0.005  20.0  22.4  22.4
+   12    20.51 3538.02N  5135.70E   2.9  10  3   0.39   0.005  20.0  22.4  22.4
+   13    20.51 3538.04N  5135.72E   2.9  10  3   0.39   0.005  20.0  22.4  22.4
+   14    20.51 3538.06N  5135.73E   2.8  10  2   0.39   0.005  20.0  22.4   0.0
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  0 8 20.51 3538.06N  51 35.7E   2.8   10 3   0.39 0.000 51.7 59.8 60.4  3
+
+ Origin time error:       0.46
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.04      0.10      0.07      0.09      0.06      0.06
+
+ Resolution matrix: k =      0.005
+
+                             Long     Lat   Depth
+                     Long   0.899  -0.139   0.176
+                      Lat  -0.139   0.790   0.258
+                    Depth   0.176   0.258   0.670
+
+ Azimuthal Gap in Station Coverage 323 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ PAMN   150  17.5 41.4 3 P   3   PN5      0 8 48.6  28.05  27.58   0.47 0.27* 2
+ PAMN   150  17.5 41.4 1 S   1   SN5      0 9  8.8  48.25  48.26  -0.00 0.80*27
+ CIDP   159  44.0 41.4 4 P   4   PN5      0 8 50.9  30.36  28.97   1.40 0.00  0
+ CIDP   159  44.0 41.4 3 S   3   SN5      0 9 10.4  49.89  50.69  -0.80 0.26* 2
+ AURM   171  44.8 41.4 0 P   0   PN5      0 8 51.3  30.78  30.72   0.06 1.00* 8
+ AURM   171  44.8 41.4 1 S   1   SN5      0 9 14.8  54.28  53.77   0.51 0.75*13
+ OIXZ   181  39.9 41.4 0 P   0   PN5      0 8 52.5  32.04  32.16  -0.12 0.97* 8
+ OIXZ   181  39.9 41.4 2 S   2   SN5      0 9 16.1  55.63  56.28  -0.65 0.49*10
+ MZGD   216  54.1 41.4 3 P   3   PN5      0 8 56.8  36.32  37.27  -0.95 0.22* 1
+ MZGD   216  54.1 41.4 0 S   0   SN5      0 9 25.6  65.12  65.22  -0.10 0.86*25
+ ESZY   216  52.4 41.4 2 P   2   PN5      0 8 58.2  37.65  37.31   0.34 0.43* 4
+ ESZY   216  52.4 41.4 4 S   4   SN5      0 9 28.1  67.61  65.29   2.32 0.00  0
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.5 sec dx=    11.3 km dy=     9.9 km dz=   -14.7 km drms=  0.39
+
+ unweighted rms =     0.91
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      6
+
+ 2020  1 1  010  0.0 L  37.146  52.276 16.0       7 0.0 3.5l                   1
+
+   First arrival: HSDK 2020  1 1    0 10 11.42
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.74   52.47    2.79
+Starting location   10.0 km from closest station and rms    36.56   52.47    3.94
+Starting location   10.0 km from closest station and rms    36.74   52.25    3.85
+Starting location   10.0 km from closest station and rms    36.56   52.25    5.29
+Starting location   50.0 km from closest station and rms    37.10   52.92    5.97
+Starting location   50.0 km from closest station and rms    36.20   52.92    7.71
+Starting location   50.0 km from closest station and rms    37.10   51.80    3.76
+Starting location   50.0 km from closest station and rms    36.20   51.80   10.96
+Starting location  150.0 km from closest station and rms    38.00   54.04    9.62
+Starting location  150.0 km from closest station and rms    35.30   54.04   16.06
+Starting location  150.0 km from closest station and rms    38.00   50.68   10.11
+Starting location  150.0 km from closest station and rms    35.30   50.68   19.60
+
+ maximum multi-station phase: P          6
+
+
+   7 multiple-phase stations
+
+        HSDK  P -S         83.8 km
+        OIXZ  P -S         94.5 km
+        AURM  P -S        128.7 km
+        CIDP  P -S        108.5 km
+        ESZY  P -S        179.4 km
+        MZGD  P -S        203.6 km
+        TYAW  P -S        261.9 km
+
+ Starting location from 2 distances:   35.84   52.88
+ rms =    10.64
+ Starting location from 2 distances:   37.17   52.02
+ rms =     2.28
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    52.42 3721.39N  52 1.08E  10.0  12  2   2.28   0.005   6.1   4.8   0.0
+    2    59.97 3710.18N  5220.17E  10.0  12  2   0.84   0.005  26.9  28.4   0.0
+    3    59.45 37 9.67N  5217.10E  10.0  12  2   0.66   0.005   6.3   8.4   0.0
+    3    59.50 37 9.44N  5217.03E  10.0  12  2   0.65   0.005   5.1   6.7   0.0
+ depth freed: icd=   3
+    4    59.80 37 9.83N  5215.94E  20.0  12  3   0.39   0.005   6.2   7.8   9.8
+    5     0.26 37 8.59N  5216.50E  19.8  12  3   0.35   0.005   3.8   5.1   5.1
+    6     0.26 37 8.58N  5216.52E  19.8  12  2   0.35   0.005   3.5   4.7   0.0
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  010  0.26 37 8.58N  52 16.5E  19.8   12 3   0.35 0.000  3.5  4.7  4.8  3
+
+ Origin time error:       0.61
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.21      0.23      0.14      0.10      0.09      0.05
+
+ Resolution matrix: k =      0.005
+
+                             Long     Lat   Depth
+                     Long   0.994   0.002   0.000
+                      Lat   0.002   0.994   0.001
+                    Depth   0.000   0.001   0.993
+
+ Azimuthal Gap in Station Coverage 293 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ HSDK    55 172.2 94.2 0 P   0   PG       010 11.4  11.15  11.07   0.08 1.00 12
+ HSDK    55 172.2 94.2 2 S   2   SG       010 19.2  18.91  19.37  -0.46 0.50  9
+ OIXZ    63 117.7 93.2 2 P   2   PG       010 13.2  12.95  12.36   0.59 0.50  3
+ OIXZ    63 117.7 93.2 0 S   0   SG       010 22.0  21.70  21.63   0.07 1.00  9
+ CIDP    73 137.0 92.4 0 P   0   PG       010 14.3  14.05  14.08  -0.03 1.00  4
+ CIDP    73 137.0 92.4 2 S   2   SG       010 24.4  24.10  24.63  -0.54 0.50  3
+ AURM    76 127.8 92.3 2 P   2   PG       010 14.0  13.70  14.54  -0.83 0.50* 2
+ AURM    76 127.8 92.3 0 S   0   SG       010 25.9  25.62  25.44   0.18 1.00* 9
+ ESZY   116 108.3 61.9 4 P   4   PN5      010 19.7  19.42  20.61  -1.19 0.00  0
+ ESZY   116 108.3 61.9 1 S   1   SN5      010 36.3  36.03  36.07  -0.04 0.68*17
+ MZGD   121 110.1 61.9 1 P   1   PN5      010 21.3  21.00  21.34  -0.34 0.67* 9
+ MZGD   121 110.1 61.9 4 S   4   SN5      010 40.1  39.86  37.35   2.50 0.00  0
+ TYAW   200 175.1 61.9 1 S   1   SN5      010 57.9  57.62  57.53   0.09 0.53*18
+ TYAW   200 175.1 61.9 1 P   1   PN5      010 33.6  33.38  32.87   0.50 0.53* 5
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.3 sec dx=    -0.1 km dy=    -0.3 km dz=     3.8 km drms=  0.35
+
+ unweighted rms =     0.83
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      7
+
+ 2020  1 1  011 40.0 L  35.441  52.021 15.0       4 0.0 2.0l                   1
+
+   First arrival: VGNX 2020  1 1    0 11 55.21
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.27   52.12    5.53
+Starting location   10.0 km from closest station and rms    36.09   52.12    5.03
+Starting location   10.0 km from closest station and rms    36.27   51.90    6.53
+Starting location   10.0 km from closest station and rms    36.09   51.90    6.15
+Starting location   50.0 km from closest station and rms    36.63   52.57   11.56
+Starting location   50.0 km from closest station and rms    35.73   52.57    4.19
+Starting location   50.0 km from closest station and rms    36.63   51.46    8.67
+Starting location   50.0 km from closest station and rms    35.73   51.46    3.70
+Starting location  150.0 km from closest station and rms    37.54   53.68   24.31
+Starting location  150.0 km from closest station and rms    34.83   53.68   12.95
+Starting location  150.0 km from closest station and rms    37.54   50.35   10.65
+Starting location  150.0 km from closest station and rms    34.83   50.35    7.04
+
+ maximum multi-station phase: P          3
+
+
+   4 multiple-phase stations
+
+        VGNX  P -S        136.2 km
+        HSDK  P -S        198.5 km
+        PAMN  P -S        206.6 km
+        ESZY  P -S        276.0 km
+
+ Starting location from 2 distances:   34.94   51.25
+ rms =     3.47
+ Starting location from 2 distances:   34.93   51.25
+ rms =     3.52
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    25.78 35 7.57N  5115.01E  10.0   6  2   3.34   0.005   2.9   3.9   0.0
+    2    34.28 3512.27N  5216.54E  10.0   6  2   2.92   0.005 115.0  45.7   0.0
+    3    39.09 3526.72N  5158.53E  10.0   6  2   0.48   0.005  45.9  53.9   0.0
+    4    38.98 3525.99N  52 1.06E  10.0   6  2   0.39   0.005  10.2   6.4   0.0
+    4    39.04 3526.11N  52 1.18E  10.0   6  2   0.39   0.005   7.3   4.9   0.0
+ depth freed: icd=   3
+    5    39.19 3524.99N  5158.35E  15.9   6  3   0.32   0.005  11.7   6.6   9.0
+    6    39.22 3524.08N  5157.76E  19.5   6  3   0.32   0.005  10.7   7.7  12.5
+    7    39.17 3522.12N  5156.86E  26.9   6  3   0.31   0.005   6.6   8.8  17.6
+    8    39.39 3522.43N  5156.87E  38.0   6  3   0.54   0.160   6.3   5.5 243.7
+    9    39.28 3522.97N  5153.75E  35.8   6  3   0.29   0.107  11.1   8.9   5.3
+   10    39.23 3523.08N  5152.60E  36.6   6  3   0.29   0.027  13.7   5.3   7.9
+   11    39.21 3523.23N  5151.75E  37.5   6  3   0.28   0.007  26.3   6.8  15.3
+   12    39.22 3523.23N  5151.79E  37.4   6  3   0.28   0.010  27.1   7.2  15.5
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  011 39.21 3523.23N  51 51.8E  37.5    6 3   0.28 0.000 34.5  8.3 19.8  3
+
+ Origin time error:       0.41
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.08      0.08      0.13      0.16      0.19      0.17
+
+ Resolution matrix: k =      0.010
+
+                             Long     Lat   Depth
+                     Long   0.857   0.041   0.164
+                      Lat   0.041   0.968  -0.062
+                    Depth   0.164  -0.062   0.792
+
+ Azimuthal Gap in Station Coverage 324 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ VGNX    89   8.7101.6 2 P   2   PG       011 55.2  15.99  16.34  -0.35 0.50*11
+ VGNX    89   8.7101.6 0 S   0   SG       012  7.8  28.61  28.60   0.01 1.00*18
+ HSDK   147  17.5 95.8 3 P   3   PG       012  5.0  25.78  24.76   1.02 0.21* 2
+ HSDK   147  17.5 95.8 4 S   4   SG       012 23.4  44.16  43.33   0.83 0.00  0
+ PAMN   172   7.1 94.8 4 P   4   PG       012  9.7  30.47  28.31   2.16 0.00  0
+ PAMN   172   7.1 94.8 1 S   1   SG       012 28.8  49.60  49.54   0.06 0.60*28
+ ESZY   217  42.9 57.1 0 P   0   PN6      012 13.6  34.40  34.30   0.10 0.69*17
+ ESZY   217  42.9 57.1 0 S   0   SN6      012 39.2  59.95  60.02  -0.07 0.69*24
+      
+
+ Difference from previous solution:
+
+ dorigin=    -0.8 sec dx=   -14.4 km dy=    -6.0 km dz=    22.5 km drms=  0.28
+
+ unweighted rms =     0.91
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      8
+
+ 2020  1 1  013 20.0 L  35.702  52.270  9.6       8 0.0 4.0l                   1
+
+   First arrival: VGNX 2020  1 1    0 13 30.92
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    35.36   52.38    6.00
+Starting location   10.0 km from closest station and rms    35.18   52.38    7.46
+Starting location   10.0 km from closest station and rms    35.36   52.16    6.08
+Starting location   10.0 km from closest station and rms    35.18   52.16    7.56
+Starting location   50.0 km from closest station and rms    35.72   52.82    6.33
+Starting location   50.0 km from closest station and rms    34.82   52.82    7.55
+Starting location   50.0 km from closest station and rms    35.72   51.72    3.55
+Starting location   50.0 km from closest station and rms    34.82   51.72    7.14
+Starting location  150.0 km from closest station and rms    36.62   53.92   27.39
+Starting location  150.0 km from closest station and rms    33.92   53.92   13.20
+Starting location  150.0 km from closest station and rms    36.62   50.63   11.99
+Starting location  150.0 km from closest station and rms    33.92   50.63   11.23
+
+ maximum multi-station phase: S          7
+
+
+   8 multiple-phase stations
+
+        VGNX  P -S        100.2 km
+        YOPU  P -S         72.3 km
+        HSDK  P -S        190.5 km
+        AURM  P -S        189.8 km
+        PAMN  P -S        199.3 km
+        OIXZ  P -S        198.2 km
+        MZGD  P -S        229.4 km
+        ESZY  P -S        232.6 km
+
+ Starting location from 2 distances:   35.20   51.49
+ rms =     4.60
+ Starting location from 2 distances:   35.47   52.92
+ rms =     6.97
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    15.25 3543.37N  5143.45E  10.0  11  2   3.55   0.005   5.7   2.7   0.0
+    2    20.44 3542.87N  5215.91E  10.0  11  2   0.37   0.005  59.9  17.8   0.0
+    3    20.32 3542.51N  5215.57E  10.0  11  2   0.34   0.005   2.8   1.2   0.0
+    3    20.32 3542.51N  5215.57E  10.0  11  2   0.34   0.005   2.6   1.1   0.0
+ depth freed: icd=   3
+    4    19.85 3542.72N  5216.21E   6.9  11  3   0.31   0.005   4.0   1.6   6.8
+    5    19.76 3543.04N  5216.56E   5.6  11  3   0.29   0.005   4.7   3.2   7.9
+    6    19.60 3543.29N  5217.54E   3.7  11  3   0.28   0.005   4.7   1.6   4.4
+    7    19.93 3543.07N  5216.83E   6.5  11  3   0.33   0.010   3.1   1.3   4.8
+    8    19.76 3543.02N  5216.53E   5.7  11  3   0.30   0.007   4.8   3.2   8.1
+    9    19.60 3543.29N  5217.55E   3.7  11  3   0.28   0.005   4.7   1.6   4.4
+   10    19.93 3543.07N  5216.83E   6.5  11  3   0.33   0.010   3.1   1.3   4.8
+   11    19.76 3543.02N  5216.53E   5.7  11  3   0.30   0.007   4.8   3.2   8.1
+   12    19.60 3543.29N  5217.55E   3.7  11  3   0.28   0.005   4.7   1.6   4.4
+   13    19.93 3543.07N  5216.83E   6.5  11  3   0.33   0.010   3.1   1.3   4.8
+   14    19.76 3543.02N  5216.53E   5.7  11  3   0.30   0.007   4.8   3.2   8.1
+   15    19.60 3543.29N  5217.55E   3.7  11  3   0.28   0.005   4.7   1.6   4.4
+   16    19.64 3543.28N  5217.52E   3.9  11  3   0.28   5.120   0.4   0.2   0.5
+   17    19.71 3543.25N  5217.42E   4.5  11  3   0.28   2.560   1.0   0.5   1.3
+   18    19.67 3543.23N  5217.35E   4.3  11  3   0.28   1.707   0.8   0.4   0.6
+   19    19.65 3543.23N  5217.33E   4.2  11  3   0.27   1.138   1.0   0.5   0.8
+   20    20.11 3543.23N  5217.35E   4.1  11  3   0.28   0.569   1.8   0.8   1.6
+   21    20.05 3543.14N  5217.05E   4.0  11  3   0.26   0.379   1.7   0.8   2.3
+   22    19.60 3543.08N  5216.87E   4.4  11  3   0.28   0.190   2.3   1.0   3.4
+   23    19.65 3543.20N  5217.24E   4.2  11  3   0.27   0.126   2.6   1.1   2.4
+   24    20.10 3543.24N  5217.37E   4.0  11  3   0.28   0.169   2.9   1.1   2.7
+   25    19.59 3543.10N  5216.93E   4.2  11  3   0.28   0.225   2.4   1.0   3.5
+   26    19.64 3543.20N  5217.25E   4.2  11  3   0.27   0.150   2.4   1.0   2.2
+   27    19.64 3543.22N  5217.31E   4.1  11  3   0.27   0.400   1.6   0.8   1.3
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  013 20.05 3543.14N  52 17.0E   4.0   11 3   0.26 0.000  4.1  1.4  4.2  3
+
+ Origin time error:       0.41
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.37      0.28      0.72      0.69      0.17      0.18
+
+ Resolution matrix: k =      0.400
+
+                             Long     Lat   Depth
+                     Long   0.579  -0.082   0.254
+                      Lat  -0.082   0.659   0.162
+                    Depth   0.254   0.162   0.522
+
+ Azimuthal Gap in Station Coverage 154 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ YOPU    50 181.1 64.2 4 P   4   PN2      013 30.9  10.90  10.11   0.80 0.00  0
+ YOPU    50 181.1 64.2 1 S   1   SN2      013 37.6  17.60  17.69  -0.09 0.89 28
+ VGNX    57 334.8 64.2 3 P   3   PN2      013 30.9  10.87  11.62  -0.75 0.30  2
+ VGNX    57 334.8 64.2 1 S   1   SN2      013 40.2  20.15  20.33  -0.18 0.89 25
+ HSDK   104   3.7 48.6 4 P   4   PN4      013 38.5  18.44  20.21  -1.77 0.00  0
+ HSDK   104   3.7 48.6 3 S   3   SN4      013 56.1  36.07  35.36   0.71 0.28* 0
+ AURM   126  27.9 41.4 4 P   4   PN5      013 41.8  21.76  23.58  -1.82 0.00  0
+ AURM   126  27.9 41.4 4 S   4   SN5      013 59.4  39.33  41.26  -1.93 0.00  0
+ PAMN   134 353.0 41.4 2 P   2   PN5      013 45.1  25.08  24.78   0.30 0.51* 1
+ PAMN   134 353.0 41.4 1 S   1   SN5      014  3.6  43.53  43.37   0.17 0.76*22
+ OIXZ   140  23.0 41.4 4 P   4   PN5      013 46.6  26.50  25.60   0.90 0.00  0
+ OIXZ   140  23.0 41.4 0 S   0   SN5      014  4.9  44.85  44.80   0.05 1.00* 4
+ MZGD   162  44.3 41.4 1 P   1   PN5      013 49.1  29.04  28.87   0.17 0.70* 3
+ MZGD   162  44.3 41.4 0 S   0   SN5      014 10.3  50.28  50.52  -0.24 0.94* 7
+ ESZY   164  42.1 41.4 0 S   0   SN5      014 10.9  50.88  50.88  -0.01 0.93* 6
+ ESZY   164  42.1 41.4 1 P   1   PN5      013 49.4  29.34  29.08   0.27 0.70* 2
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.0 sec dx=     1.3 km dy=     1.9 km dz=    -5.6 km drms=  0.26
+
+ unweighted rms =     0.90
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #      9
+
+ 2020  1 1  015  0.0 L  36.588  51.990 14.1       6 0.0 3.0l                   1
+
+   First arrival: VGNX 2020  1 1    0 15  9.95
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.27   52.12    4.21
+Starting location   10.0 km from closest station and rms    36.09   52.12    7.63
+Starting location   10.0 km from closest station and rms    36.27   51.90    5.66
+Starting location   10.0 km from closest station and rms    36.09   51.90    8.58
+Starting location   50.0 km from closest station and rms    36.63   52.57    7.86
+Starting location   50.0 km from closest station and rms    35.73   52.57   14.17
+Starting location   50.0 km from closest station and rms    36.63   51.46    3.80
+Starting location   50.0 km from closest station and rms    35.73   51.46   14.58
+Starting location  150.0 km from closest station and rms    37.54   53.68   15.32
+Starting location  150.0 km from closest station and rms    34.83   53.68   17.01
+Starting location  150.0 km from closest station and rms    37.54   50.35    8.98
+Starting location  150.0 km from closest station and rms    34.83   50.35   20.75
+
+ maximum multi-station phase: P          5
+
+
+   6 multiple-phase stations
+
+        VGNX  P -S         87.0 km
+        CIDP  P -S        135.9 km
+        OIXZ  P -S        128.2 km
+        ESZY  P -S        194.9 km
+        YOPU  P -S        207.3 km
+        TYAW  P -S        201.2 km
+
+ Starting location from 2 distances:   35.30   52.43
+ rms =    20.91
+ Starting location from 2 distances:   36.54   51.31
+ rms =     4.10
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    50.57 3638.09N  5127.46E  10.0  10  2   3.84   0.005   1.7   0.6   0.0
+    2     0.92 3637.49N  52 3.51E  10.0  10  2   1.41   0.005  72.1  40.3   0.0
+    3     0.01 3634.95N  52 0.36E  10.0  10  2   0.58   0.005  17.4  13.2   0.0
+    3     0.03 3634.84N  52 0.41E  10.0  10  2   0.58   0.005   7.7   5.4   0.0
+ depth freed: icd=   3
+    4     0.27 3636.33N  5158.64E  16.2  10  3   0.46   0.005  10.2   7.5   9.4
+    5     0.35 3635.75N  5158.65E  16.7  10  3   0.41   0.005   9.3   5.7   6.9
+    6     0.34 3635.75N  5158.64E  16.7  10  2   0.41   0.005   8.9   5.4   0.0
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  015  0.34 3635.75N  51 58.6E  16.7   10 3   0.41 0.000  9.4  5.7  6.6  3
+
+ Origin time error:       0.55
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.34      0.20      0.42      0.30      0.04      0.12
+
+ Resolution matrix: k =      0.005
+
+                             Long     Lat   Depth
+                     Long   0.968   0.025   0.012
+                      Lat   0.025   0.968   0.004
+                    Depth   0.012   0.004   0.967
+
+ Azimuthal Gap in Station Coverage 253 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ VGNX    46 175.9103.5 2 P   2   PG       015  9.9   9.60   9.58   0.02 0.52 25
+ VGNX    46 175.9103.5 4 S   4   SG       015 18.0  17.65  16.76   0.89 0.00  0
+ CIDP    77  84.4 64.2 4 P   4   PN4      015 13.7  13.37  14.81  -1.44 0.00  0
+ CIDP    77  84.4 64.2 1 S   1   SN4      015 26.3  25.96  25.92   0.03 0.77*17
+ OIXZ    88  68.8 64.2 2 P   2   PN4      015 17.4  17.08  16.67   0.41 0.50* 7
+ OIXZ    88  68.8 64.2 0 S   0   SN4      015 29.3  28.95  29.17  -0.22 1.00* 8
+ ESZY   139  79.9 52.6 2 P   2   PN5      015 25.0  24.64  24.26   0.38 0.44* 4
+ ESZY   139  79.9 52.6 1 S   1   SN5      015 43.0  42.68  42.46   0.23 0.66* 5
+ TYAW   145 162.3 52.6 2 P   2   PN5      015 25.8  25.50  25.13   0.37 0.43* 4
+ TYAW   145 162.3 52.6 1 S   1   SN5      015 44.5  44.13  43.97   0.16 0.65*20
+ YOPU   149 169.6 52.6 3 S   3   SN5      015 44.3  43.98  45.03  -1.06 0.21* 2
+ YOPU   149 169.6 52.6 2 P   2   PN5      015 25.1  24.78  25.73  -0.95 0.43* 6
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.3 sec dx=    -1.1 km dy=     0.9 km dz=     2.6 km drms=  0.41
+
+ unweighted rms =     0.68
+
+-----------------------------------------------------------------------------
+
+
+ EVENT #     10
+
+ 2020  1 1  016 40.0 L  36.005  51.626 14.1      10 0.0 5.0l                   1
+
+   First arrival: HSDK 2020  1 1    0 16 58.56
+
+ Starting location depth =    10.0 km
+Starting location   10.0 km from closest station and rms    36.74   52.47   16.99
+Starting location   10.0 km from closest station and rms    36.56   52.47   14.63
+Starting location   10.0 km from closest station and rms    36.74   52.25   15.21
+Starting location   10.0 km from closest station and rms    36.56   52.25   13.03
+Starting location   50.0 km from closest station and rms    37.10   52.92   20.85
+Starting location   50.0 km from closest station and rms    36.20   52.92    9.41
+Starting location   50.0 km from closest station and rms    37.10   51.80   13.76
+Starting location   50.0 km from closest station and rms    36.20   51.80    3.84
+Starting location  150.0 km from closest station and rms    38.00   54.04   19.54
+Starting location  150.0 km from closest station and rms    35.30   54.04    7.15
+Starting location  150.0 km from closest station and rms    38.00   50.68   14.12
+Starting location  150.0 km from closest station and rms    35.30   50.68    8.21
+
+ maximum multi-station phase: P          6
+
+
+  10 multiple-phase stations
+
+        VGNX  P -S        103.1 km
+        HSDK  P -S        154.0 km
+        TYAW  P -S        146.6 km
+        YOPU  P -S        147.9 km
+        PAMN  P -S        174.2 km
+        CIDP  P -S        174.0 km
+        OIXZ  P -S        212.3 km
+        AURM  P -S        168.5 km
+        MZGD  P -S        250.9 km
+        ESZY  P -S        261.9 km
+
+ Starting location from 2 distances:   35.09   52.21
+ rms =    14.60
+ Starting location from 2 distances:   35.70   50.93
+ rms =     3.48
+
+ iter   origin      lat      long depth  no  m    rms   damp.  erlg  erlt  erdp
+         (sec)  (dg mn)   (dg mn)  (km)         (sec)          (km)  (km)  (km)
+    1    29.70 3553.06N  5055.87E  10.0  10  2   3.48   0.005   6.0   3.9   0.0
+    2    39.09 36 3.64N  5135.47E  10.0  10  2   1.06   0.005  59.4  23.5   0.0
+    3    40.23 3559.33N  5141.39E  10.0  10  2   0.38   0.005  24.6   5.9   0.0
+    4    40.30 3559.75N  5141.72E  10.0  10  2   0.37   0.005   8.1   1.5   0.0
+    4    40.30 3559.75N  5141.74E  10.0  10  2   0.37   0.005   7.6   1.4   0.0
+ depth freed: icd=   3
+    5    40.39 3559.69N  5148.73E   1.5  10  3   0.42   0.010  30.5   1.7  19.3
+    6    40.35 3559.74N  5145.33E   5.5  10  3   0.38   0.007  26.1   1.7  12.5
+    7    40.25 3559.51N  5140.54E  11.6  10  3   0.37   0.005  15.2   1.6   8.9
+    8    40.28 3559.74N  5135.15E  19.9  10  3   0.43   0.010  22.0   1.7  17.8
+    9    39.81 3559.80N  5139.74E   9.5  10  3   0.39   0.107  10.6   2.1  12.0
+   10    40.24 3559.76N  5142.93E   8.1  10  3   0.36   0.071  12.5   1.7   8.0
+   11    40.41 3559.67N  5148.24E   2.1  10  3   0.41   0.036  22.5   1.6  14.2
+   12    40.38 3559.74N  5145.60E   5.3  10  3   0.38   0.024  21.1   1.6  10.1
+   13    40.27 3559.53N  5140.83E  11.3  10  3   0.37   0.016  14.7   1.6   8.6
+   14    40.30 3559.74N  5135.56E  19.3  10  3   0.43   0.021  20.8   1.7  16.8
+   15    39.91 3559.62N  5142.38E   4.0  10  3   0.39   0.056  15.0   2.3  16.9
+   16    39.81 3559.79N  5142.54E   5.8  10  3   0.39   0.037  17.4   1.9   8.3
+   17    40.25 3559.83N  5142.13E   9.1  10  3   0.37   0.025  16.1   1.9   8.8
+   18    40.41 3559.69N  5147.48E   3.0  10  3   0.40   0.033  23.3   1.7  14.7
+   19    40.31 3559.73N  5144.92E   5.8  10  3   0.37   0.022  20.7   1.6  10.0
+   20    40.27 3559.52N  5140.80E  11.3  10  3   0.37   0.015  14.0   1.6   8.3
+   21    40.29 3559.66N  5140.27E  12.3  10  3   0.36   0.631   4.1   1.1   3.3
+   22    40.30 3559.74N  5138.55E  14.9  10  3   0.38   0.316   7.9   1.5   6.4
+   23    40.21 3559.72N  5140.69E  11.0  10  3   0.37   0.210   6.6   1.6   5.2
+   24    40.29 3559.75N  5138.87E  14.3  10  3   0.37   0.281   8.6   1.5   6.9
+   25    40.22 3559.68N  5141.18E  10.3  10  3   0.37   0.187   6.9   1.6   5.4
+   26    40.28 3559.75N  5141.76E   9.8  10  3   0.37   0.125   9.2   1.5   6.9
+   27    40.29 3559.73N  5143.98E   7.1  10  3   0.36   0.083  10.6   1.6   6.7
+   28    40.42 3559.64N  5149.05E   1.3  10  3   0.42   0.042  21.1   1.6  13.1
+   29    40.46 3559.74N  5146.45E   4.5  10  3   0.39   0.028  20.9   1.6  10.0
+   30    40.34 3559.57N  5142.98E   8.6  10  3   0.36   0.018  15.7   1.7   8.7
+   31    40.40 3559.67N  5148.93E   1.4  10  3   0.42   0.025  25.7   1.7  16.1
+   32    40.41 3559.74N  5145.94E   5.0  10  3   0.39   0.016  23.4   1.6  11.2
+   33    40.33 3559.55N  5142.73E   8.9  10  3   0.37   0.011  15.8   1.7   8.8
+   34    40.39 3559.67N  5149.45E   0.7  10  3   0.42   0.015  29.0   1.7  18.3
+   35    40.43 3559.75N  5146.12E   4.8  10  3   0.39   0.010  26.0   1.7  12.3
+   36    40.33 3559.55N  5142.66E   9.0  10  3   0.37   0.006  16.3   1.7   9.1
+   37    40.30 3559.69N  5143.34E   7.9  10  3   0.36   0.320   5.0   1.3   3.2
+   38    40.30 3559.71N  5143.63E   7.6  10  3   0.36   0.853   3.3   0.9   2.1
+   39    40.31 3559.72N  5144.08E   7.0  10  3   0.36   0.569   3.8   1.0   2.4
+   40    40.38 3559.70N  5145.61E   5.3  10  3   0.38   0.284   7.4   1.4   4.7
+   41    40.38 3559.62N  5143.25E   8.6  10  3   0.36   0.190   8.6   1.3   4.9
+   42    40.33 3559.70N  5144.76E   6.3  10  3   0.36   0.253   8.1   1.5   5.1
+   43    40.36 3559.60N  5142.64E   9.2  10  3   0.37   0.337   8.5   1.3   4.9
+   44    40.30 3559.71N  5143.51E   7.7  10  3   0.36   0.225   5.9   1.4   3.8
+   45    40.31 3559.72N  5143.92E   7.2  10  3   0.36   0.599   3.7   1.0   2.4
+   46    40.31 3559.72N  5144.09E   7.0  10  3   0.36   1.598   2.5   0.6   1.6
+
+   date hrmn   sec      lat      long depth   no m    rms  damp erln erlt erdp ic
+ 20 1 1  016 40.31 3559.72N  51 44.1E   7.0   10 3   0.36 0.000 17.8  1.9  9.5  3
+
+ Origin time error:       0.58
+
+ DRMS Values: d=    5.00 km
+
+ DRMS:       lon+d     lon-d     lat+d     lat-d   depth+d   depth-d
+  DRMS pos    0.06      0.05      0.58      0.53      0.08      0.12
+
+ Resolution matrix: k =      1.598
+
+                             Long     Lat   Depth
+                     Long   0.310   0.075   0.217
+                      Lat   0.075   0.376  -0.048
+                    Depth   0.217  -0.048   0.315
+
+ Azimuthal Gap in Station Coverage 249 degrees
+  
+     
+ stn   dist   azm  ain w phas    calcphs hrmn tsec  t-obs  t-cal    res   wt di
+ VGNX    33  50.0 97.0 4 P   4   PG       016 47.3   6.95   6.97  -0.02 0.00  0
+ VGNX    33  50.0 97.0 4 S   4   SG       016 56.8  16.49  12.19   4.30 0.00  0
+ HSDK    92  37.4 56.4 0 P   0   PN4      016 58.6  18.25  18.19   0.06 1.00*10
+ HSDK    92  37.4 56.4 2 S   2   SN4      017 12.8  32.50  31.84   0.67 0.50* 6
+ YOPU    94 148.5 56.4 1 P   1   PN4      016 59.1  18.82  18.52   0.30 0.75* 8
+ YOPU    94 148.5 56.4 0 S   0   SN4      017 12.8  32.52  32.42   0.10 1.00*20
+ TYAW    97 137.2 56.4 1 P   1   PN4      016 59.0  18.67  19.11  -0.44 0.74*17
+ TYAW    97 137.2 56.4 4 S   4   SN4      017 12.5  32.24  33.44  -1.20 0.00  0
+ PAMN   108  17.6 47.3 4 P   4   PN5      017  1.4  21.11  20.80   0.31 0.00  0
+ PAMN   108  17.6 47.3 4 S   4   SN5      017 17.5  37.24  36.40   0.84 0.00  0
+ CIDP   123  52.9 47.3 3 P   3   PN5      017  4.2  23.92  23.06   0.86 0.23* 0
+ CIDP   123  52.9 47.3 1 S   1   SN5      017 20.3  40.03  40.35  -0.32 0.69*13
+ AURM   135  53.1 47.3 4 P   4   PN5      017  6.7  26.41  24.84   1.57 0.00  0
+ AURM   135  53.1 47.3 4 S   4   SN5      017 22.3  42.01  43.47  -1.46 0.00  0
+ OIXZ   143  46.4 47.3 0 P   0   PN5      017  6.2  25.89  25.99  -0.09 0.87*11
+ OIXZ   143  46.4 47.3 1 S   1   SN5      017 25.9  45.55  45.48   0.08 0.66*12
+ ESZY   183  60.1 47.3 4 P   4   PN5      017 13.5  33.21  31.88   1.33 0.00  0
+ ESZY   183  60.1 47.3 4 S   4   SN5      017 37.8  57.46  55.79   1.67 0.00  0
+ MZGD   184  62.0 47.3 2 P   2   PN5      017 11.6  31.29  31.97  -0.67 0.39* 2
+ MZGD   184  62.0 47.3 4 S   4   SN5      017 34.8  54.52  55.94  -1.42 0.00  0
+      
+
+ Difference from previous solution:
+
+ dorigin=     0.3 sec dx=     9.8 km dy=    -1.1 km dz=    -7.1 km drms=  0.36
+
+ unweighted rms =     1.30
+
+-----------------------------------------------------------------------------
+
+
+ average differences from previous solutions:       10 events
+
+                            mean         rms
+
+ origin time:               0.0 sec       0.4
+ longitude:                -1.0 km        7.5
+ latitude:                  0.4 km        4.1
+ depth:                     2.7 km       10.8
+
+
+ average station residuals (weighted):
+
+ station     p residual rms dev  no p     s residual rms dev  no s
+ ESZY              0.16    0.17     5           0.08    0.12     6
+ CIDP             -0.04    0.31     5          -0.21    0.21     5
+ YOPU             -0.18    0.31     4           0.00    0.24     4
+ MZGD             -0.16    0.33     6          -0.17    0.13     4
+ PAMN              0.31    0.23     4          -0.01    0.12     5
+ TYAW              0.26    0.40     4           0.04    0.10     4
+ OIXZ              0.10    0.24     4          -0.08    0.19     5
+ HSDK              0.12    0.15     4           0.22    0.28     4
+ AURM             -0.24    0.34     2           0.30    0.12     3
+ VGNX             -0.10    0.14     7          -0.06    0.06     5
+
+ Mean rms value (  10 events) =        0.342

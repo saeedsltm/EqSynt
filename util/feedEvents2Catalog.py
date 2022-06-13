@@ -16,11 +16,12 @@ class feedCatalog():
         pick.waveform_id = event.WaveformStreamID("BI", staCode)
         return pick
         
-    def setArrival(self, phase, time, distance, pick_id):
+    def setArrival(self, phase, time, distance, azimuth, pick_id):
         arrival = event.Arrival()
         arrival.phase = phase
         arrival.time = time
         arrival.distance = k2d(distance)
+        arrival.azimuth = azimuth
         arrival.pick_id = pick_id
         return arrival
 
@@ -37,9 +38,9 @@ class feedCatalog():
             phaseP = arrivalsDict[staCode]["P"]
             phaseS = arrivalsDict[staCode]["S"]
             for Phase in [phaseP, phaseS]:
-                phase, onset, weight, time, distance = Phase
+                phase, onset, weight, time, distance, azimuth = Phase
                 pick = self.setPick(staCode, onset, phase, weight, time)
-                arrival = self.setArrival(phase, time, distance, pick.resource_id)
+                arrival = self.setArrival(phase, time, distance, azimuth, pick.resource_id)
                 picks.append(pick)
                 arrivals.append(arrival)
         return picks, arrivals
@@ -49,7 +50,7 @@ class feedCatalog():
         origin.time = eventInfo["OriginTime"]
         origin.latitude = eventInfo["Latitude"]
         origin.longitude = eventInfo["Longitude"]
-        origin.depth = eventInfo["Depth"]
+        origin.depth = eventInfo["Depth"]*1e3
         origin.arrivals = arrivals
         return origin
     

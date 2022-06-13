@@ -22,13 +22,21 @@
         "Station": {
             "SeedRandomID": 1,
             "StationFile": "",
-            "StationBoundLonMin": 51.00,
-            "StationBoundLonMax": 52.00,
-            "StationBoundLatMin": 36.00,
-            "StationBoundLatMax": 37.00,
-            "NumberOfStations": 10,
-            "GaussianDistribution": false,
-            "UniformDistribution": true
+            "StationBoundCenter": [
+                52.00,
+                36.00
+            ],
+            "StationBoundCov": [
+                [
+                    0.1,
+                    0.0
+                ],
+                [
+                    0.0,
+                    0.1
+                ]
+            ],
+            "NumberOfStations": 10
         },
         "/Comment#002_02": "+++ Define velocity model",
         "Model": {
@@ -71,16 +79,23 @@
         "Catalog": {
             "SeedRandomID": 2,
             "CatalogFile": "",
-            "CatalogBoundLonMin": 51.00,
-            "CatalogBoundLonMax": 52.00,
-            "CatalogBoundLatMin": 36.00,
-            "CatalogBoundLatMax": 37.00,
+            "CatalogBoundCenter": [
+                52.00,
+                36.00
+            ],
+            "CatalogBoundCov": [
+                [
+                    0.25,
+                    0.0
+                ],
+                [
+                    0.0,
+                    0.25
+                ]
+            ],
             "CatalogBoundDepMin": 5.00,
             "CatalogBoundDepMax": 20.00,
-            "NumberOfEvents": 10,
-            "GaussianDistribution": false,
-            "UniformDistribution": true,
-            "FaultDistribution": false
+            "NumberOfEvents": 10
         }
     },
     "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
@@ -111,8 +126,7 @@
         "/Comment#004_03": "+++ How much error (stdDev in seconds) add to travel times?",
         "ErrorOnArrivals": {
             "P": 1.00,
-            "S": 1.00,
-            "ActivateWeightingBasedOnError": true
+            "S": 1.00
         },
         "/Comment#004_04": "+++ How much of phases should be used (in percent)?",
         "UsageOfPhase": {

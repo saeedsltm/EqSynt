@@ -1,0 +1,178 @@
+ 2020  1 1  0 1 40.0 L  35.972  51.792 19.3       9 0.0 4.5l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101000140     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ OIXZ    EP   0    0 2 2.403                                            141  44 
+ OIXZ    ES   0    0 221.422                                            141  44 
+ ESZY    EP   0    0 2 9.191                                            180  58 
+ ESZY    ES   0    0 232.482                                            180  58 
+ PAMN    EP   0    0 159.586                                            108  14 
+ PAMN    ES   0    0 212.800                                            108  14 
+ HSDK    EP   0    0 156.901                                           91.1  33 
+ HSDK    ES   0    0 211.782                                           91.1  33 
+ MZGD    EP   0    0 211.875                                            180  60 
+ MZGD    ES   0    0 232.411                                            180  60 
+ TYAW    EP   0    0 157.757                                           92.0 138 
+ TYAW    ES   0    0 2 9.347                                           92.0 138 
+ YOPU    EP   0    0 156.347                                           89.1 150 
+ YOPU    ES   0    0 2 6.959                                           89.1 150 
+ CIDP    EP   0    0 2 0.822                                            120  50 
+ CIDP    ES   0    0 216.202                                            120  50 
+ VGNX    EP   0    0 147.910                                           30.9  40 
+ VGNX    ES   0    0 152.968                                           30.9  40 
+                                                                                
+
+ 2020  1 1  0 3 20.0 L  36.820  50.932 19.2       5 0.0 2.5l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101000320     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ VGNX    EP   0    0 341.219                                            119 125 
+ VGNX    ES   0    0 355.869                                            119 125 
+ CIDP    EP   0    0 348.121                                            170  95 
+ CIDP    ES   0    0 410.554                                            170  95 
+ PAMN    EP   0    0 336.823                                            104  83 
+ PAMN    ES   0    0 353.293                                            104  83 
+ ESZY    EP   0    0 356.341                                            230  89 
+ ESZY    ES   0    0 426.306                                            230  89 
+ MZGD    EP   0    0 358.081                                            233  90 
+ MZGD    ES   0    0 424.817                                            233  90 
+                                                                                
+
+ 2020  1 1  0 5  0.0 L  35.579  51.103  5.8       3 0.0 1.5l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101000500     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ CIDP    EP   0    0 534.893                                            196  51 
+ CIDP    ES   0    0 558.199                                            196  51 
+ VGNX    EP   0    0 520.319                                            106  50 
+ VGNX    ES   0    0 535.537                                            106  50 
+ TYAW    EP   0    0 522.601                                            125 101 
+ TYAW    ES   0    0 540.591                                            125 101 
+                                                                                
+
+ 2020  1 1  0 6 40.0 L  35.377  52.251  6.3       6 0.0 3.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101000640     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ VGNX    EP   0    0 658.019                                           92.1 346 
+ VGNX    ES   0    0 711.730                                           92.1 346 
+ AURM    EP   0    0 710.708                                            161  22 
+ AURM    ES   0    0 730.573                                            161  22 
+ YOPU    EP   0    0 642.812                                           11.8 170 
+ YOPU    ES   0    0 645.725                                           11.8 170 
+ HSDK    EP   0    0 7 6.990                                            141   3 
+ HSDK    ES   0    0 725.231                                            141   3 
+ PAMN    EP   0    0 710.871                                            171 355 
+ PAMN    ES   0    0 732.022                                            171 355 
+ MZGD    EP   0    0 713.023                                            192  36 
+ MZGD    ES   0    0 737.993                                            192  36 
+                                                                                
+
+ 2020  1 1  0 8 20.0 L  35.545  51.471 17.5       6 0.0 3.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101000820     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ PAMN    EP   0    0 848.555                                            162  20 
+ PAMN    ES   0    0 9 8.761                                            162  20 
+ CIDP    EP   0    0 850.868                                            174  44 
+ CIDP    ES   0    0 910.399                                            174  44 
+ OIXZ    EP   0    0 852.549                                            195  40 
+ OIXZ    ES   0    0 916.135                                            195  40 
+ MZGD    EP   0    0 856.822                                            230  53 
+ MZGD    ES   0    0 925.622                                            230  53 
+ AURM    EP   0    0 851.288                                            186  45 
+ AURM    ES   0    0 914.783                                            186  45 
+ ESZY    EP   0    0 858.159                                            230  52 
+ ESZY    ES   0    0 928.119                                            230  52 
+                                                                                
+
+ 2020  1 1  010  0.0 L  37.146  52.276 16.0       7 0.0 3.5l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101001000     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ TYAW    EP   0    01033.642                                            200 175 
+ TYAW    ES   0    01057.889                                            200 175 
+ AURM    EP   0    01013.968                                           76.0 128 
+ AURM    ES   0    01025.885                                           76.0 128 
+ ESZY    EP   0    01019.682                                            116 108 
+ ESZY    ES   0    01036.290                                            116 108 
+ OIXZ    EP   0    01013.213                                           62.8 118 
+ OIXZ    ES   0    01021.964                                           62.8 118 
+ MZGD    EP   0    01021.265                                            121 110 
+ MZGD    ES   0    01040.121                                            121 110 
+ CIDP    EP   0    01014.313                                           73.3 137 
+ CIDP    ES   0    01024.363                                           73.3 137 
+ HSDK    EP   0    01011.416                                           55.3 172 
+ HSDK    ES   0    01019.179                                           55.3 172 
+                                                                                
+
+ 2020  1 1  011 40.0 L  35.441  52.021 15.0       4 0.0 2.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101001140     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ HSDK    EP   0    012 4.993                                            137  12 
+ HSDK    ES   0    01223.372                                            137  12 
+ PAMN    EP   0    012 9.686                                            164   2 
+ PAMN    ES   0    01228.814                                            164   2 
+ ESZY    EP   0    01213.612                                            202  41 
+ ESZY    ES   0    01239.165                                            202  41 
+ VGNX    EP   0    01155.205                                           82.5 359 
+ VGNX    ES   0    012 7.820                                           82.5 359 
+                                                                                
+
+ 2020  1 1  013 20.0 L  35.702  52.270  9.6       8 0.0 4.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101001320     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ YOPU    EP   0    01330.950                                           47.7 179 
+ YOPU    ES   0    01337.642                                           47.7 179 
+ OIXZ    EP   0    01346.551                                            142  23 
+ OIXZ    ES   0    014 4.900                                            142  23 
+ ESZY    EP   0    01349.389                                            165  42 
+ ESZY    ES   0    01410.925                                            165  42 
+ HSDK    EP   0    01338.484                                            105   4 
+ HSDK    ES   0    01356.120                                            105   4 
+ PAMN    EP   0    01345.124                                            136 353 
+ PAMN    ES   0    014 3.580                                            136 353 
+ AURM    EP   0    01341.804                                            128  28 
+ AURM    ES   0    01359.375                                            128  28 
+ VGNX    EP   0    01330.917                                           58.3 336 
+ VGNX    ES   0    01340.195                                           58.3 336 
+ MZGD    EP   0    01349.091                                            164  44 
+ MZGD    ES   0    01410.329                                            164  44 
+                                                                                
+
+ 2020  1 1  015  0.0 L  36.588  51.990 14.1       6 0.0 3.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101001500     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ TYAW    EP   0    01525.844                                            143 162 
+ TYAW    ES   0    01544.476                                            143 162 
+ OIXZ    EP   0    01517.427                                           87.3  68 
+ OIXZ    ES   0    01529.299                                           87.3  68 
+ YOPU    EP   0    01525.124                                            148 169 
+ YOPU    ES   0    01544.323                                            148 169 
+ CIDP    EP   0    01513.715                                           75.8  83 
+ CIDP    ES   0    01526.302                                           75.8  83 
+ VGNX    EP   0    015 9.946                                           44.8 177 
+ VGNX    ES   0    01517.997                                           44.8 177 
+ ESZY    EP   0    01524.983                                            138  79 
+ ESZY    ES   0    01543.029                                            138  79 
+                                                                                
+
+ 2020  1 1  016 40.0 L  36.005  51.626 14.1      10 0.0 5.0l                   1
+ Action:ARG 22-06-13 19:38 OP:OBSP STATUS:               ID:20200101001640     I
+ STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
+ VGNX    EP   0    01647.258                                           40.2  60 
+ VGNX    ES   0    01656.800                                           40.2  60 
+ TYAW    EP   0    01658.978                                            105 133 
+ TYAW    ES   0    01712.549                                            105 133 
+ PAMN    EP   0    017 1.419                                            110  22 
+ PAMN    ES   0    01717.547                                            110  22 
+ CIDP    EP   0    017 4.229                                            130  55 
+ CIDP    ES   0    01720.337                                            130  55 
+ OIXZ    EP   0    017 6.205                                            149  49 
+ OIXZ    ES   0    01725.862                                            149  49 
+ ESZY    EP   0    01713.524                                            191  61 
+ ESZY    ES   0    01737.775                                            191  61 
+ YOPU    EP   0    01659.131                                            100 143 
+ YOPU    ES   0    01712.828                                            100 143 
+ MZGD    EP   0    01711.602                                            192  63 
+ MZGD    ES   0    01734.832                                            192  63 
+ AURM    EP   0    017 6.720                                            142  55 
+ AURM    ES   0    01722.323                                            142  55 
+ HSDK    EP   0    01658.558                                           97.4  42 
+ HSDK    ES   0    01712.815                                           97.4  42 
+                                                                                
+

@@ -8,6 +8,8 @@ from pathlib import Path
 from shutil import copy, move
 from glob import glob
 from pytz import utc
+from numpy.random import multivariate_normal
+from numpy.random import seed
 import pykonal
 from tqdm.contrib import tzip
 from math import ceil
@@ -18,6 +20,7 @@ from obspy import UTCDateTime as utc
 from util import feedEvents2Catalog
 from numpy import array
 from util.nordic2xyzm import nordic2xyzm
+from util.visualizer import plotSeismicityMap, plotHypocenterDiff
 from util.logger import myLogger
 import random
 import os
@@ -126,10 +129,10 @@ class Main():
         stationCodeLength = 4
         random.seed(self.config["FSS"]["Station"]["SeedRandomID"])
         stationCodes = ["".join(random.sample(ascii_uppercase, k=stationCodeLength)) for _ in range(nStations)]
-        StationBoundLonMin = self.config["FSS"]["Station"]["StationBoundLonMin"]
-        StationBoundLonMax = self.config["FSS"]["Station"]["StationBoundLonMax"]
-        StationBoundLatMin = self.config["FSS"]["Station"]["StationBoundLatMin"]
-        StationBoundLatMax = self.config["FSS"]["Station"]["StationBoundLatMax"]            
+        StationBoundCenter = self.config["FSS"]["Station"]["StationBoundCenter"]
+        StationBoundCov = self.config["FSS"]["Station"]["StationBoundCov"]
+        seed(self.config["FSS"]["Station"]["SeedRandomID"])
+        stationLons, stationLats = multivariate_normal(StationBoundCenter, StationBoundCov, nStations).T           
         Vp = self.config["FSS"]["Model"]["Vp"]
         Z = self.config["FSS"]["Model"]["Z"]
         Interfaces = self.config["FSS"]["Model"]["Interfaces"]
@@ -137,20 +140,6 @@ class Main():
         xNear = self.config["FSS"]["Model"]["xNear"]
         xFar = self.config["FSS"]["Model"]["xFar"]
         trialDepth = self.config["FSS"]["Model"]["trialDepth"]
-        if self.config["FSS"]["Station"]["GaussianDistribution"]:
-            meanLon, stdLon = mean([StationBoundLonMin, StationBoundLonMax]), stdev([StationBoundLonMin, StationBoundLonMax])
-            meanLat, stdLat = mean([StationBoundLatMin, StationBoundLatMax]), stdev([StationBoundLatMin, StationBoundLatMax])
-            random.seed(self.config["FSS"]["Station"]["SeedRandomID"])
-            stationLons = [random.gauss(meanLon, stdLon) for _ in range(nStations)]
-            random.seed(self.config["FSS"]["Station"]["SeedRandomID"])
-            stationLats = [random.gauss(meanLat, stdLat) for _ in range(nStations)]
-        elif self.config["FSS"]["Station"]["UniformDistribution"]:
-            random.seed(self.config["FSS"]["Station"]["SeedRandomID"])
-            stationLons = [random.uniform(StationBoundLonMin, StationBoundLonMax) for _ in range(nStations)]
-            random.seed(self.config["FSS"]["Station"]["SeedRandomID"])
-            stationLats = [random.uniform(StationBoundLatMin, StationBoundLatMax) for _ in range(nStations)]
-        elif self.config["FSS"]["Station"]["FaultDistribution"]:
-            pass
         with open(os.path.join("files", "resets.dat")) as f, open(os.path.join("EqInput", "STATION0.HYP"), "w") as g:
             for l in f:
                 g.write(l)
@@ -173,7 +162,7 @@ class Main():
             ))
             g.write("\nNew")
     
-    def createNewCatalogFile(self):
+    def createNewCatalogFile(self, computeWeight=True):
         """_summary_
         """
         stationsDict = self.readStationFile(os.path.join("EqInput", "STATION0.HYP"))
@@ -181,40 +170,23 @@ class Main():
         eventsArrivals = []
         eventsInfo = []
         NumberOfEvents = self.config["FSS"]["Catalog"]["NumberOfEvents"]
-        CatalogBoundLonMin = self.config["FSS"]["Catalog"]["CatalogBoundLonMin"]
-        CatalogBoundLonMax = self.config["FSS"]["Catalog"]["CatalogBoundLonMax"]
-        CatalogBoundLatMin = self.config["FSS"]["Catalog"]["CatalogBoundLatMin"]
-        CatalogBoundLatMax = self.config["FSS"]["Catalog"]["CatalogBoundLatMax"]
+        CatalogBoundCenter = self.config["FSS"]["Catalog"]["CatalogBoundCenter"]
+        CatalogBoundCov = self.config["FSS"]["Catalog"]["CatalogBoundCov"]
+        seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
+        eventLons, eventLats = multivariate_normal(CatalogBoundCenter, CatalogBoundCov, NumberOfEvents).T
         CatalogBoundDepMin = self.config["FSS"]["Catalog"]["CatalogBoundDepMin"]
         CatalogBoundDepMax = self.config["FSS"]["Catalog"]["CatalogBoundDepMax"]
-        if self.config["FSS"]["Catalog"]["GaussianDistribution"]:
-            meanLon, stdLon = mean([CatalogBoundLonMin, CatalogBoundLonMax]), stdev([CatalogBoundLonMin, CatalogBoundLonMax])
-            meanLat, stdLat = mean([CatalogBoundLatMin, CatalogBoundLatMax]), stdev([CatalogBoundLatMin, CatalogBoundLatMax])
-            meanDep, stdDep = mean([CatalogBoundDepMin, CatalogBoundDepMax]), stdev([CatalogBoundDepMin, CatalogBoundDepMax])
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventLons = [random.gauss(meanLon, stdLon) for _ in range(NumberOfEvents)]
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventLats = [random.gauss(meanLat, stdLat) for _ in range(NumberOfEvents)]
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventDeps = [random.gauss(meanDep, stdDep) for _ in range(NumberOfEvents)]
-        elif self.config["FSS"]["Catalog"]["UniformDistribution"]:
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventLons = [random.uniform(CatalogBoundLonMin, CatalogBoundLonMax) for _ in range(NumberOfEvents)]
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventLats = [random.uniform(CatalogBoundLatMin, CatalogBoundLatMax) for _ in range(NumberOfEvents)]
-            random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
-            eventDeps = [random.uniform(CatalogBoundDepMin, CatalogBoundDepMax) for _ in range(NumberOfEvents)]
-        elif self.config["FSS"]["Catalog"]["FaultDistribution"]:
-            pass
+        random.seed(self.config["FSS"]["Catalog"]["SeedRandomID"])
+        eventDeps = [random.uniform(CatalogBoundDepMin, CatalogBoundDepMax) for _ in range(NumberOfEvents)]
         print("+++ Generating new catalog")
-        eventOt = utc.now()  # type: ignore
-        eventsTimeShift = 60.0
-        for (eventLat, eventLon, eventDep) in tzip(eventLats, eventLons, eventDeps):  # type: ignore
+        eventOt = utc(2020, 1, 1)  # type: ignore
+        eventsTimeShift = 100.0
+        for i, (eventLat, eventLon, eventDep) in enumerate(tzip(eventLats, eventLons, eventDeps)):  # type: ignore
             newEventArrivals = {}
             eventOt += eventsTimeShift
             newEventInfo = {"OriginTime":eventOt, "Longitude":eventLon, "Latitude":eventLat, "Depth":eventDep}
             eventsInfo.append(newEventInfo)
-            selectedStations, receivers = self.computeNewDistances(eventLat, eventLon, stationsDict)
+            selectedStations, azimuths, receivers = self.computeNewDistances(i, eventLat, eventLon, stationsDict)
             hdf5FileP = os.path.join(
                 "ttt", "dep{z:003d}{vt:s}.hdf5".format(z=int(eventDep), vt="P"))
             if hdf5FileP not in self.travelTimeDict.keys():
@@ -231,19 +203,32 @@ class Main():
                 self.travelTimeDict[hdf5FileS] = traveltime
             extractedTTS = extractTT(
                 self.travelTimeDict[hdf5FileS], receivers)
-            for station, ttP, ttS, distance in zip(selectedStations, extractedTTP, extractedTTS, receivers):
-                travelTimeP, weightP = self.addTTError(eventOt+ttP, m=0.0, std=self.config["FPS"]["ErrorOnArrivals"]["P"])
-                travelTimeS, weightS = self.addTTError(eventOt+ttP, m=0.0, std=self.config["FPS"]["ErrorOnArrivals"]["S"])
+            for station, ttP, ttS, distance, azimuth in zip(selectedStations, extractedTTP, extractedTTS, receivers, azimuths):
+                travelTimeP, weightP = self.setTTError(eventOt+ttP, m=0.0, std=self.config["FPS"]["ErrorOnArrivals"]["P"], addWeight=computeWeight)
+                travelTimeS, weightS = self.setTTError(eventOt+ttS, m=0.0, std=self.config["FPS"]["ErrorOnArrivals"]["S"], addWeight=computeWeight)
                 newEventArrivals[station] = {
-                    "P":["P", "emergent", weightP, travelTimeP, distance[0]],
-                    "S":["S", "emergent", weightS, travelTimeS, distance[0]]
+                    "P":["P", "emergent", weightP, travelTimeP, distance[0], azimuth],
+                    "S":["S", "emergent", weightS, travelTimeS, distance[0], azimuth]
                     }
             eventsArrivals.append(newEventArrivals)
         feedCatalog = feedEvents2Catalog.feedCatalog()
         newCatalog = feedCatalog.setCatalog(eventsInfo, eventsArrivals)
-        newCatalog.write(os.path.join("EqInput", "select.out"), format="NORDIC")
+        self.writeCatalog(newCatalog, computeWeight)
+        
+    
+    def writeCatalog(self, catalog, computeWeight):
+        """_summary_
 
-    def addTTError(self, tt, m=0.0, std=1.0):
+        Args:
+            catalog (_type_): _description_
+        """
+        if computeWeight:
+            catalog.write(os.path.join("EqInput", "select_weighted.out"), format="NORDIC")
+        else:
+            catalog.write(os.path.join("EqInput", "select_unweighted.out"), format="NORDIC")
+
+
+    def setTTError(self, tt, m=0.0, std=1.0, addWeight=True):
         """_summary_
 
         Args:
@@ -256,10 +241,10 @@ class Main():
         """
         err = random.gauss(m, std)
         tt = tt + err
-        w = self.mapError2Weight(err, m, std)
+        w = self.mapError2Weight(err, m, std, addWeight)
         return tt, w
     
-    def mapError2Weight(self, err, m, std):
+    def mapError2Weight(self, err, m, std, addWeight=True):
         """_summary_
 
         Args:
@@ -270,7 +255,7 @@ class Main():
         Returns:
             _type_: _description_
         """
-        if not self.config["FPS"]["ErrorOnArrivals"]["ActivateWeightingBasedOnError"]:
+        if not addWeight:
             return 0
         absError = abs(abs(std) - abs(m))
         if 0.0 <= abs(err) <= 0.25*absError:
@@ -285,7 +270,7 @@ class Main():
             return 4
 
 
-    def computeNewDistances(self, eventLat, eventLon, stations):
+    def computeNewDistances(self, eventID, eventLat, eventLon, stations):
         """given event coordinates it computes new station's distance
 
         Args:
@@ -297,13 +282,80 @@ class Main():
         Returns:
             numpy.array: an array contains stations distance
         """
+        random.seed(eventID)
         randomStations = random.sample(list(stations.keys()), k=random.randint(3, len(stations)))
         stationLats = [stations[station]["Lat"] for station in randomStations]
         stationLons = [stations[station]["Lon"] for station in randomStations]
         distances = [gps(eventLat, eventLon, stationLat, stationLon)[
             0]*1e-3 for (stationLat, stationLon) in zip(stationLats, stationLons)]
-        return randomStations, [array([distance, 1.0, 0.0]) for distance in distances]
-                
+        azimuths = [gps(eventLat, eventLon, stationLat, stationLon)[
+            1] for (stationLat, stationLon) in zip(stationLats, stationLons)]
+        return randomStations, azimuths, [array([distance, 1.0, 0.0]) for distance in distances]
+    
+    def makeReportFile(self):
+        """_summary_
+        """
+        for selectFile in glob(os.path.join("EqInput", "select_*.out")):
+            copy(selectFile, os.path.join(self.resultsPath, "relocation"))
+        copy(os.path.join("EqInput", "STATION0.HYP"), os.path.join(self.resultsPath, "relocation"))
+        copy(os.path.join("files", "report.inp"), os.path.join(self.resultsPath, "relocation"))
+        root = os.getcwd()
+        os.chdir(os.path.join(self.resultsPath, "relocation"))
+        for inpFile in glob("select*.out"):
+            with open("hyp.inp", "w") as f:
+                f.write("{inpFile:s}\nn\n".format(inpFile=inpFile))
+            cmd = "hyp < hyp.inp"
+            os.system(cmd)
+            cmd = "report hyp.out report.inp"
+            os.system(cmd)
+            reportOut = "report_{inpFile:s}.out".format(inpFile=inpFile.split(".")[0])
+            os.rename("report.out", reportOut)
+            self.report2csv(reportOut)
+        cmd = "report select_unweighted.out report.inp"
+        os.system(cmd)
+        reportOut = "report_initial.out"
+        os.rename("report.out", reportOut)
+        self.report2csv(reportOut)
+        os.chdir(root)
+
+
+    def report2csv(self, reportFile):
+        """_summary_
+
+        Args:
+            reportFile (_type_): _description_
+        """
+        with open(reportFile) as f, open("{reportFile:s}.csv".format(reportFile=reportFile.split(".")[0]), "w") as g:
+            next(f)
+            g.write("OT,Lat,LatErr,Lon,LonErr,Dep,DepErr,NST,RMS,GAP\n")
+            for l in f:
+                for i in [6, 8, 11, 12, 13, 14, 16, 17, 19]:
+                    l = l[:i]+l[i].replace(" ", "0")+l[i+1:]
+                ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f").strftime("%Y-%m-%d %H:%M:%S.%f")
+                lat,latErr = self.handleMissingValue(l[22:28]), self.handleMissingValue(l[29:34])
+                lon,lonErr = self.handleMissingValue(l[37:43]), self.handleMissingValue(l[44:49])
+                dep,depErr = self.handleMissingValue(l[50:55]), self.handleMissingValue(l[56:61])
+                nst = self.handleMissingValue(l[62:65])
+                rms = self.handleMissingValue(l[67:70])
+                gap = self.handleMissingValue(l[71:75])
+                g.write("{ot:s},{lat:6.3f},{latErr:6.2f},{lon:6.3f},{lonErr:6.2f},{dep:5.1f},{depErr:6.2f},{nst:3.0f},{rms:4.1f},{gap:3.0f}\n".format(
+                    ot=ot, lat=lat, latErr=latErr, lon=lon, lonErr=lonErr, dep=dep, depErr=depErr, nst=nst, rms=rms, gap=gap
+                ))
+    
+    def handleMissingValue(self, value):
+        try:
+            return float(value)
+        except ValueError:
+            return -99.9
+
+    
+    def visualizeResult(self):
+        """_summary_
+        """
+        stationsDict = self.readStationFile(os.path.join("EqInput", "STATION0.HYP"))
+        plotSeismicityMap(self.resultsPath, stationsDict)
+        plotHypocenterDiff(self.resultsPath, stationsDict, self.config)
+
     def readVelocityFile(self, stationFile):
         """reading velocity model from "STATION0.HYP" file 
 
@@ -735,9 +787,12 @@ class Main():
 # Run application
 if __name__ == "__main__":
     app = Main()
-    app.generateTTTable()
-    app.createNewStationFile()
-    app.createNewCatalogFile()
+    # app.generateTTTable()
+    # app.createNewStationFile()
+    # app.createNewCatalogFile(computeWeight=False)
+    # app.createNewCatalogFile(computeWeight=True)
+    # app.makeReportFile()
+    app.visualizeResult()
     # app.parseStationInfo()
     # app.parseVelocityModel()
     # app.writeNLlocVelocityModel()
