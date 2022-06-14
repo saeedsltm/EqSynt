@@ -20,7 +20,7 @@
         "flag": true,
         "/Comment#002_01": "+++ Define station coordinate",
         "Station": {
-            "SeedRandomID": 1,
+            "SeedRandomID": 6,
             "StationFile": "",
             "StationBoundCenter": [
                 52.00,
@@ -77,7 +77,7 @@
         },
         "/Comment#002_03": "+++ Define catalog of events",
         "Catalog": {
-            "SeedRandomID": 2,
+            "SeedRandomID": 1,
             "CatalogFile": "",
             "CatalogBoundCenter": [
                 52.00,
@@ -85,17 +85,17 @@
             ],
             "CatalogBoundCov": [
                 [
-                    0.25,
+                    0.05,
                     0.0
                 ],
                 [
                     0.0,
-                    0.25
+                    0.05
                 ]
             ],
             "CatalogBoundDepMin": 5.00,
             "CatalogBoundDepMax": 20.00,
-            "NumberOfEvents": 10
+            "NumberOfEvents": 100
         }
     },
     "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
@@ -132,7 +132,7 @@
         "UsageOfPhase": {
             "Seed": 1,
             "PercentageUseOfP": 100,
-            "PercentageUseOfS": 50
+            "PercentageUseOfS": 100
         },
         "/Comment#004_05": "+++ Make horizontal shift in epicenters if needed (in degree)?",
         "LocationShift": {
@@ -146,7 +146,7 @@
     "FGS": {
         "VelocityMin": 3.0,
         "VelocityMax": 7.0,
-        "HistERHMax": 20.0,
+        "HistERHMax": 30.0,
         "HistERHInc": 1.0,
         "HistERZMax": 30.0,
         "HistERZInc": 1.0,

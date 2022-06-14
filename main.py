@@ -226,6 +226,10 @@ class Main():
             catalog.write(os.path.join("EqInput", "select_weighted.out"), format="NORDIC")
         else:
             catalog.write(os.path.join("EqInput", "select_unweighted.out"), format="NORDIC")
+        with open(os.path.join("EqInput", "magnitudes.dat"), "w") as f:
+            for event in catalog:
+                mag = event.magnitudes[0].mag
+                f.write("{mag:3.1f}\n".format(mag=mag))
 
 
     def setTTError(self, tt, m=0.0, std=1.0, addWeight=True):
@@ -298,6 +302,7 @@ class Main():
         for selectFile in glob(os.path.join("EqInput", "select_*.out")):
             copy(selectFile, os.path.join(self.resultsPath, "relocation"))
         copy(os.path.join("EqInput", "STATION0.HYP"), os.path.join(self.resultsPath, "relocation"))
+        copy(os.path.join("EqInput", "magnitudes.dat"), os.path.join(self.resultsPath, "relocation"))
         copy(os.path.join("files", "report.inp"), os.path.join(self.resultsPath, "relocation"))
         root = os.getcwd()
         os.chdir(os.path.join(self.resultsPath, "relocation"))
@@ -331,7 +336,11 @@ class Main():
             for l in f:
                 for i in [6, 8, 11, 12, 13, 14, 16, 17, 19]:
                     l = l[:i]+l[i].replace(" ", "0")+l[i+1:]
-                ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f").strftime("%Y-%m-%d %H:%M:%S.%f")
+                try:
+                    ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f").strftime("%Y-%m-%d %H:%M:%S.%f")
+                except ValueError:
+                    l = l[:16]+"59.99"+l[20:]
+                    ot = dt.strptime(l[:20], " %Y %m%d %H%M %S.%f").strftime("%Y-%m-%d %H:%M:%S.%f")
                 lat,latErr = self.handleMissingValue(l[22:28]), self.handleMissingValue(l[29:34])
                 lon,lonErr = self.handleMissingValue(l[37:43]), self.handleMissingValue(l[44:49])
                 dep,depErr = self.handleMissingValue(l[50:55]), self.handleMissingValue(l[56:61])
@@ -353,8 +362,8 @@ class Main():
         """_summary_
         """
         stationsDict = self.readStationFile(os.path.join("EqInput", "STATION0.HYP"))
-        plotSeismicityMap(self.resultsPath, stationsDict)
-        plotHypocenterDiff(self.resultsPath, stationsDict, self.config)
+        plotSeismicityMap(self.resultsPath, stationsDict)  # type: ignore
+        plotHypocenterDiff(self.resultsPath, stationsDict, self.config)  # type: ignore
 
     def readVelocityFile(self, stationFile):
         """reading velocity model from "STATION0.HYP" file 
@@ -788,10 +797,10 @@ class Main():
 if __name__ == "__main__":
     app = Main()
     # app.generateTTTable()
-    # app.createNewStationFile()
-    # app.createNewCatalogFile(computeWeight=False)
-    # app.createNewCatalogFile(computeWeight=True)
-    # app.makeReportFile()
+    app.createNewStationFile()
+    app.createNewCatalogFile(computeWeight=False)
+    app.createNewCatalogFile(computeWeight=True)
+    app.makeReportFile()
     app.visualizeResult()
     # app.parseStationInfo()
     # app.parseVelocityModel()
