@@ -307,6 +307,7 @@ class Main():
         root = os.getcwd()
         os.chdir(os.path.join(self.resultsPath, "relocation"))
         for inpFile in glob("select*.out"):
+            nordic2xyzm(nordicFile=inpFile)
             with open("hyp.inp", "w") as f:
                 f.write("{inpFile:s}\nn\n".format(inpFile=inpFile))
             cmd = "hyp < hyp.inp"

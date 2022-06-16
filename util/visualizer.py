@@ -1,7 +1,5 @@
-from matplotlib.pyplot import legend
 import proplot as plt
 from numpy import array, arange, corrcoef, sqrt, abs, loadtxt
-from matplotlib.lines import Line2D
 from pandas import read_csv, DataFrame
 from obspy.geodetics.base import degrees2kilometers as d2k
 import os
@@ -138,10 +136,11 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     T = ["raw-rel$_u$ (km)", "raw-rel$_w$ (km)"]
     R = [ru, rw]
     for i,(x,y,c,t,r) in enumerate(zip(X, Y, C, T, R)):
+        r = x.corr(y)
         scr1 = axs[i].scatter(x, y, s=50, marker="o", c=c, lw=0.4, edgecolors="k",
                             cmap="lajolla", vmin=gapMin, vmax=gapMax)
         axs[i].plot([xMin, xMax], [xMin, xMax], color="k", ms=0.5)
-        axs[i].format(lrtitle="r={r:f}".format(r=r[0]),
+        axs[i].format(lrtitle="r={r:f}".format(r=r),
                     xlim=(xMin, xMax), ylim=(xMin, xMax))
         ix = axs[i].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
         ix.format(title=t, fontsize=8)
