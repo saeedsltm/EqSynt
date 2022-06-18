@@ -1,6 +1,6 @@
 from obspy.core import event
-from random import gauss
 from obspy.geodetics.base import kilometer2degrees as k2d
+
 
 class feedCatalog():
     def __init__(self):
@@ -10,12 +10,12 @@ class feedCatalog():
         pick = event.Pick()
         pick.onset = onset
         pick.phase_hint = phaseHint
-        pick.update({"extra":{"nordic_pick_weight":{"value":0}}})
+        pick.update({"extra": {"nordic_pick_weight": {"value": 0}}})
         pick.extra.nordic_pick_weight.value = weight
         pick.time = time
         pick.waveform_id = event.WaveformStreamID("BI", staCode)
         return pick
-        
+
     def setArrival(self, phase, time, distance, azimuth, pick_id):
         arrival = event.Arrival()
         arrival.phase = phase
@@ -31,8 +31,8 @@ class feedCatalog():
         magnitude.magnitude_type = magType
         magnitude.origin_id = origin.resource_id
         return magnitude
-    
-    def getPicksArrivals(self, arrivalsDict):   
+
+    def getPicksArrivals(self, arrivalsDict):
         picks, arrivals = [], []
         for staCode in arrivalsDict:
             phaseP = arrivalsDict[staCode]["P"]
@@ -40,11 +40,12 @@ class feedCatalog():
             for Phase in [phaseP, phaseS]:
                 phase, onset, weight, time, distance, azimuth = Phase
                 pick = self.setPick(staCode, onset, phase, weight, time)
-                arrival = self.setArrival(phase, time, distance, azimuth, pick.resource_id)
+                arrival = self.setArrival(
+                    phase, time, distance, azimuth, pick.resource_id)
                 picks.append(pick)
                 arrivals.append(arrival)
         return picks, arrivals
-    
+
     def setOrigin(self, eventInfo, arrivals):
         origin = event.Origin()
         origin.time = eventInfo["OriginTime"]
@@ -53,9 +54,9 @@ class feedCatalog():
         origin.depth = eventInfo["Depth"]*1e3
         origin.arrivals = arrivals
         return origin
-    
+
     def setEvent(self, eventInfo, arrivalsDict):
-        picks, arrivals = self.getPicksArrivals(arrivalsDict)                
+        picks, arrivals = self.getPicksArrivals(arrivalsDict)
         Event = event.Event()
         origin = self.setOrigin(eventInfo, arrivals)
         magnitude = self.setMagnitude(0.5*len(arrivalsDict), "Ml", origin)
@@ -63,7 +64,7 @@ class feedCatalog():
         Event.picks = picks
         Event.magnitudes.append(magnitude)
         return Event
-    
+
     def setCatalog(self, eventsInfo, eventArrivals):
         catalog = event.Catalog()
         for eventInfo, arrivalsDict in zip(eventsInfo, eventArrivals):
