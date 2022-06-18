@@ -1,11 +1,9 @@
 from LatLon import lat_lon as ll
 from datetime import datetime as dt
-from datetime import timedelta as td
-from statistics import mean, stdev
 from string import ascii_uppercase
 from json import load
 from pathlib import Path
-from shutil import copy, move
+from shutil import copy
 from glob import glob
 from pytz import utc
 from numpy.random import multivariate_normal
@@ -19,7 +17,7 @@ from obspy.geodetics.base import gps2dist_azimuth as gps
 from obspy import UTCDateTime as utc
 from util import feedEvents2Catalog
 from numpy import array
-from util.nordic2xyzm import nordic2xyzm
+from util.nordic2xyzm import catalog2xyzm
 from util.visualizer import plotSeismicityMap, plotHypocenterDiff
 from util.logger import myLogger
 import random
@@ -32,8 +30,7 @@ import sys
 class Main():
     # Init
     def __init__(self):
-        # self.resultsPath = os.path.join("results", dt.now().strftime("%Y_%j_%H%M%S"))
-        self.resultsPath = os.path.join("results", "test")
+        self.resultsPath = os.path.join("results", dt.now().strftime("%Y_%j_%H%M%S"))
         Path(self.resultsPath).mkdir(parents=True, exist_ok=True)
         self.report = myLogger(os.path.join(self.resultsPath, "report"), mode="w")
         self.readConfiguration()
@@ -287,7 +284,7 @@ class Main():
             numpy.array: an array contains stations distance
         """
         random.seed(eventID)
-        randomStations = random.sample(list(stations.keys()), k=random.randint(3, len(stations)))
+        randomStations = random.sample(list(stations.keys()), k=random.randint(4, len(stations)))
         stationLats = [stations[station]["Lat"] for station in randomStations]
         stationLons = [stations[station]["Lon"] for station in randomStations]
         distances = [gps(eventLat, eventLon, stationLat, stationLon)[
@@ -307,21 +304,13 @@ class Main():
         root = os.getcwd()
         os.chdir(os.path.join(self.resultsPath, "relocation"))
         for inpFile in glob("select*.out"):
-            nordic2xyzm(nordicFile=inpFile)
             with open("hyp.inp", "w") as f:
                 f.write("{inpFile:s}\nn\n".format(inpFile=inpFile))
-            cmd = "hyp < hyp.inp"
+            cmd = "hyp < hyp.inp > /dev/null"
             os.system(cmd)
-            cmd = "report hyp.out report.inp"
-            os.system(cmd)
-            reportOut = "report_{inpFile:s}.out".format(inpFile=inpFile.split(".")[0])
-            os.rename("report.out", reportOut)
-            self.report2csv(reportOut)
-        cmd = "report select_unweighted.out report.inp"
-        os.system(cmd)
-        reportOut = "report_initial.out"
-        os.rename("report.out", reportOut)
-        self.report2csv(reportOut)
+            catalog2xyzm("hyp.out", inpFile)
+        initial = "select_unweighted.out"
+        catalog2xyzm(initial, "initial.out")
         os.chdir(root)
 
 

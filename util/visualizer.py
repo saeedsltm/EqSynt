@@ -9,20 +9,20 @@ def getMinMax(*inpList):
     Max = max([max(x) for x in inpList])
     return Min, Max
 
-def plotSeismicityMap(resultPath, stationsDict):
-    print("+++ Plotting seismicity map ...")
-    # - Read input data
-    report_initial = read_csv(os.path.join(resultPath, "relocation", "report_initial.csv"))
-    report_select_unweighted = read_csv(os.path.join(resultPath, "relocation", "report_select_unweighted.csv"))
-    report_select_weighted = read_csv(os.path.join(resultPath, "relocation", "report_select_weighted.csv"))
+def loadData(resultPath):
+    report_initial = read_csv(os.path.join(resultPath, "relocation", "xyzm_initial.dat"), delim_whitespace=True)
+    report_select_unweighted = read_csv(os.path.join(resultPath, "relocation", "xyzm_select_unweighted.dat"), delim_whitespace=True)
+    report_select_weighted = read_csv(os.path.join(resultPath, "relocation", "xyzm_select_weighted.dat"), delim_whitespace=True)
     magnitudes = loadtxt(os.path.join(resultPath, "relocation", "magnitudes.dat"))
     report_initial["MAG"] = magnitudes
     report_select_unweighted["MAG"] = magnitudes
     report_select_weighted["MAG"] = magnitudes
-    c = (report_select_unweighted["Lon"]>0)&(report_select_weighted["Lon"]>0)
-    report_initial = report_initial[c]
-    report_select_unweighted = report_select_unweighted[c]
-    report_select_weighted = report_select_weighted[c]
+    return report_initial, report_select_unweighted, report_select_weighted
+
+def plotSeismicityMap(resultPath, stationsDict):
+    print("+++ Plotting seismicity map ...")
+    # - Read input data
+    report_initial, report_select_unweighted, report_select_weighted = loadData(resultPath)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(report_initial["Lon"], report_select_unweighted["Lon"], report_select_weighted["Lon"], sta["Lon"])
@@ -46,7 +46,6 @@ def plotSeismicityMap(resultPath, stationsDict):
     C = ["green", "red", "blue"]
     L = ["Raw", "Relocated$_u$", "Relocated$_w$"]
     for x,y,m,c,l in zip(X, Y, M, C, L):
-            # axs[0].plot(x, y, marker=m, ms=4, mec="k", mew=0.1, ls="", color=c)
             axs[0].scatter(x, y, s=m, marker="o", c=c, lw=0.4, edgecolors="k", alpha=.5, label=l)
     axs[0].plot(sta["Lon"], sta["Lat"], marker="^", ms=4, mec="k", mew=0.1, ls="", color="k")
 
@@ -59,7 +58,6 @@ def plotSeismicityMap(resultPath, stationsDict):
     M = [report_initial["MAG"], report_select_unweighted["MAG"], report_select_weighted["MAG"]]
     C = ["green", "red", "blue"]
     for x,y,c,m in zip(X, Y, C, M):
-            # px.plot(x, y, marker=m, ms=4, mec="k", mew=0.1, ls="", color=c)              
             px.scatter(x, y, s=m, marker="o", c=c, lw=0.4, edgecolors="k", alpha=.5)
 
     px = axs[0].panel_axes(side="b", width="5em")
@@ -71,7 +69,6 @@ def plotSeismicityMap(resultPath, stationsDict):
     M = [report_initial["MAG"], report_select_unweighted["MAG"], report_select_weighted["MAG"]]
     C = ["green", "red", "blue"]
     for x,y,c,m in zip(X, Y, C, M):
-            # px.plot(x, y, marker=m, ms=4, mec="k", mew=0.1, ls="", color=c, autoreverse=False)  
             px.scatter(x, y, s=m, marker="o", c=c, lw=0.4, edgecolors="k", alpha=.5)
                  
     # Saving figure
@@ -81,13 +78,7 @@ def plotSeismicityMap(resultPath, stationsDict):
 def plotHypocenterDiff(resultPath, stationsDict, config):
     print("+++ Plotting some statistics ...")
     # - Read input data
-    report_initial = read_csv(os.path.join(resultPath, "relocation", "report_initial.csv"))
-    report_select_unweighted = read_csv(os.path.join(resultPath, "relocation", "report_select_unweighted.csv"))
-    report_select_weighted = read_csv(os.path.join(resultPath, "relocation", "report_select_weighted.csv"))
-    c = (report_select_unweighted["Lon"]>0)&(report_select_weighted["Lon"]>0)
-    report_initial = report_initial[c]
-    report_select_unweighted = report_select_unweighted[c]
-    report_select_weighted = report_select_weighted[c]
+    report_initial, report_select_unweighted, report_select_weighted = loadData(resultPath)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(report_initial["Lon"], report_select_unweighted["Lon"], report_select_weighted["Lon"], sta["Lon"])
@@ -95,6 +86,7 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     zMin, zMax = getMinMax(report_initial["Dep"], report_select_unweighted["Dep"], report_select_weighted["Dep"])
     gMin, gMax = getMinMax(report_select_unweighted["GAP"], report_select_weighted["GAP"])
     rMin, rMax = getMinMax(report_select_unweighted["RMS"], report_select_weighted["RMS"])
+    mdsMin, mdsMax = getMinMax(report_initial["MDS"], report_initial["MDS"])
     gapMin, gapMax = 0, config["FGS"]["ColorbarGapMax"]
     HistInsetERHMin, HistInsetERHMax = config["FGS"]["HistInsetERHMin"], config["FGS"]["HistInsetERHMax"]
     HistInsetERHInc, HistInsetERZInc = config["FGS"]["HistInsetERHInc"], config["FGS"]["HistInsetERZInc"]
@@ -126,7 +118,7 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
 
     ru = [] # for unweighted
     rw = [] # for weighted
-    for v in ["Lon", "Lat", "Dep", "GAP", "RMS"]:
+    for v in ["Lon", "Lat", "Dep"]:
         ru.append(corrcoef(report_initial[v], report_select_unweighted[v])[0][1])
         rw.append(corrcoef(report_initial[v], report_select_weighted[v])[0][1])
     # - Visualizing data
@@ -151,20 +143,6 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
         ix.hist(data, arange(HistInsetERHMin, HistInsetERHMax+1, HistInsetERHInc),
                 filled=True, alpha=0.7, edgecolor="k", color="gray")
 
-    # axs[1].scatter(ini["LAT"], fin["LAT"], s=50, marker="o", c=fin["GAP"], lw=0.4, edgecolors="k",
-    #                cmap="lajolla", vmin=gapMin, vmax=gapMax)
-    # axs[1].plot([yMin, yMax], [yMin, yMax], color="k", ms=0.5)
-    # axs[1].set_xlim(yMin, yMax)
-    # axs[1].format(lrtitle="r={r:f}".format(r=r[1]),
-    #               xlim=(yMin, yMax), ylim=(yMin, yMax))
-    # ix = axs[1].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
-    # ix.format(title="raw-rel (km)", fontsize=8)
-    # ix.grid(ls=":")
-    # ix.spines["right"].set_visible(False)
-    # ix.spines["top"].set_visible(False)
-    # data = d2k(ini["LAT"].values-fin["LAT"].values)
-    # ix.hist(data, arange(HistInsetERHMin, HistInsetERHMax+1, HistInsetERHInc),
-    #         filled=True, alpha=0.7, edgecolor="k", color="gray")
     X = [report_initial["Lat"], report_initial["Lat"]]
     Y = [report_select_unweighted["Lat"], report_select_weighted["Lat"]]
     C = [report_select_unweighted["GAP"], report_select_weighted["GAP"]]
@@ -184,27 +162,15 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
         data = d2k(x.values-y.values)  # type: ignore
         ix.hist(data, arange(HistInsetERHMin, HistInsetERHMax+1, HistInsetERHInc),
                 filled=True, alpha=0.7, edgecolor="k", color="gray")
-    # axs[2].scatter(ini["DEPTH"], fin["DEPTH"], s=50, marker="o", c=fin["GAP"], lw=0.4, edgecolors="k",
-    #                cmap="lajolla", vmin=gapMin, vmax=gapMax)
-    # axs[2].plot([zMin, zMax], [zMin, zMax], color="k", ms=0.5)
-    # axs[2].format(lrtitle="r={r:f}".format(r=r[2]),
-    #               xlim=(zMin, zMax), ylim=(zMin, zMax))
-    # ix = axs[2].inset([0.1, 0.6, 0.3, 0.3], transform="axes", zoom=False)
-    # ix.format(title="raw-rel (km)", fontsize=8)
-    # ix.grid(ls=":")
-    # ix.spines["right"].set_visible(False)
-    # ix.spines["top"].set_visible(False)
-    # data = ini["DEPTH"].values-fin["DEPTH"].values
-    # ix.hist(data, arange(HistInsetERZMin, HistInsetERZMax+1, HistInsetERZInc),
-    #         filled=True, alpha=0.7, edgecolor="k", color="gray")
+
     X = [report_initial["Dep"], report_initial["Dep"]]
     Y = [report_select_unweighted["Dep"], report_select_weighted["Dep"]]
-    C = [report_select_unweighted["GAP"], report_select_weighted["GAP"]]
+    C = [report_select_unweighted["MDS"], report_select_weighted["MDS"]]
     T = ["raw-rel$_u$ (km)", "raw-rel$_w$ (km)"]
     R = [ru, rw]
     for i,(x,y,c,t,r) in enumerate(zip(X, Y, C, T, R), start=4):
         scr2 = axs[i].scatter(x, y, s=50, marker="o", c=c, lw=0.4, edgecolors="k",
-                       cmap="lajolla", vmin=gapMin, vmax=gapMax)
+                              cmap="lajolla", vmin=mdsMin, vmax=mdsMax)
         axs[i].plot([zMin, zMax], [zMin, zMax], color="k", ms=0.5)
         axs[i].format(lrtitle="r={r:f}".format(r=r[2]),
                     xlim=(zMin, zMax), ylim=(zMin, zMax))
@@ -216,45 +182,25 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
         data = x.values-y.values  # type: ignore
         ix.hist(data, arange(HistInsetERZMin, HistInsetERZMax+1, HistInsetERZInc),
                 filled=True, alpha=0.7, edgecolor="k", color="gray")
-    # scr2 = axs[3].scatter(ini["LON"], fin["LON"], s=50, marker="o", c=fin["MIND"], lw=0.4, edgecolors="k",
-    #                       cmap="lajolla", vmin=dMin, vmax=dMax)
-    # axs[3].plot([xMin, xMax], [xMin, xMax], color="k", ms=0.5)
-    # axs[3].set_xlim(xMin, xMax)
-    # axs[3].set_ylim(xMin, xMax)
-    # axs[3].format(lrtitle="r={r:f}".format(r=r[0]))
 
     r = []
     for v in ["GAP", "RMS"]:
         r.append(corrcoef(report_select_unweighted[v], report_select_weighted[v])[0][1])
     axs[6].scatter(report_select_unweighted["GAP"], report_select_weighted["GAP"], s=50, marker="o",
-                   c=report_select_unweighted["GAP"], lw=0.4, edgecolors="k", cmap="lajolla", vmin=gapMin, vmax=gapMax)
+                   c=report_select_unweighted["MDS"], lw=0.4, edgecolors="k", cmap="lajolla", vmin=mdsMin, vmax=mdsMax)
     axs[6].plot([gMin, gMax], [gMin, gMax], color="k", ms=0.5)
     axs[6].set_xlim(gMin, gMax)
     axs[6].set_ylim(gMin, gMax)
     axs[6].format(lrtitle="r={r:f}".format(r=r[0]),
                   xlim=(gMin, gMax), ylim=(gMin, gMax))
 
-    # axs[4].scatter(ini["LAT"], fin["LAT"], s=50, marker="o", c=fin["MIND"], lw=0.4, edgecolors="k",
-    #                cmap="lajolla", vmin=dMin, vmax=dMax)
-    # axs[4].plot([yMin, yMax], [yMin, yMax], color="k", ms=0.5)
-    # axs[4].set_xlim(yMin, yMax)
-    # axs[4].set_ylim(yMin, yMax)
-    # axs[4].format(lrtitle="r={r:f}".format(r=r[1]))
-
     axs[7].scatter(report_select_unweighted["RMS"], report_select_weighted["RMS"], s=50, marker="o",
-                   c=report_select_unweighted["GAP"], lw=0.4, edgecolors="k", cmap="lajolla", vmin=gapMin, vmax=gapMax)
+                   c=report_select_unweighted["MDS"], lw=0.4, edgecolors="k", cmap="lajolla", vmin=mdsMin, vmax=mdsMax)
     axs[7].plot([rMin, rMax], [rMin, rMax], color="k", ms=0.5)
     axs[7].set_xlim(rMin, rMax)
     axs[7].set_ylim(rMin, rMax)
     axs[7].format(lrtitle="r={r:f}".format(r=r[1]),
                 xlim=(rMin, rMax), ylim=(rMin, rMax))
-
-    # axs[5].scatter(ini["DEPTH"], fin["DEPTH"], s=50, marker="o", c=fin["MIND"], lw=0.4, edgecolors="k",
-    #                cmap="lajolla", vmin=dMin, vmax=dMax)
-    # axs[5].plot([zMin, zMax], [zMin, zMax], color="k", ms=0.5)
-    # axs[5].set_xlim(zMin, zMax)
-    # axs[5].set_ylim(zMin, zMax)
-    # axs[5].format(lrtitle="r={r:f}".format(r=r[2]))
     
     d1 = distanceDiff(report_initial["Lon"], report_select_unweighted["Lon"], report_initial["Lat"], report_select_unweighted["Lat"])
     d2 = distanceDiff(report_initial["Lon"], report_select_weighted["Lon"], report_initial["Lat"], report_select_weighted["Lat"])
@@ -263,13 +209,6 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     axs[8].hist(d.T, arange(0, HistERHMax+1, HistERHInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=labels, legend="ur", legend_kw={"ncol": 1})
 
-    # scr3 = axs[6].scatter(ini["GAP"], fin["GAP"], s=50, marker="o", c=fin["MIND"], lw=0.4, edgecolors="k",
-    #                       cmap="lajolla", vmin=dMin, vmax=dMax)
-    # axs[6].plot([gMin, gMax], [gMin, gMax], color="k", ms=0.5)
-    # axs[6].set_xlim(gMin, gMax)
-    # axs[6].set_ylim(gMin, gMax)
-    # axs[6].format(lrtitle="r={r:f}".format(r=r[3]))
-
     d1 = abs(report_initial["Lon"] - report_select_unweighted["Lon"])
     d2 = abs(report_initial["Lon"] - report_select_weighted["Lon"])
     d = d2k(array([d1, d2]))
@@ -277,35 +216,26 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     axs[9].hist(d.T, arange(0, HistERZMax+1, HistERZInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=labels, legend="ur", legend_kw={"ncol": 1})
 
-    # d = array([ini["ERH"], fin["ERH"]])
-    # axs[7].hist(d.T, arange(0, HistERHMax+1, HistERHInc), filled=True, alpha=0.7, edgecolor="k",
-    #             cycle=("cyan7", "red7"), labels=["raw", "relocated"], legend="ur", legend_kw={"ncol": 1})
-
-    d1 = sqrt(report_select_unweighted["LonErr"]**2 + report_select_unweighted["LatErr"]**2)
-    d2 = sqrt(report_select_weighted["LonErr"]**2 + report_select_weighted["LatErr"]**2)
+    d1 = report_select_unweighted["ERH"]
+    d2 = report_select_weighted["ERH"]
     d = array([d1, d2])
-    labels = ["$HEr-rel{_u} (km)$", "$HEr-rel{_w} (km)$"]
+    labels = ["$ERH-rel{_u} (km)$", "$ERH-rel{_w} (km)$"]
     axs[10].hist(d.T, arange(0, HistERHMax+1, HistERHInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=labels, legend="ur", legend_kw={"ncol": 1})
 
-    # d = array([ini["ERZ"], fin["ERZ"]])
-    # axs[8].hist(d.T, arange(0, HistERZMax+1, HistERZInc), filled=True, alpha=0.7, edgecolor="k",
-    #             cycle=("cyan7", "red7"), labels=["raw", "relocated"], legend="ur", legend_kw={"ncol": 1})
-
-    d1 = report_select_unweighted["DepErr"]
-    d2 = report_select_weighted["DepErr"]
+    d1 = report_select_unweighted["ERZ"]
+    d2 = report_select_weighted["ERZ"]
     d = array([d1, d2])
-    labels = ["$ZEr-rel{_u} (km)$", "$ZEr-rel{_w} (km)$"]
+    labels = ["$ERZ-rel{_u} (km)$", "$ERZ-rel{_w} (km)$"]
     axs[11].hist(d.T, arange(0, HistERZMax+1, HistERZInc), filled=True, alpha=0.7, edgecolor="k",
                 cycle=("cyan7", "red7"), labels=labels, legend="ur", legend_kw={"ncol": 1})
 
-    # # - Colorbar
+    # - Colorbar
     fig.colorbar(
         scr1, row=1, loc="r", extend="both", label="Azimuthal gap ($\degree$)", shrink=0.9)
     fig.colorbar(
-        scr2, row=2, loc="r", extend="both", label="Azimuthal gap ($\degree$)", shrink=0.9)
-    # fig.colorbar(
-    #     scr3, row=3, loc="r", extend="both", label="Nearest station (km)", shrink=0.9)
+        scr2, row=2, loc="r", extend="both", label="Min distance to station ($km$)", shrink=0.9)
+
     # - Save figure
     fig.save(os.path.join(resultPath, "compareHyp.pdf"))    
 

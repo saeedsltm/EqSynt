@@ -70,14 +70,3 @@ class feedCatalog():
             Event = self.setEvent(eventInfo, arrivalsDict)
             catalog.append(Event)
         return catalog
-
-# if __name__ == "__main__":
-#     eventArrivals = [{"AAA":{"P":["Pg", utc(2020,1,1)], "S":["Sg", utc(2020,1,1)]},
-#                  "BBB":{"P":["Pn", utc(2020,1,1)], "S":[]},
-#                  "CCC":{"P":["P", utc(2020,1,1)], "S":["Sg", utc(2020,1,1)]},
-#                  "DDD":{"P":["Pn", utc(2020,1,1)], "S":["Sg", utc(2020,1,1)]},
-#                  "EEE":{"P":["Pg", utc(2020,1,1)], "S":["Sg", utc(2020,1,1)]},
-#                  "FFF":{"P":["Pg", utc(2020,1,1)], "S":["Sg", utc(2020,1,1)]},
-#                 }]
-#     app = feedCatalog()
-#     catalog = app.setCatalog(eventArrivals)
