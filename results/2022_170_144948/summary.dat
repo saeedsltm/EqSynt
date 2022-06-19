@@ -1,0 +1,23 @@
+Statistics:
+==================================================| Events relocated without weighting scheme || Events relocated using weighting scheme |
++++ Number(%) of event with ERH<2.0km:                                              0(0.0)                                  0(0.0)
++++ Number(%) of event with ERH<5.0km:                                              5(2.0)                                97(38.8)
++++ Number(%) of event with ERZ<2.0km:                                              0(0.0)                                 15(6.0)
++++ Number(%) of event with ERZ<5.0km:                                            38(15.2)                               170(68.0)
++++ Number(%) of event with RMS<0.1s:                                               0(0.0)                                 17(6.8)
++++ Number(%) of event with RMS<0.3s:                                               1(0.4)                               135(54.0)
++++ Number(%) of event with GAP<150:                                              40(16.0)                                32(12.8)
++++ Number(%) of event with GAP<200:                                              90(36.0)                                80(32.0)
++++ Number(%) of event with GAP<250:                                             189(75.6)                               172(68.8)
++++ Number(%) of event with MDS<5:                                                  5(2.0)                                  5(2.0)
++++ Number(%) of event with MDS<10:                                                22(8.8)                                 16(6.4)
++++ Number(%) of event with MDS<15:                                               46(18.4)                                50(20.0)
++++ Number(%) of event with Nus>5:                                              250(100.0)                               221(88.4)
++++ Number(%) of event with NuP>5:                                              250(100.0)                              250(100.0)
++++ Number(%) of event with NuS>5:                                              250(100.0)                              250(100.0)
+==================== Class A =====================| Events relocated without weighting scheme || Events relocated using weighting scheme |
++++ Number(%) of event:                                                             0(0.0)                                  0(0.0)
+==================== Class B =====================| Events relocated without weighting scheme || Events relocated using weighting scheme |
++++ Number(%) of event:                                                             0(0.0)                                  1(0.4)
+==================== Class C =====================| Events relocated without weighting scheme || Events relocated using weighting scheme |
++++ Number(%) of event:                                                             5(2.0)                                54(21.6)

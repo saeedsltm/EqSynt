@@ -19,7 +19,6 @@ from tqdm.contrib import tzip
 from util import feedEvents2Catalog
 from util.logger import myLogger
 from util.nordic2xyzm import catalog2xyzm
-from util.plot import plotHypocenterDiff, plotSeismicityMap, plotVelocityModels
 from util.synthTime import extractTT, generateTTT
 from util.visualizer import plotHypocenterDiff, plotSeismicityMap
 
@@ -31,6 +30,7 @@ class Main():
     def __init__(self):
         self.resultsPath = os.path.join(
             "results", dt.now().strftime("%Y_%j_%H%M%S"))
+        # self.resultsPath = "results/test"
         Path(self.resultsPath).mkdir(parents=True, exist_ok=True)
         self.report = myLogger(os.path.join(
             self.resultsPath, "report"), mode="w")
@@ -303,8 +303,9 @@ class Main():
             numpy.array: an array contains stations distance
         """
         random.seed(eventID)
+        MinNumberOfUsedStation = 5
         randomStations = random.sample(
-            list(stations.keys()), k=random.randint(4, len(stations)))
+            list(stations.keys()), k=random.randint(MinNumberOfUsedStation, len(stations)))
         stationLats = [stations[station]["Lat"] for station in randomStations]
         stationLons = [stations[station]["Lon"] for station in randomStations]
         distances = [gps(eventLat, eventLon, stationLat, stationLon)[
@@ -379,7 +380,7 @@ class Main():
         """
         stationsDict = self.readStationFile(
             os.path.join("EqInput", "STATION0.HYP"))
-        plotSeismicityMap(self.resultsPath, stationsDict)  # type: ignore
+        plotSeismicityMap(self.resultsPath, stationsDict, self.config)  # type: ignore
         plotHypocenterDiff(self.resultsPath, stationsDict,
                            self.config)  # type: ignore
 

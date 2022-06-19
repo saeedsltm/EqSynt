@@ -95,7 +95,7 @@
             ],
             "CatalogBoundDepMin": 5.00,
             "CatalogBoundDepMax": 20.00,
-            "NumberOfEvents": 100
+            "NumberOfEvents": 250
         }
     },
     "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
@@ -158,5 +158,37 @@
         "HistInsetERZInc": 0.5,
         "ColorbarGapMax": 360,
         "ColorbarNearestMax": 10
+    },
+    "/Comment#007": "============================ Report Settings (RPS)",
+    "RPS": {
+        "Classes": {
+            "A": {
+                "ERH": 2.0,
+                "ERZ": 5.0,
+                "GAP": 150,
+                "RMS": 0.1,
+                "MDS": 5.0,
+                "NuP": 6,
+                "NuS": 2
+            },
+            "B": {
+                "ERH": 5.0,
+                "ERZ": 10.0,
+                "GAP": 200,
+                "RMS": 0.2,
+                "MDS": 10.0,
+                "NuP": 5,
+                "NuS": 1
+            },
+            "C": {
+                "ERH": 7.0,
+                "ERZ": 15.0,
+                "GAP": 250,
+                "RMS": 0.5,
+                "MDS": 20.0,
+                "NuP": 5,
+                "NuS": 1
+            }
+        }
     }
 }

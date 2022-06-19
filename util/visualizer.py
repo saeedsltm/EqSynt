@@ -4,7 +4,7 @@ import proplot as plt
 from numpy import abs, arange, array, corrcoef, loadtxt, sqrt
 from obspy.geodetics.base import degrees2kilometers as d2k
 from pandas import DataFrame, read_csv
-
+from util.summarizer import summarize
 
 def getMinMax(*inpList):
     Min = min([min(x) for x in inpList])
@@ -12,7 +12,7 @@ def getMinMax(*inpList):
     return Min, Max
 
 
-def loadData(resultPath):
+def loadData(resultPath, config):
     report_initial = read_csv(os.path.join(
         resultPath, "relocation", "xyzm_initial.dat"), delim_whitespace=True)
     report_select_unweighted = read_csv(os.path.join(
@@ -24,14 +24,15 @@ def loadData(resultPath):
     report_initial["MAG"] = magnitudes
     report_select_unweighted["MAG"] = magnitudes
     report_select_weighted["MAG"] = magnitudes
+    summarize(report_select_unweighted, report_select_weighted, config, resultPath)
     return report_initial, report_select_unweighted, report_select_weighted
 
 
-def plotSeismicityMap(resultPath, stationsDict):
+def plotSeismicityMap(resultPath, stationsDict, config):
     print("+++ Plotting seismicity map ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
-        resultPath)
+        resultPath, config)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(
@@ -104,7 +105,7 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     print("+++ Plotting some statistics ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
-        resultPath)
+        resultPath, config)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(
