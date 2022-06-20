@@ -6,13 +6,43 @@ from obspy.geodetics.base import degrees2kilometers as d2k
 from pandas import DataFrame, read_csv
 from util.summarizer import summarize
 
+
+def distanceDiff(xa, xb, ya, yb):
+    """Compute distance between two lists of points
+
+    Args:
+        xa (array): X array of first points
+        xb (array): X array of second points
+        ya (array): Y array of first points
+        yb (array): Y array of second points
+
+    Returns:
+        array: an array contains distances
+    """
+    return sqrt((xa-xb)**2+(ya-yb)**2)
+
+
 def getMinMax(*inpList):
+    """Get min and max of input list
+
+    Returns:
+        tuple: min and max of input list
+    """
     Min = min([min(x) for x in inpList])
     Max = max([max(x) for x in inpList])
     return Min, Max
 
 
 def loadData(resultPath, config):
+    """Load input data
+
+    Args:
+        resultPath (str): path to the result directory
+        config (dict): a dictionary contains main configurations
+
+    Returns:
+        tuple: a tuple contains initial, unweighted and weighted catalogs
+    """
     report_initial = read_csv(os.path.join(
         resultPath, "relocation", "xyzm_initial.dat"), delim_whitespace=True)
     report_select_unweighted = read_csv(os.path.join(
@@ -24,11 +54,19 @@ def loadData(resultPath, config):
     report_initial["MAG"] = magnitudes
     report_select_unweighted["MAG"] = magnitudes
     report_select_weighted["MAG"] = magnitudes
-    summarize(report_select_unweighted, report_select_weighted, config, resultPath)
+    summarize(report_select_unweighted,
+              report_select_weighted, config, resultPath)
     return report_initial, report_select_unweighted, report_select_weighted
 
 
 def plotSeismicityMap(resultPath, stationsDict, config):
+    """Plot a simple seismicity figure
+
+    Args:
+        resultPath (str): path to the result directory
+        stationsDict (dict): a dictionary contains station information
+        config (dict): a dictionary contains main configurations
+    """
     print("+++ Plotting seismicity map ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
@@ -102,6 +140,13 @@ def plotSeismicityMap(resultPath, stationsDict, config):
 
 
 def plotHypocenterDiff(resultPath, stationsDict, config):
+    """Plot statistical figure
+
+    Args:
+        resultPath (str): path to the result directory
+        stationsDict (dict): a dictionary contains station information
+        config (dict): a dictionary contains main configurations
+    """
     print("+++ Plotting some statistics ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
@@ -136,6 +181,7 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     axs.format(
         abc=True, abcloc="ul", suptitle="Dislocation plots")
     [ax.grid(ls=":") for ax in axs]
+    scr1, scr2 = None, None
     axesLabels = ["longitude (deg)", "longitude (deg)", "latitude (deg)",
                   "latitude (deg)", "depth (km)", "depth (km)"]
     W = ["u", "w", "u", "w", "u", "w"]
@@ -272,13 +318,9 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
 
     # - Colorbar
     fig.colorbar(
-        scr1, row=1, loc="r", extend="both", label="Azimuthal gap ($\degree$)", shrink=0.9)
+        scr1, row=1, loc="r", extend="both", label="Azimuthal gap ($\\degree$)", shrink=0.9)
     fig.colorbar(
         scr2, row=2, loc="r", extend="both", label="Min distance to station ($km$)", shrink=0.9)
 
     # - Save figure
     fig.save(os.path.join(resultPath, "compareHyp.pdf"))
-
-
-def distanceDiff(xa, xb, ya, yb):
-    return sqrt((xa-xb)**2+(ya-yb)**2)

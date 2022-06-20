@@ -10,6 +10,15 @@ warnings.filterwarnings("ignore")
 
 
 def handleNone(value, degree=False):
+    """Handle missing values
+
+    Args:
+        value (float): a float value
+        degree (bool, optional): whether convert to degree or not. Defaults to False.
+
+    Returns:
+        float: handled value
+    """
     if value == None:
         return None
     else:
@@ -19,6 +28,14 @@ def handleNone(value, degree=False):
 
 
 def getHer(event):
+    """Get horizontal error of event
+
+    Args:
+        event (obspy.event): an obspy event
+
+    Returns:
+        float: event horizontal error
+    """
     if event.origins[0].latitude_errors.uncertainty:
         return round(d2k(sqrt(event.origins[0].latitude_errors.uncertainty**2 + event.origins[0].longitude_errors.uncertainty**2)), 1)
     else:
@@ -26,6 +43,14 @@ def getHer(event):
 
 
 def getZer(event):
+    """Get depth error of event
+
+    Args:
+        event (obspy.event): an obspy event
+
+    Returns:
+        float: event depth error
+    """
     if event.origins[0].depth_errors.uncertainty:
         return event.origins[0].depth_errors.uncertainty*0.001
     else:
@@ -33,6 +58,12 @@ def getZer(event):
 
 
 def catalog2xyzm(hypInp, catalogFileName):
+    """Convert catalog to xyzm file format
+
+    Args:
+        hypInp (str): file name of NORDIC file
+        catalogFileName (str): file name of xyzm.dat file
+    """
     cat = read_events(hypInp)
     magnitudes = loadtxt("magnitudes.dat")
     outputFile = "xyzm_{catalogFileName:s}.dat".format(
