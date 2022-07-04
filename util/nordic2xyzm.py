@@ -1,7 +1,7 @@
 import warnings
 from math import sqrt
 
-from numpy import loadtxt, nan
+from numpy import loadtxt, nan, mean, round_
 from obspy import read_events
 from obspy.geodetics.base import degrees2kilometers as d2k
 from pandas import DataFrame
@@ -88,6 +88,8 @@ def catalog2xyzm(hypInp, catalogFileName):
             [arrival.phase for arrival in arrivals if "S" in arrival.phase.upper()])
         mds = handleNone(
             min([arrival.distance for arrival in event.origins[0].arrivals]), degree=True)
+        ads = round_(handleNone(
+            mean([arrival.distance for arrival in event.origins[0].arrivals]), degree=True), 2)
         try:
             gap = handleNone(event.origins[0].quality.azimuthal_gap)
         except AttributeError:
@@ -107,6 +109,7 @@ def catalog2xyzm(hypInp, catalogFileName):
             "Nus": nus,
             "NuP": nuP,
             "NuS": nuS,
+            "ADS": ads,
             "MDS": mds,
             "GAP": gap,
             "RMS": rms,

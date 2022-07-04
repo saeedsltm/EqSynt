@@ -29,7 +29,7 @@ class Main():
     def __init__(self):
         self.resultsPath = os.path.join(
             "results", utc.now().strftime("%Y_%j_%H%M%S"))
-        # self.resultsPath = "results/test"
+        self.resultsPath = "results/2022_185_134736"
         Path(self.resultsPath).mkdir(parents=True, exist_ok=True)
         self.report = myLogger(os.path.join(
             self.resultsPath, "report"), mode="w")
@@ -37,9 +37,9 @@ class Main():
         self.config2Log()
         self.checkRequiredFiles()
         self.clearExistingFiles()
-        self.node_intervals = [self.config["TravelTimeGenerator"]["velocityXGridIntervals"],
-                               self.config["TravelTimeGenerator"]["velocityYGridIntervals"],
-                               self.config["TravelTimeGenerator"]["velocityZGridIntervals"]]
+        self.node_intervals = [self.config["TravelTimeGenerator"]["XGridIntervals"],
+                               self.config["TravelTimeGenerator"]["YGridIntervals"],
+                               self.config["TravelTimeGenerator"]["ZGridIntervals"]]
         self.travelTimeDict = {}
 
     # Read configuration parameters
@@ -71,9 +71,9 @@ class Main():
     # Check required input files
     def checkRequiredFiles(self):
         # - check earthquake arrivals and station files
-        if self.config["FSS"]["flag"] and not self.config["RSS"]["flag"]:
+        if self.config["FSS"]["Flag"] and not self.config["RSS"]["Flag"]:
             self.createNewStationFile()
-        elif not self.config["FSS"]["flag"] and self.config["RSS"]["flag"]:
+        elif not self.config["FSS"]["Flag"] and self.config["RSS"]["Flag"]:
             self.eqFile = os.path.join(
                 "EqInput", self.config["RSS"]["Inputs"]["EqFile"])
             self.stationFile = os.path.join(
@@ -158,24 +158,24 @@ class Main():
         # reading velocity file
         velocityModelDict = self.readVelocityFile(
             os.path.join("EqInput", "STATION0.HYP"))
-        if self.config["TravelTimeGenerator"]["flag"]:
-            xMaxDist = self.config["TravelTimeGenerator"]["numXGrid"] * \
-                self.config["TravelTimeGenerator"]["velocityXGridIntervals"]
-            zMaxDist = self.config["TravelTimeGenerator"]["numZGrid"] * \
-                self.config["TravelTimeGenerator"]["velocityZGridIntervals"]
+        if self.config["TravelTimeGenerator"]["Flag"]:
+            xMaxDist = self.config["TravelTimeGenerator"]["NumXGrid"] * \
+                self.config["TravelTimeGenerator"]["XGridIntervals"]
+            zMaxDist = self.config["TravelTimeGenerator"]["NumZGrid"] * \
+                self.config["TravelTimeGenerator"]["ZGridIntervals"]
             print("+++ Generating travel time tables for X range (0, {xMax:4.0f})km, and Z range (0, {zMax:4.0f})km".format(
                 xMax=xMaxDist, zMax=zMaxDist))
             print("+++ Generating travel time tables for P phase ...")
             generateTTT(
                 velocityModelDict, "P",
-                self.config["TravelTimeGenerator"]["numXGrid"], self.config["TravelTimeGenerator"]["numZGrid"],
-                self.node_intervals, self.config["TravelTimeGenerator"]["decimationFactor"]
+                self.config["TravelTimeGenerator"]["NumXGrid"], self.config["TravelTimeGenerator"]["NumZGrid"],
+                self.node_intervals, self.config["TravelTimeGenerator"]["DecimationFactor"]
             )
             print("+++ Generating travel time tables for S phase ...")
             generateTTT(
                 velocityModelDict, "S",
-                self.config["TravelTimeGenerator"]["numXGrid"], self.config["TravelTimeGenerator"]["numZGrid"],
-                self.node_intervals, self.config["TravelTimeGenerator"]["decimationFactor"]
+                self.config["TravelTimeGenerator"]["NumXGrid"], self.config["TravelTimeGenerator"]["NumZGrid"],
+                self.node_intervals, self.config["TravelTimeGenerator"]["DecimationFactor"]
             )
 
     # Create new station file
@@ -200,9 +200,9 @@ class Main():
         Z = self.config["FSS"]["Model"]["Z"]
         Interfaces = self.config["FSS"]["Model"]["Interfaces"]
         VpVs = self.config["FSS"]["Model"]["VpVs"]
-        xNear = self.config["FSS"]["Model"]["xNear"]
-        xFar = self.config["FSS"]["Model"]["xFar"]
-        trialDepth = self.config["FSS"]["Model"]["trialDepth"]
+        xNear = self.config["FSS"]["Model"]["XNear"]
+        xFar = self.config["FSS"]["Model"]["XFar"]
+        trialDepth = self.config["FSS"]["Model"]["TrialDepth"]
         with open(os.path.join("files", "resets.dat")) as f, open(os.path.join("EqInput", "STATION0.HYP"), "w") as g:
             for l in f:
                 g.write(l)
@@ -414,9 +414,9 @@ class Main():
 # Run application
 if __name__ == "__main__":
     app = Main()
-    app.generateTTTable()
-    app.createNewStationFile()
-    app.createNewCatalogFile(computeWeight=False)
-    app.createNewCatalogFile(computeWeight=True)
+    # app.generateTTTable()
+    # app.createNewStationFile()
+    # app.createNewCatalogFile(computeWeight=False)
+    # app.createNewCatalogFile(computeWeight=True)
     app.makeReportFile()
     app.visualizeResult()

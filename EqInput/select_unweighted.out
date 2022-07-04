@@ -1,5 +1,5 @@
  2020  1 1  0 1 40.0 L  35.863  52.363  7.0       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101000140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101000140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    0 153.844                                           75.6  39 
  RVDG    ES   0    0 2 8.188                                           75.6  39 
@@ -20,7 +20,7 @@
                                                                                 
 
  2020  1 1  0 3 20.0 L  35.760  51.882 17.7       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101000320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101000320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    0 331.341                                           62.1  27 
  TVCN    ES   0    0 341.704                                           62.1  27 
@@ -37,7 +37,7 @@
                                                                                 
 
  2020  1 1  0 5  0.0 L  35.485  52.194 16.5       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101000500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101000500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    0 523.821                                            136 355 
  YIBA    ES   0    0 540.433                                            136 355 
@@ -52,7 +52,7 @@
                                                                                 
 
  2020  1 1  0 6 40.0 L  35.830  52.390  8.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101000640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101000640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    0 650.152                                           50.3 340 
  TVCN    ES   0    0 657.958                                           50.3 340 
@@ -69,7 +69,7 @@
                                                                                 
 
  2020  1 1  0 8 20.0 L  35.944  52.071 12.4       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101000820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101000820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    0 849.463                                            165  51 
  YAIP    ES   0    0 910.350                                            165  51 
@@ -86,7 +86,7 @@
                                                                                 
 
  2020  1 1  010  0.0 L  35.539  52.327 11.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    01029.721                                            181  35 
  YAIP    ES   0    01055.905                                            181  35 
@@ -109,7 +109,7 @@
                                                                                 
 
  2020  1 1  011 40.0 L  35.914  51.928 14.8       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    01157.081                                           89.8   8 
  YIBA    ES   0    01210.244                                           89.8   8 
@@ -132,7 +132,7 @@
                                                                                 
 
  2020  1 1  013 20.0 L  35.754  52.254 16.8       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    01338.219                                            110 302 
  EVSP    ES   0    01354.125                                            110 302 
@@ -151,7 +151,7 @@
                                                                                 
 
  2020  1 1  015  0.0 L  35.804  51.961  6.4       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    01531.256                                            174  75 
  ZGXN    ES   0    01553.947                                            174  75 
@@ -168,7 +168,7 @@
                                                                                 
 
  2020  1 1  016 40.0 L  36.130  52.009  5.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    01643.477                                           22.2  50 
  TVCN    ES   0    01648.713                                           22.2  50 
@@ -189,7 +189,7 @@
                                                                                 
 
  2020  1 1  018 20.0 L  36.256  51.754 17.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101001820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101001820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    01838.524                                            103  91 
  ZSCP    ES   0    01852.522                                            103  91 
@@ -212,7 +212,7 @@
                                                                                 
 
  2020  1 1  020  0.0 L  36.112  52.202 11.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    02016.806                                           94.4 350 
  XIVZ    ES   0    02032.014                                           94.4 350 
@@ -233,7 +233,7 @@
                                                                                 
 
  2020  1 1  021 40.0 L  35.847  52.201 16.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    022 7.564                                            163  45 
  YAIP    ES   0    02230.519                                            163  45 
@@ -254,7 +254,7 @@
                                                                                 
 
  2020  1 1  023 20.0 L  35.791  51.973  5.0       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    02352.884                                            182  48 
  YAIP    ES   0    02416.972                                            182  48 
@@ -273,7 +273,7 @@
                                                                                 
 
  2020  1 1  025  0.0 L  36.119  51.940 11.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    025 6.052                                           28.0  56 
  TVCN    ES   0    02512.321                                           28.0  56 
@@ -288,7 +288,7 @@
                                                                                 
 
  2020  1 1  026 40.0 L  35.911  51.845 15.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    027 0.548                                            101  69 
  ZSCP    ES   0    02713.596                                            101  69 
@@ -305,7 +305,7 @@
                                                                                 
 
  2020  1 1  028 20.0 L  35.811  51.846  8.4       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101002820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101002820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    02825.353                                           30.7  33 
  SRWZ    ES   0    02832.314                                           30.7  33 
@@ -324,7 +324,7 @@
                                                                                 
 
  2020  1 1  030  0.0 L  35.997  51.850 19.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    03018.762                                            103  64 
  RVDG    ES   0    03034.649                                            103  64 
@@ -347,7 +347,7 @@
                                                                                 
 
  2020  1 1  031 40.0 L  36.052  51.750 18.5       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    03154.584                                           79.0  21 
  YIBA    ES   0    032 5.839                                           79.0  21 
@@ -364,7 +364,7 @@
                                                                                 
 
  2020  1 1  033 20.0 L  36.166  52.371  5.5      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    03329.602                                           48.2  81 
  ZSCP    ES   0    03337.224                                           48.2  81 
@@ -389,7 +389,7 @@
                                                                                 
 
  2020  1 1  035  0.0 L  35.802  51.957  5.4      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    03517.721                                           86.1 309 
  EVSP    ES   0    03530.180                                           86.1 309 
@@ -414,7 +414,7 @@
                                                                                 
 
  2020  1 1  036 40.0 L  36.378  51.833 13.1       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    03658.553                                           95.2  88 
  RVDG    ES   0    03710.606                                           95.2  88 
@@ -431,7 +431,7 @@
                                                                                 
 
  2020  1 1  038 20.0 L  35.858  52.011 19.1       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101003820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101003820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    03835.022                                           79.9  22 
  YXLK    ES   0    03844.480                                           79.9  22 
@@ -448,7 +448,7 @@
                                                                                 
 
  2020  1 1  040  0.0 L  36.470  52.043 10.7       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    040 6.444                                           27.4   4 
  YIBA    ES   0    04010.973                                           27.4   4 
@@ -467,7 +467,7 @@
                                                                                 
 
  2020  1 1  041 40.0 L  36.138  52.027  8.2      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    04156.152                                           82.8  69 
  RVDG    ES   0    042 7.063                                           82.8  69 
@@ -492,7 +492,7 @@
                                                                                 
 
  2020  1 1  043 20.0 L  35.921  52.067 11.3       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    04335.834                                           82.6  65 
  ZSCP    ES   0    04349.333                                           82.6  65 
@@ -513,7 +513,7 @@
                                                                                 
 
  2020  1 1  045  0.0 L  35.922  51.745  5.4      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    04515.658                                           86.3  39 
  YXLK    ES   0    04528.401                                           86.3  39 
@@ -538,7 +538,7 @@
                                                                                 
 
  2020  1 1  046 40.0 L  36.131  51.953  8.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    04641.863                                           12.4 143 
  SRWZ    ES   0    04646.815                                           12.4 143 
@@ -563,7 +563,7 @@
                                                                                 
 
  2020  1 1  048 20.0 L  36.208  52.188 11.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101004820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101004820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    04836.006                                           88.0 276 
  EVSP    ES   0    04848.645                                           88.0 276 
@@ -578,7 +578,7 @@
                                                                                 
 
  2020  1 1  050  0.0 L  36.198  52.064 12.4       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    05012.015                                           57.5   0 
  YIBA    ES   0    05020.143                                           57.5   0 
@@ -601,7 +601,7 @@
                                                                                 
 
  2020  1 1  051 40.0 L  36.280  51.831  8.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    05210.016                                            164  66 
  YAIP    ES   0    05230.507                                            164  66 
@@ -624,7 +624,7 @@
                                                                                 
 
  2020  1 1  053 20.0 L  35.933  52.115  8.5       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    05325.759                                           13.9 329 
  SRWZ    ES   0    05326.606                                           13.9 329 
@@ -639,7 +639,7 @@
                                                                                 
 
  2020  1 1  055  0.0 L  35.983  52.109  8.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    05511.294                                           63.7  20 
  YXLK    ES   0    05522.597                                           63.7  20 
@@ -654,7 +654,7 @@
                                                                                 
 
  2020  1 1  056 40.0 L  36.340  52.253 11.9       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    05659.219                                           93.5 266 
  EVSP    ES   0    05711.284                                           93.5 266 
@@ -677,7 +677,7 @@
                                                                                 
 
  2020  1 1  058 20.0 L  35.688  52.489  9.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101005820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101005820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    05843.502                                            133  64 
  ZGXN    ES   0    059 3.499                                            133  64 
@@ -700,7 +700,7 @@
                                                                                 
 
  2020  1 1  1 0  0.0 L  35.887  51.677  5.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    1 034.106                                            197  79 
  ZGXN    ES   0    1 058.055                                            197  79 
@@ -723,7 +723,7 @@
                                                                                 
 
  2020  1 1  1 1 40.0 L  36.196  52.036 17.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    1 154.966                                           77.9  86 
  ZSCP    ES   0    1 2 7.771                                           77.9  86 
@@ -742,7 +742,7 @@
                                                                                 
 
  2020  1 1  1 3 20.0 L  35.548  52.071 13.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    1 337.924                                           79.5   8 
  TVCN    ES   0    1 345.960                                           79.5   8 
@@ -767,7 +767,7 @@
                                                                                 
 
  2020  1 1  1 5  0.0 L  36.185  51.932 14.6      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    1 516.360                                           89.4  74 
  RVDG    ES   0    1 531.320                                           89.4  74 
@@ -792,7 +792,7 @@
                                                                                 
 
  2020  1 1  1 6 40.0 L  36.170  52.051  7.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    1 7 7.257                                            152  59 
  YAIP    ES   0    1 727.622                                            152  59 
@@ -809,7 +809,7 @@
                                                                                 
 
  2020  1 1  1 8 20.0 L  35.955  51.950 19.9       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101010820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101010820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    1 828.298                                           40.3  33 
  TVCN    ES   0    1 836.638                                           40.3  33 
@@ -830,7 +830,7 @@
                                                                                 
 
  2020  1 1  110  0.0 L  36.092  52.042 17.9       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    11028.454                                            161  85 
  ZGXN    ES   0    11046.656                                            161  85 
@@ -851,7 +851,7 @@
                                                                                 
 
  2020  1 1  111 40.0 L  36.027  52.044  6.8      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    11155.841                                           76.5   1 
  YIBA    ES   0    112 7.052                                           76.5   1 
@@ -876,7 +876,7 @@
                                                                                 
 
  2020  1 1  113 20.0 L  36.084  51.850 10.0       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    11349.855                                            172  59 
  YAIP    ES   0    11412.070                                            172  59 
@@ -891,7 +891,7 @@
                                                                                 
 
  2020  1 1  115  0.0 L  36.253  52.027 15.8       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    11515.245                                           77.5 359 
  XIVZ    ES   0    11527.604                                           77.5 359 
@@ -912,7 +912,7 @@
                                                                                 
 
  2020  1 1  116 40.0 L  36.041  52.268 15.7       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    11653.649                                           68.4  55 
  RVDG    ES   0    117 3.721                                           68.4  55 
@@ -931,7 +931,7 @@
                                                                                 
 
  2020  1 1  118 20.0 L  35.857  51.916 19.0       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101011820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101011820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    11839.840                                            106  55 
  RVDG    ES   0    11854.478                                            106  55 
@@ -946,7 +946,7 @@
                                                                                 
 
  2020  1 1  120  0.0 L  36.017  52.095 11.3       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    12015.038                                           77.5 358 
  YIBA    ES   0    12026.896                                           77.5 358 
@@ -965,7 +965,7 @@
                                                                                 
 
  2020  1 1  121 40.0 L  36.010  51.923 17.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    12211.126                                            173  82 
  ZGXN    ES   0    12230.560                                            173  82 
@@ -988,7 +988,7 @@
                                                                                 
 
  2020  1 1  123 20.0 L  36.156  51.861 15.1       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    12349.680                                            177  88 
  ZGXN    ES   0    12412.473                                            177  88 
@@ -1003,7 +1003,7 @@
                                                                                 
 
  2020  1 1  125  0.0 L  36.274  51.900  9.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    12527.358                                            158  65 
  YAIP    ES   0    12550.326                                            158  65 
@@ -1024,7 +1024,7 @@
                                                                                 
 
  2020  1 1  126 40.0 L  36.133  52.090 13.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    12657.364                                           91.0 356 
  XIVZ    ES   0    12712.531                                           91.0 356 
@@ -1041,7 +1041,7 @@
                                                                                 
 
  2020  1 1  128 20.0 L  36.038  51.755 18.2       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101012820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101012820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    12839.603                                            105  77 
  ZSCP    ES   0    12853.118                                            105  77 
@@ -1060,7 +1060,7 @@
                                                                                 
 
  2020  1 1  130  0.0 L  35.787  52.166 17.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    13016.002                                           83.3  11 
  YXLK    ES   0    13027.495                                           83.3  11 
@@ -1083,7 +1083,7 @@
                                                                                 
 
  2020  1 1  131 40.0 L  36.007  51.940 12.6       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    13143.306                                           9.31  66 
  SRWZ    ES   0    13146.360                                           9.31  66 
@@ -1100,7 +1100,7 @@
                                                                                 
 
  2020  1 1  133 20.0 L  36.070  51.693 13.8       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    13335.230                                           77.8  49 
  YXLK    ES   0    13345.835                                           77.8  49 
@@ -1115,7 +1115,7 @@
                                                                                 
 
  2020  1 1  135  0.0 L  35.808  52.189  5.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    13515.370                                           79.5  53 
  ZSCP    ES   0    13527.455                                           79.5  53 
@@ -1138,7 +1138,7 @@
                                                                                 
 
  2020  1 1  136 40.0 L  35.707  52.078  8.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    13710.133                                            167  70 
  ZGXN    ES   0    13731.177                                            167  70 
@@ -1153,7 +1153,7 @@
                                                                                 
 
  2020  1 1  138 20.0 L  35.639  51.991 17.0       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101013820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101013820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    13839.263                                            103  18 
  YXLK    ES   0    13852.518                                            103  18 
@@ -1176,7 +1176,7 @@
                                                                                 
 
  2020  1 1  140  0.0 L  36.091  52.251 11.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    14014.012                                           71.2 346 
  YIBA    ES   0    14024.501                                           71.2 346 
@@ -1193,7 +1193,7 @@
                                                                                 
 
  2020  1 1  141 40.0 L  35.827  51.994  7.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    14211.454                                            178  49 
  YAIP    ES   0    14234.498                                            178  49 
@@ -1212,7 +1212,7 @@
                                                                                 
 
  2020  1 1  143 20.0 L  36.440  52.285 13.2       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    14339.420                                           97.6 260 
  EVSP    ES   0    14352.530                                           97.6 260 
@@ -1233,7 +1233,7 @@
                                                                                 
 
  2020  1 1  145  0.0 L  36.276  51.585 15.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    145 8.614                                           33.3 272 
  EVSP    ES   0    14514.885                                           33.3 272 
@@ -1256,7 +1256,7 @@
                                                                                 
 
  2020  1 1  146 40.0 L  36.076  52.364 15.1       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    14647.954                                           29.9 262 
  SRWZ    ES   0    14652.353                                           29.9 262 
@@ -1277,7 +1277,7 @@
                                                                                 
 
  2020  1 1  148 20.0 L  36.193  51.732 10.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101014820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101014820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    14833.726                                           65.4  27 
  YIBA    ES   0    14841.986                                           65.4  27 
@@ -1298,7 +1298,7 @@
                                                                                 
 
  2020  1 1  150  0.0 L  35.865  51.960 11.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    15032.291                                            178  51 
  YAIP    ES   0    15052.747                                            178  51 
@@ -1319,7 +1319,7 @@
                                                                                 
 
  2020  1 1  151 40.0 L  36.123  51.725 12.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    15210.041                                            180  62 
  YAIP    ES   0    15236.560                                            180  62 
@@ -1334,7 +1334,7 @@
                                                                                 
 
  2020  1 1  153 20.0 L  35.861  52.177 16.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    15338.834                                           95.4 354 
  YIBA    ES   0    15350.857                                           95.4 354 
@@ -1349,7 +1349,7 @@
                                                                                 
 
  2020  1 1  155  0.0 L  35.744  52.116 12.8      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    155 6.020                                           33.7 347 
  SRWZ    ES   0    15513.072                                           33.7 347 
@@ -1374,7 +1374,7 @@
                                                                                 
 
  2020  1 1  156 40.0 L  36.010  52.179 10.9      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    15654.398                                           69.4  69 
  ZSCP    ES   0    157 2.984                                           69.4  69 
@@ -1399,7 +1399,7 @@
                                                                                 
 
  2020  1 1  158 20.0 L  35.977  51.958 12.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101015820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101015820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    15849.988                                            171  54 
  YAIP    ES   0    15911.446                                            171  54 
@@ -1414,7 +1414,7 @@
                                                                                 
 
  2020  1 1  2 0  0.0 L  36.168  52.194  5.4       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    2 017.754                                           88.2 350 
  XIVZ    ES   0    2 031.208                                           88.2 350 
@@ -1433,7 +1433,7 @@
                                                                                 
 
  2020  1 1  2 1 40.0 L  36.031  52.118  5.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    2 144.961                                           26.1  16 
  TVCN    ES   0    2 149.188                                           26.1  16 
@@ -1448,7 +1448,7 @@
                                                                                 
 
  2020  1 1  2 3 20.0 L  36.138  52.017 15.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    2 331.839                                           64.2   4 
  YIBA    ES   0    2 341.852                                           64.2   4 
@@ -1467,7 +1467,7 @@
                                                                                 
 
  2020  1 1  2 5  0.0 L  36.153  52.052 19.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    2 515.522                                           88.6 358 
  XIVZ    ES   0    2 529.365                                           88.6 358 
@@ -1490,7 +1490,7 @@
                                                                                 
 
  2020  1 1  2 6 40.0 L  35.456  51.931 13.9       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    2 656.795                                           92.1  15 
  TVCN    ES   0    2 7 9.104                                           92.1  15 
@@ -1511,7 +1511,7 @@
                                                                                 
 
  2020  1 1  2 8 20.0 L  36.489  52.232 10.9       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101020820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101020820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    2 830.369                                           52.8 199 
  SRWZ    ES   0    2 840.364                                           52.8 199 
@@ -1530,7 +1530,7 @@
                                                                                 
 
  2020  1 1  210  0.0 L  35.978  52.099  7.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    21031.951                                            157  80 
  ZGXN    ES   0    21048.002                                            157  80 
@@ -1549,7 +1549,7 @@
                                                                                 
 
  2020  1 1  211 40.0 L  35.973  51.969 12.5       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    21155.004                                           82.8   6 
  YIBA    ES   0    212 6.574                                           82.8   6 
@@ -1566,7 +1566,7 @@
                                                                                 
 
  2020  1 1  213 20.0 L  35.749  52.004 19.7       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    21327.827                                           32.5   4 
  SRWZ    ES   0    21333.553                                           32.5   4 
@@ -1583,7 +1583,7 @@
                                                                                 
 
  2020  1 1  215  0.0 L  35.777  51.884 16.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    21519.627                                            113  52 
  RVDG    ES   0    21536.804                                            113  52 
@@ -1602,7 +1602,7 @@
                                                                                 
 
  2020  1 1  216 40.0 L  35.934  52.056 13.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    21644.302                                           12.0 351 
  SRWZ    ES   0    21645.868                                           12.0 351 
@@ -1625,7 +1625,7 @@
                                                                                 
 
  2020  1 1  218 20.0 L  35.961  52.111 17.9       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101021820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101021820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    21823.823                                           11.2 322 
  SRWZ    ES   0    21826.596                                           11.2 322 
@@ -1642,7 +1642,7 @@
                                                                                 
 
  2020  1 1  220  0.0 L  36.048  52.221  8.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    220 4.101                                           16.7 267 
  SRWZ    ES   0    220 7.210                                           16.7 267 
@@ -1663,7 +1663,7 @@
                                                                                 
 
  2020  1 1  221 40.0 L  35.576  52.490 12.7      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    222 8.315                                            170  32 
  YAIP    ES   0    22230.463                                            170  32 
@@ -1688,7 +1688,7 @@
                                                                                 
 
  2020  1 1  223 20.0 L  36.202  51.855 19.3       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    22327.496                                           31.6  78 
  TVCN    ES   0    22330.631                                           31.6  78 
@@ -1705,7 +1705,7 @@
                                                                                 
 
  2020  1 1  225  0.0 L  35.944  52.565 13.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    22521.622                                            121 336 
  XIVZ    ES   0    22537.010                                            121 336 
@@ -1720,7 +1720,7 @@
                                                                                 
 
  2020  1 1  226 40.0 L  35.949  52.010 11.9       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    22653.413                                           70.7  26 
  YXLK    ES   0    227 2.495                                           70.7  26 
@@ -1737,7 +1737,7 @@
                                                                                 
 
  2020  1 1  228 20.0 L  35.936  52.298  9.0       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101022820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101022820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    22832.867                                           65.2   4 
  YXLK    ES   0    22842.393                                           65.2   4 
@@ -1758,7 +1758,7 @@
                                                                                 
 
  2020  1 1  230  0.0 L  35.928  52.152 13.2       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    230 8.372                                           36.6   6 
  TVCN    ES   0    23014.418                                           36.6   6 
@@ -1773,7 +1773,7 @@
                                                                                 
 
  2020  1 1  231 40.0 L  36.070  51.715 19.4       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    23152.546                                           78.3  23 
  YIBA    ES   0    232 4.844                                           78.3  23 
@@ -1790,7 +1790,7 @@
                                                                                 
 
  2020  1 1  233 20.0 L  36.289  52.113  5.1       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    23323.120                                           8.71 114 
  TVCN    ES   0    23322.483                                           8.71 114 
@@ -1805,7 +1805,7 @@
                                                                                 
 
  2020  1 1  235  0.0 L  35.862  51.975 16.8       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    23523.341                                            120   2 
  XIVZ    ES   0    23534.965                                            120   2 
@@ -1826,7 +1826,7 @@
                                                                                 
 
  2020  1 1  236 40.0 L  36.054  52.126 17.3       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    23646.182                                           23.5  16 
  TVCN    ES   0    23650.482                                           23.5  16 
@@ -1847,7 +1847,7 @@
                                                                                 
 
  2020  1 1  238 20.0 L  35.984  52.063 18.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101023820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101023820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    23834.083                                           83.6 294 
  EVSP    ES   0    23848.460                                           83.6 294 
@@ -1870,7 +1870,7 @@
                                                                                 
 
  2020  1 1  240  0.0 L  36.083  52.259 16.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    24017.080                                           98.6 347 
  XIVZ    ES   0    24030.724                                           98.6 347 
@@ -1893,7 +1893,7 @@
                                                                                 
 
  2020  1 1  241 40.0 L  36.248  52.426 17.1       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    242 3.026                                            126  92 
  ZGXN    ES   0    24220.277                                            126  92 
@@ -1912,7 +1912,7 @@
                                                                                 
 
  2020  1 1  243 20.0 L  35.636  52.147 12.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    24340.088                                            107  38 
  RVDG    ES   0    24354.928                                            107  38 
@@ -1929,7 +1929,7 @@
                                                                                 
 
  2020  1 1  245  0.0 L  36.094  52.135 13.4       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    245 4.459                                           19.0  18 
  TVCN    ES   0    245 6.671                                           19.0  18 
@@ -1948,7 +1948,7 @@
                                                                                 
 
  2020  1 1  246 40.0 L  36.234  52.181 11.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    24653.021                                           66.3  74 
  RVDG    ES   0    247 1.852                                           66.3  74 
@@ -1969,7 +1969,7 @@
                                                                                 
 
  2020  1 1  248 20.0 L  36.184  51.910  5.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101024820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101024820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    24822.635                                           19.5 144 
  SRWZ    ES   0    24828.208                                           19.5 144 
@@ -1986,7 +1986,7 @@
                                                                                 
 
  2020  1 1  250  0.0 L  36.437  51.874 18.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    25010.233                                           44.2  77 
  YXLK    ES   0    25015.585                                           44.2  77 
@@ -2009,7 +2009,7 @@
                                                                                 
 
  2020  1 1  251 40.0 L  35.606  51.702 13.5       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    25156.789                                           85.0  31 
  TVCN    ES   0    252 9.545                                           85.0  31 
@@ -2026,7 +2026,7 @@
                                                                                 
 
  2020  1 1  253 20.0 L  35.801  51.631  8.0      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    25328.901                                           45.2  53 
  SRWZ    ES   0    25336.539                                           45.2  53 
@@ -2051,7 +2051,7 @@
                                                                                 
 
  2020  1 1  255  0.0 L  36.437  51.750 12.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    25510.718                                           55.1  80 
  YXLK    ES   0    25517.708                                           55.1  80 
@@ -2066,7 +2066,7 @@
                                                                                 
 
  2020  1 1  256 40.0 L  35.700  51.927 12.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    25711.123                                            180  71 
  ZGXN    ES   0    25733.360                                            180  71 
@@ -2089,7 +2089,7 @@
                                                                                 
 
  2020  1 1  258 20.0 L  35.869  52.249 10.4      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101025820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101025820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    25824.563                                           27.1 314 
  SRWZ    ES   0    25830.856                                           27.1 314 
@@ -2114,7 +2114,7 @@
                                                                                 
 
  2020  1 1  3 0  0.0 L  36.196  51.723 10.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    3 0 7.847                                           43.4  80 
  TVCN    ES   0    3 016.256                                           43.4  80 
@@ -2131,7 +2131,7 @@
                                                                                 
 
  2020  1 1  3 1 40.0 L  35.903  52.139 13.1       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    3 157.151                                           90.4 356 
  YIBA    ES   0    3 210.958                                           90.4 356 
@@ -2148,7 +2148,7 @@
                                                                                 
 
  2020  1 1  3 3 20.0 L  36.029  52.315 14.4       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    3 328.595                                           54.8   3 
  YXLK    ES   0    3 339.388                                           54.8   3 
@@ -2167,7 +2167,7 @@
                                                                                 
 
  2020  1 1  3 5  0.0 L  36.112  52.362 14.2       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    3 5 4.422                                           21.6 317 
  TVCN    ES   0    3 5 9.496                                           21.6 317 
@@ -2188,7 +2188,7 @@
                                                                                 
 
  2020  1 1  3 6 40.0 L  36.024  52.349 11.9       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    3 7 4.731                                            134  81 
  ZGXN    ES   0    3 721.043                                            134  81 
@@ -2205,7 +2205,7 @@
                                                                                 
 
  2020  1 1  3 8 20.0 L  36.548  51.727  5.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101030820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101030820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    3 830.793                                           53.4 127 
  TVCN    ES   0    3 839.252                                           53.4 127 
@@ -2226,7 +2226,7 @@
                                                                                 
 
  2020  1 1  310  0.0 L  35.956  51.878  8.4       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    31031.117                                            178  55 
  YAIP    ES   0    31056.258                                            178  55 
@@ -2241,7 +2241,7 @@
                                                                                 
 
  2020  1 1  311 40.0 L  35.955  51.843  7.7       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    31150.841                                           46.4  43 
  TVCN    ES   0    31157.304                                           46.4  43 
@@ -2258,7 +2258,7 @@
                                                                                 
 
  2020  1 1  313 20.0 L  36.045  52.054 13.8       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    31331.486                                           59.4  27 
  YXLK    ES   0    31339.813                                           59.4  27 
@@ -2277,7 +2277,7 @@
                                                                                 
 
  2020  1 1  315  0.0 L  36.401  52.148 17.9      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    315 4.443                                           16.7 163 
  TVCN    ES   0    31510.365                                           16.7 163 
@@ -2302,7 +2302,7 @@
                                                                                 
 
  2020  1 1  316 40.0 L  35.724  51.973 17.0       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    31657.040                                           92.8 312 
  EVSP    ES   0    31710.826                                           92.8 312 
@@ -2319,7 +2319,7 @@
                                                                                 
 
  2020  1 1  318 20.0 L  35.851  51.736 17.0      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101031820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101031820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    31832.382                                           67.6 316 
  EVSP    ES   0    31842.549                                           67.6 316 
@@ -2344,7 +2344,7 @@
                                                                                 
 
  2020  1 1  320  0.0 L  36.184  51.626 17.2       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    320 9.118                                           38.8 287 
  EVSP    ES   0    32014.578                                           38.8 287 
@@ -2363,7 +2363,7 @@
                                                                                 
 
  2020  1 1  321 40.0 L  35.930  51.889  8.8       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    32155.097                                           77.9  32 
  YXLK    ES   0    322 7.575                                           77.9  32 
@@ -2386,7 +2386,7 @@
                                                                                 
 
  2020  1 1  323 20.0 L  35.688  52.000 17.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    32338.480                                           97.9  19 
  YXLK    ES   0    32352.454                                           97.9  19 
@@ -2401,7 +2401,7 @@
                                                                                 
 
  2020  1 1  325  0.0 L  36.151  51.807 15.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    32513.675                                           64.2  50 
  YXLK    ES   0    32523.106                                           64.2  50 
@@ -2424,7 +2424,7 @@
                                                                                 
 
  2020  1 1  326 40.0 L  35.901  52.138  6.2       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    32710.142                                            163  48 
  YAIP    ES   0    32729.134                                            163  48 
@@ -2439,7 +2439,7 @@
                                                                                 
 
  2020  1 1  328 20.0 L  35.708  52.405  5.3       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101032820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101032820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    32846.635                                            142 346 
  XIVZ    ES   0    329 5.700                                            142 346 
@@ -2458,7 +2458,7 @@
                                                                                 
 
  2020  1 1  330  0.0 L  35.948  51.923  5.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    33014.633                                           74.6  31 
  YXLK    ES   0    33027.790                                           74.6  31 
@@ -2475,7 +2475,7 @@
                                                                                 
 
  2020  1 1  331 40.0 L  36.433  51.375 16.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    332 3.245                                            138  98 
  ZSCP    ES   0    33220.399                                            138  98 
@@ -2498,7 +2498,7 @@
                                                                                 
 
  2020  1 1  333 20.0 L  35.766  52.082  8.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    33332.305                                           55.4  11 
  TVCN    ES   0    33339.491                                           55.4  11 
@@ -2513,7 +2513,7 @@
                                                                                 
 
  2020  1 1  335  0.0 L  36.131  52.459  6.6       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    33510.965                                           48.6  53 
  RVDG    ES   0    33517.579                                           48.6  53 
@@ -2530,7 +2530,7 @@
                                                                                 
 
  2020  1 1  336 40.0 L  35.864  52.096 14.4       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    337 1.640                                            120 356 
  XIVZ    ES   0    33717.578                                            120 356 
@@ -2553,7 +2553,7 @@
                                                                                 
 
  2020  1 1  338 20.0 L  35.659  52.024 10.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101033820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101033820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    33841.250                                            112  43 
  RVDG    ES   0    33857.806                                            112  43 
@@ -2576,7 +2576,7 @@
                                                                                 
 
  2020  1 1  340  0.0 L  35.916  52.178  6.0       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    34027.479                                            152  77 
  ZGXN    ES   0    34047.421                                            152  77 
@@ -2595,7 +2595,7 @@
                                                                                 
 
  2020  1 1  341 40.0 L  36.269  52.030  7.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    34157.521                                           73.4 271 
  EVSP    ES   0    342 6.260                                           73.4 271 
@@ -2616,7 +2616,7 @@
                                                                                 
 
  2020  1 1  343 20.0 L  36.059  52.064 12.9       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    34348.475                                            159  84 
  ZGXN    ES   0    344 8.985                                            159  84 
@@ -2637,7 +2637,7 @@
                                                                                 
 
  2020  1 1  345  0.0 L  35.836  52.062  7.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    34523.490                                            123 358 
  XIVZ    ES   0    34542.861                                            123 358 
@@ -2658,7 +2658,7 @@
                                                                                 
 
  2020  1 1  346 40.0 L  36.345  52.187  9.1      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    347 5.934                                            148  96 
  ZGXN    ES   0    34726.906                                            148  96 
@@ -2683,7 +2683,7 @@
                                                                                 
 
  2020  1 1  348 20.0 L  36.198  52.170 15.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101034820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101034820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    34834.128                                           68.5  71 
  RVDG    ES   0    34844.711                                           68.5  71 
@@ -2706,7 +2706,7 @@
                                                                                 
 
  2020  1 1  350  0.0 L  35.806  51.804 11.8       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    35014.737                                           75.5 315 
  EVSP    ES   0    35026.052                                           75.5 315 
@@ -2721,7 +2721,7 @@
                                                                                 
 
  2020  1 1  351 40.0 L  36.276  51.678  9.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    352 0.772                                            109  82 
  RVDG    ES   0    35216.901                                            109  82 
@@ -2738,7 +2738,7 @@
                                                                                 
 
  2020  1 1  353 20.0 L  36.313  51.943 12.1       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    35327.520                                           24.0 105 
  TVCN    ES   0    35329.622                                           24.0 105 
@@ -2753,7 +2753,7 @@
                                                                                 
 
  2020  1 1  355  0.0 L  35.902  51.825  5.4       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    35521.829                                            103  69 
  ZSCP    ES   0    35536.084                                            103  69 
@@ -2768,7 +2768,7 @@
                                                                                 
 
  2020  1 1  356 40.0 L  36.206  52.021 10.8       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    35654.732                                           79.2  87 
  ZSCP    ES   0    357 5.300                                           79.2  87 
@@ -2791,7 +2791,7 @@
                                                                                 
 
  2020  1 1  358 20.0 L  36.047  52.014 11.3       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101035820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101035820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    35821.983                                           2.07 109 
  SRWZ    ES   0    35825.332                                           2.07 109 
@@ -2814,7 +2814,7 @@
                                                                                 
 
  2020  1 1  4 0  0.0 L  36.040  52.004  7.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    4 016.505                                           83.5  75 
  ZSCP    ES   0    4 027.942                                           83.5  75 
@@ -2831,7 +2831,7 @@
                                                                                 
 
  2020  1 1  4 1 40.0 L  36.018  51.750  6.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    4 2 0.030                                            106  76 
  ZSCP    ES   0    4 215.104                                            106  76 
@@ -2852,7 +2852,7 @@
                                                                                 
 
  2020  1 1  4 3 20.0 L  35.987  51.958 18.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    4 338.857                                            107   3 
  XIVZ    ES   0    4 353.819                                            107   3 
@@ -2873,7 +2873,7 @@
                                                                                 
 
  2020  1 1  4 5  0.0 L  35.848  52.110 12.7       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    4 518.831                                           94.4 301 
  EVSP    ES   0    4 531.112                                           94.4 301 
@@ -2890,7 +2890,7 @@
                                                                                 
 
  2020  1 1  4 6 40.0 L  35.934  51.981  8.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    4 655.596                                           79.6 299 
  EVSP    ES   0    4 7 6.600                                           79.6 299 
@@ -2913,7 +2913,7 @@
                                                                                 
 
  2020  1 1  4 8 20.0 L  36.175  52.093 14.1       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101040820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101040820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    4 832.682                                           72.9  84 
  ZSCP    ES   0    4 843.280                                           72.9  84 
@@ -2934,7 +2934,7 @@
                                                                                 
 
  2020  1 1  410  0.0 L  36.131  51.786 17.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    41015.257                                           69.6  21 
  YIBA    ES   0    41024.345                                           69.6  21 
@@ -2949,7 +2949,7 @@
                                                                                 
 
  2020  1 1  411 40.0 L  35.671  52.462  5.3       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    41156.090                                           88.9  25 
  RVDG    ES   0    41212.025                                           88.9  25 
@@ -2968,7 +2968,7 @@
                                                                                 
 
  2020  1 1  413 20.0 L  35.803  51.814  5.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    41340.618                                            117  55 
  RVDG    ES   0    41359.621                                            117  55 
@@ -2993,7 +2993,7 @@
                                                                                 
 
  2020  1 1  415  0.0 L  36.363  51.938  7.2       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    41513.139                                           65.5 263 
  EVSP    ES   0    41523.113                                           65.5 263 
@@ -3014,7 +3014,7 @@
                                                                                 
 
  2020  1 1  416 40.0 L  35.845  52.003 15.8       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    41659.542                                           96.8   3 
  YIBA    ES   0    41710.584                                           96.8   3 
@@ -3035,7 +3035,7 @@
                                                                                 
 
  2020  1 1  418 20.0 L  35.866  52.139  7.4       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101041820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101041820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    41838.318                                           89.5  49 
  RVDG    ES   0    41850.528                                           89.5  49 
@@ -3052,7 +3052,7 @@
                                                                                 
 
  2020  1 1  420  0.0 L  36.068  52.251 15.6       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    42019.090                                            100 348 
  XIVZ    ES   0    42031.233                                            100 348 
@@ -3075,7 +3075,7 @@
                                                                                 
 
  2020  1 1  421 40.0 L  35.852  52.311 15.2       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    42154.489                                           79.6  41 
  RVDG    ES   0    422 6.574                                           79.6  41 
@@ -3096,7 +3096,7 @@
                                                                                 
 
  2020  1 1  423 20.0 L  36.184  52.678 13.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    42332.216                                           60.0 254 
  SRWZ    ES   0    42340.674                                           60.0 254 
@@ -3119,7 +3119,7 @@
                                                                                 
 
  2020  1 1  425  0.0 L  35.989  52.146  8.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    42512.629                                           62.0  17 
  YXLK    ES   0    42521.929                                           62.0  17 
@@ -3144,7 +3144,7 @@
                                                                                 
 
  2020  1 1  426 40.0 L  35.806  51.838 19.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    42654.791                                           77.7 313 
  EVSP    ES   0    427 4.711                                           77.7 313 
@@ -3165,7 +3165,7 @@
                                                                                 
 
  2020  1 1  428 20.0 L  35.822  51.970 17.0       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101042820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101042820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    42840.999                                            125   2 
  XIVZ    ES   0    429 0.628                                            125   2 
@@ -3180,7 +3180,7 @@
                                                                                 
 
  2020  1 1  430  0.0 L  35.815  52.063 12.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    43015.818                                           82.6  18 
  YXLK    ES   0    43028.264                                           82.6  18 
@@ -3203,7 +3203,7 @@
                                                                                 
 
  2020  1 1  431 40.0 L  36.214  52.139  8.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    43148.639                                           39.3  29 
  YXLK    ES   0    43151.812                                           39.3  29 
@@ -3218,7 +3218,7 @@
                                                                                 
 
  2020  1 1  433 20.0 L  36.267  51.842 14.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    43327.282                                           32.2  91 
  TVCN    ES   0    43331.792                                           32.2  91 
@@ -3241,7 +3241,7 @@
                                                                                 
 
  2020  1 1  435  0.0 L  36.258  51.947 10.9       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    43527.092                                            155  63 
  YAIP    ES   0    43548.246                                            155  63 
@@ -3256,7 +3256,7 @@
                                                                                 
 
  2020  1 1  436 40.0 L  36.251  52.098 13.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    43655.290                                           72.2  91 
  ZSCP    ES   0    437 4.648                                           72.2  91 
@@ -3271,7 +3271,7 @@
                                                                                 
 
  2020  1 1  438 20.0 L  35.976  51.777  9.8       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101043820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101043820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    43828.827                                           49.2  50 
  TVCN    ES   0    43837.811                                           49.2  50 
@@ -3288,7 +3288,7 @@
                                                                                 
 
  2020  1 1  440  0.0 L  35.862  52.325 14.5       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    44018.835                                           97.5 346 
  YIBA    ES   0    44031.033                                           97.5 346 
@@ -3305,7 +3305,7 @@
                                                                                 
 
  2020  1 1  441 40.0 L  35.566  51.544  5.9      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    442 6.321                                            136  20 
  YIBA    ES   0    44223.101                                            136  20 
@@ -3330,7 +3330,7 @@
                                                                                 
 
  2020  1 1  443 20.0 L  35.527  51.440  9.5       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    44348.407                                            166  18 
  XIVZ    ES   0    44411.015                                            166  18 
@@ -3349,7 +3349,7 @@
                                                                                 
 
  2020  1 1  445  0.0 L  36.286  51.908 19.5       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    445 5.745                                           26.5  97 
  TVCN    ES   0    44510.788                                           26.5  97 
@@ -3368,7 +3368,7 @@
                                                                                 
 
  2020  1 1  446 40.0 L  36.072  51.901 18.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    44657.951                                           96.0  68 
  RVDG    ES   0    44711.569                                           96.0  68 
@@ -3391,7 +3391,7 @@
                                                                                 
 
  2020  1 1  448 20.0 L  36.002  51.975  9.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101044820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101044820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    44832.370                                           67.0  30 
  YXLK    ES   0    44843.750                                           67.0  30 
@@ -3410,7 +3410,7 @@
                                                                                 
 
  2020  1 1  450  0.0 L  35.961  51.962 17.9       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    450 3.990                                           11.0  36 
  SRWZ    ES   0    450 7.182                                           11.0  36 
@@ -3429,7 +3429,7 @@
                                                                                 
 
  2020  1 1  451 40.0 L  35.737  52.103  9.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    45147.451                                           34.3 349 
  SRWZ    ES   0    45153.572                                           34.3 349 
@@ -3444,7 +3444,7 @@
                                                                                 
 
  2020  1 1  453 20.0 L  36.206  52.226 19.1       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    45328.453                                           36.9  18 
  YXLK    ES   0    45333.021                                           36.9  18 
@@ -3465,7 +3465,7 @@
                                                                                 
 
  2020  1 1  455  0.0 L  36.180  51.956 16.2       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    45515.308                                           85.2  85 
  ZSCP    ES   0    45527.350                                           85.2  85 
@@ -3480,7 +3480,7 @@
                                                                                 
 
  2020  1 1  456 40.0 L  35.880  51.843 11.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    45643.652                                           24.9  44 
  SRWZ    ES   0    45650.630                                           24.9  44 
@@ -3497,7 +3497,7 @@
                                                                                 
 
  2020  1 1  458 20.0 L  35.957  52.035  8.8       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101045820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101045820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    45841.964                                            110 359 
  XIVZ    ES   0    45856.121                                            110 359 
@@ -3512,7 +3512,7 @@
                                                                                 
 
  2020  1 1  5 0  0.0 L  35.850  51.900  5.1       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    5 020.223                                           97.3   8 
  YIBA    ES   0    5 032.810                                           97.3   8 
@@ -3529,7 +3529,7 @@
                                                                                 
 
  2020  1 1  5 1 40.0 L  36.210  51.875 18.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    5 150.368                                           58.7  17 
  YIBA    ES   0    5 2 0.818                                           58.7  17 
@@ -3546,7 +3546,7 @@
                                                                                 
 
  2020  1 1  5 3 20.0 L  36.079  51.565  5.6       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    5 335.018                                           83.9  32 
  YIBA    ES   0    5 349.997                                           83.9  32 
@@ -3569,7 +3569,7 @@
                                                                                 
 
  2020  1 1  5 5  0.0 L  36.163  51.947 17.3       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    5 528.479                                            169  88 
  ZGXN    ES   0    5 551.498                                            169  88 
@@ -3590,7 +3590,7 @@
                                                                                 
 
  2020  1 1  5 6 40.0 L  35.378  52.115 19.4       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    5 7 5.752                                            148 358 
  YIBA    ES   0    5 724.207                                            148 358 
@@ -3605,7 +3605,7 @@
                                                                                 
 
  2020  1 1  5 8 20.0 L  36.073  52.131 13.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101050820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101050820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    5 834.926                                           71.5  75 
  ZSCP    ES   0    5 843.719                                           71.5  75 
@@ -3624,7 +3624,7 @@
                                                                                 
 
  2020  1 1  510  0.0 L  35.895  52.005  7.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    51014.992                                           83.6 301 
  EVSP    ES   0    51029.272                                           83.6 301 
@@ -3639,7 +3639,7 @@
                                                                                 
 
  2020  1 1  511 40.0 L  35.908  52.191 18.0       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    51155.982                                           83.0  49 
  RVDG    ES   0    512 8.316                                           83.0  49 
@@ -3658,7 +3658,7 @@
                                                                                 
 
  2020  1 1  513 20.0 L  36.126  52.410 19.6       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    51326.152                                           35.1 254 
  SRWZ    ES   0    51333.574                                           35.1 254 
@@ -3677,7 +3677,7 @@
                                                                                 
 
  2020  1 1  515  0.0 L  35.824  52.478 15.6      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    51515.088                                           78.1 351 
  YXLK    ES   0    51526.986                                           78.1 351 
@@ -3702,7 +3702,7 @@
                                                                                 
 
  2020  1 1  516 40.0 L  36.160  51.607 12.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    51712.469                                            188  64 
  YAIP    ES   0    51735.985                                            188  64 
@@ -3723,7 +3723,7 @@
                                                                                 
 
  2020  1 1  518 20.0 L  36.008  52.191 10.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101051820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101051820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    51835.614                                           93.3 289 
  EVSP    ES   0    51852.040                                           93.3 289 
@@ -3738,7 +3738,7 @@
                                                                                 
 
  2020  1 1  520  0.0 L  35.900  51.656 10.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    52023.134                                            121  15 
  XIVZ    ES   0    52038.441                                            121  15 
@@ -3761,7 +3761,7 @@
                                                                                 
 
  2020  1 1  521 40.0 L  35.959  52.138  8.1       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    522 8.061                                            159  50 
  YAIP    ES   0    52230.044                                            159  50 
@@ -3780,7 +3780,7 @@
                                                                                 
 
  2020  1 1  523 20.0 L  35.961  51.974 15.1       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    52324.310                                           10.5  31 
  SRWZ    ES   0    52327.377                                           10.5  31 
@@ -3803,7 +3803,7 @@
                                                                                 
 
  2020  1 1  525  0.0 L  35.881  51.791 11.5       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    52519.391                                           95.9  14 
  YIBA    ES   0    52532.197                                           95.9  14 
@@ -3826,7 +3826,7 @@
                                                                                 
 
  2020  1 1  526 40.0 L  36.395  51.681  7.9       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    527 0.550                                            108  89 
  RVDG    ES   0    52715.197                                            108  89 
@@ -3849,7 +3849,7 @@
                                                                                 
 
  2020  1 1  528 20.0 L  36.107  51.894  6.6      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101052820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101052820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    52836.003                                           94.4   7 
  XIVZ    ES   0    52850.786                                           94.4   7 
@@ -3874,7 +3874,7 @@
                                                                                 
 
  2020  1 1  530  0.0 L  36.178  51.771 15.0       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    53016.742                                            101  86 
  ZSCP    ES   0    53033.890                                            101  86 
@@ -3897,7 +3897,7 @@
                                                                                 
 
  2020  1 1  531 40.0 L  36.206  51.581  9.4       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    53152.473                                           56.0  84 
  TVCN    ES   0    53159.817                                           56.0  84 
@@ -3912,7 +3912,7 @@
                                                                                 
 
  2020  1 1  533 20.0 L  36.472  51.992 12.5       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    53335.862                                           81.4  96 
  RVDG    ES   0    53349.563                                           81.4  96 
@@ -3931,7 +3931,7 @@
                                                                                 
 
  2020  1 1  535  0.0 L  36.017  51.708  9.9       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    53517.287                                           80.8  45 
  YXLK    ES   0    53527.163                                           80.8  45 
@@ -3946,7 +3946,7 @@
                                                                                 
 
  2020  1 1  536 40.0 L  36.276  52.082 18.1       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    537 6.057                                            157  92 
  ZGXN    ES   0    53728.224                                            157  92 
@@ -3961,7 +3961,7 @@
                                                                                 
 
  2020  1 1  538 20.0 L  36.019  51.905 18.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101053820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101053820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    53823.273                                           11.9  78 
  SRWZ    ES   0    53827.908                                           11.9  78 
@@ -3982,7 +3982,7 @@
                                                                                 
 
  2020  1 1  540  0.0 L  35.814  51.521  5.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    54025.436                                            132  69 
  ZSCP    ES   0    54043.052                                            132  69 
@@ -3997,7 +3997,7 @@
                                                                                 
 
  2020  1 1  541 40.0 L  36.247  52.101  8.0       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    54149.923                                           52.1 356 
  YIBA    ES   0    54158.442                                           52.1 356 
@@ -4018,7 +4018,7 @@
                                                                                 
 
  2020  1 1  543 20.0 L  36.460  51.937  9.9       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    54330.391                                           47.3 169 
  SRWZ    ES   0    54338.887                                           47.3 169 
@@ -4039,7 +4039,7 @@
                                                                                 
 
  2020  1 1  545  0.0 L  35.986  52.394 19.8       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    54518.285                                           86.0 340 
  YIBA    ES   0    54526.657                                           86.0 340 
@@ -4054,7 +4054,7 @@
                                                                                 
 
  2020  1 1  546 40.0 L  35.603  51.460 16.7       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    54658.514                                           98.6  42 
  TVCN    ES   0    54711.760                                           98.6  42 
@@ -4077,7 +4077,7 @@
                                                                                 
 
  2020  1 1  548 20.0 L  36.250  51.826 10.1       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101054820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101054820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    54835.637                                           79.8  12 
  XIVZ    ES   0    54848.991                                           79.8  12 
@@ -4096,7 +4096,7 @@
                                                                                 
 
  2020  1 1  550  0.0 L  35.532  52.069  8.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    55020.088                                            107  43 
  ZSCP    ES   0    55033.853                                            107  43 
@@ -4119,7 +4119,7 @@
                                                                                 
 
  2020  1 1  551 40.0 L  36.361  51.949 15.1       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    55156.237                                           86.8  99 
  ZSCP    ES   0    552 8.656                                           86.8  99 
@@ -4140,7 +4140,7 @@
                                                                                 
 
  2020  1 1  553 20.0 L  35.832  51.916 17.6       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    55348.840                                            177  76 
  ZGXN    ES   0    55412.590                                            177  76 
@@ -4163,7 +4163,7 @@
                                                                                 
 
  2020  1 1  555  0.0 L  36.012  52.459 19.0       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    555 7.652                                           35.8 319 
  TVCN    ES   0    55514.312                                           35.8 319 
@@ -4184,7 +4184,7 @@
                                                                                 
 
  2020  1 1  556 40.0 L  36.078  51.893 10.2       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    55656.457                                           96.5  68 
  RVDG    ES   0    55711.954                                           96.5  68 
@@ -4201,7 +4201,7 @@
                                                                                 
 
  2020  1 1  558 20.0 L  35.904  52.004 18.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101055820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101055820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    55848.251                                            167  78 
  ZGXN    ES   0    55911.161                                            167  78 
@@ -4224,7 +4224,7 @@
                                                                                 
 
  2020  1 1  6 0  0.0 L  36.249  52.270 15.3       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    6 023.958                                            140  92 
  ZGXN    ES   0    6 041.960                                            140  92 
@@ -4239,7 +4239,7 @@
                                                                                 
 
  2020  1 1  6 1 40.0 L  35.977  52.188 12.3       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    6 157.378                                           94.3 291 
  EVSP    ES   0    6 211.260                                           94.3 291 
@@ -4256,7 +4256,7 @@
                                                                                 
 
  2020  1 1  6 3 20.0 L  35.989  52.256 19.8       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    6 332.776                                           59.7   8 
  YXLK    ES   0    6 341.989                                           59.7   8 
@@ -4275,7 +4275,7 @@
                                                                                 
 
  2020  1 1  6 5  0.0 L  36.231  52.104  8.5       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    6 515.042                                           80.3 274 
  EVSP    ES   0    6 528.114                                           80.3 274 
@@ -4294,7 +4294,7 @@
                                                                                 
 
  2020  1 1  6 6 40.0 L  36.400  52.181 15.9      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    6 7 6.284                                            150  98 
  ZGXN    ES   0    6 725.460                                            150  98 
@@ -4319,7 +4319,7 @@
                                                                                 
 
  2020  1 1  6 8 20.0 L  35.623  52.101  6.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101060820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101060820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    6 840.176                                            102  12 
  YXLK    ES   0    6 857.095                                            102  12 
@@ -4344,7 +4344,7 @@
                                                                                 
 
  2020  1 1  610  0.0 L  36.302  51.741  7.5       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    61021.335                                            103  84 
  RVDG    ES   0    61033.536                                            103  84 
@@ -4361,7 +4361,7 @@
                                                                                 
 
  2020  1 1  611 40.0 L  36.086  51.926 18.7       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    61151.090                                           61.8  38 
  YXLK    ES   0    612 1.422                                           61.8  38 
@@ -4376,7 +4376,7 @@
                                                                                 
 
  2020  1 1  613 20.0 L  36.224  51.810  8.2       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    61351.694                                            181  90 
  ZGXN    ES   0    61413.895                                            181  90 
@@ -4395,7 +4395,7 @@
                                                                                 
 
  2020  1 1  615  0.0 L  36.326  51.914 16.4       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    61511.213                                           45.2  61 
  YXLK    ES   0    61517.802                                           45.2  61 
@@ -4410,7 +4410,7 @@
                                                                                 
 
  2020  1 1  616 40.0 L  36.250  51.881 14.0      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    61649.849                                           52.2  54 
  YXLK    ES   0    61658.411                                           52.2  54 
@@ -4435,7 +4435,7 @@
                                                                                 
 
  2020  1 1  618 20.0 L  35.838  52.151 17.6       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101061820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101061820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    61837.164                                           80.4  57 
  ZSCP    ES   0    61846.461                                           80.4  57 
@@ -4456,7 +4456,7 @@
                                                                                 
 
  2020  1 1  620  0.0 L  35.798  52.246 10.5       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    62026.494                                            149  72 
  ZGXN    ES   0    62045.508                                            149  72 
@@ -4477,7 +4477,7 @@
                                                                                 
 
  2020  1 1  621 40.0 L  36.161  51.816 10.1      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    62152.934                                           62.8  50 
  YXLK    ES   0    622 0.495                                           62.8  50 
@@ -4502,7 +4502,7 @@
                                                                                 
 
  2020  1 1  623 20.0 L  35.867  51.860  9.4       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    62334.705                                           74.7 308 
  EVSP    ES   0    62345.605                                           74.7 308 
@@ -4525,7 +4525,7 @@
                                                                                 
 
  2020  1 1  625  0.0 L  35.776  51.923 18.0      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    62514.902                                           85.6 311 
  EVSP    ES   0    62527.030                                           85.6 311 
@@ -4550,7 +4550,7 @@
                                                                                 
 
  2020  1 1  626 40.0 L  36.136  52.234 14.1       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    62657.933                                           93.3 280 
  EVSP    ES   0    62712.753                                           93.3 280 
@@ -4565,7 +4565,7 @@
                                                                                 
 
  2020  1 1  628 20.0 L  35.976  51.984 19.3       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101062820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101062820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    62834.562                                           82.5   5 
  YIBA    ES   0    62847.862                                           82.5   5 
@@ -4584,7 +4584,7 @@
                                                                                 
 
  2020  1 1  630  0.0 L  36.395  52.101 18.3      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  EVSP    EP   0    63015.547                                           80.5 261 
  EVSP    ES   0    63029.393                                           80.5 261 
@@ -4609,7 +4609,7 @@
                                                                                 
 
  2020  1 1  631 40.0 L  35.886  52.195  7.0       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    632 9.438                                            160  47 
  YAIP    ES   0    63229.750                                            160  47 
@@ -4628,7 +4628,7 @@
                                                                                 
 
  2020  1 1  633 20.0 L  35.973  52.174 13.3       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    63340.469                                            109 352 
  XIVZ    ES   0    63355.159                                            109 352 
@@ -4647,7 +4647,7 @@
                                                                                 
 
  2020  1 1  635  0.0 L  36.417  51.956  6.6      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    63530.500                                            170  97 
  ZGXN    ES   0    63551.071                                            170  97 
@@ -4672,7 +4672,7 @@
                                                                                 
 
  2020  1 1  636 40.0 L  35.893  51.906  5.6       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    63645.703                                           20.1  35 
  SRWZ    ES   0    63646.806                                           20.1  35 
@@ -4695,7 +4695,7 @@
                                                                                 
 
  2020  1 1  638 20.0 L  35.686  51.563  6.1       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101063820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101063820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YIBA    EP   0    63841.824                                            122  21 
  YIBA    ES   0    639 0.133                                            122  21 
@@ -4714,7 +4714,7 @@
                                                                                 
 
  2020  1 1  640  0.0 L  35.845  52.101 18.0       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YXLK    EP   0    64015.926                                           78.5  16 
  YXLK    ES   0    64026.685                                           78.5  16 
@@ -4729,7 +4729,7 @@
                                                                                 
 
  2020  1 1  641 40.0 L  35.751  52.115 16.8       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    64156.849                                           88.6  52 
  ZSCP    ES   0    642 9.454                                           88.6  52 
@@ -4752,7 +4752,7 @@
                                                                                 
 
  2020  1 1  643 20.0 L  36.151  51.828 17.4      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    64337.789                                           90.5  11 
  XIVZ    ES   0    64348.310                                           90.5  11 
@@ -4777,7 +4777,7 @@
                                                                                 
 
  2020  1 1  645  0.0 L  36.132  52.327 10.1       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZSCP    EP   0    64511.064                                           52.8  77 
  ZSCP    ES   0    64519.916                                           52.8  77 
@@ -4796,7 +4796,7 @@
                                                                                 
 
  2020  1 1  646 40.0 L  36.381  52.268 14.2       9 0.0 4.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    647 5.886                                            142  98 
  ZGXN    ES   0    64723.651                                            142  98 
@@ -4819,7 +4819,7 @@
                                                                                 
 
  2020  1 1  648 20.0 L  35.795  52.233 16.7      10 0.0 5.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101064820     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101064820     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  RVDG    EP   0    64836.477                                           89.1  41 
  RVDG    ES   0    64849.178                                           89.1  41 
@@ -4844,7 +4844,7 @@
                                                                                 
 
  2020  1 1  650  0.0 L  36.141  51.976 10.7       6 0.0 3.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101065000     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101065000     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  YAIP    EP   0    65025.787                                            159  59 
  YAIP    ES   0    65046.453                                            159  59 
@@ -4861,7 +4861,7 @@
                                                                                 
 
  2020  1 1  651 40.0 L  36.101  51.907 13.6       5 0.0 2.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101065140     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101065140     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  XIVZ    EP   0    65156.860                                           94.9   6 
  XIVZ    ES   0    65212.120                                           94.9   6 
@@ -4876,7 +4876,7 @@
                                                                                 
 
  2020  1 1  653 20.0 L  35.815  51.647  8.4       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101065320     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101065320     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  ZGXN    EP   0    65353.818                                            201  77 
  ZGXN    ES   0    65420.408                                            201  77 
@@ -4897,7 +4897,7 @@
                                                                                 
 
  2020  1 1  655  0.0 L  35.500  52.118  6.2       8 0.0 4.0l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101065500     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101065500     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  SRWZ    EP   0    65512.014                                           60.5 352 
  SRWZ    ES   0    65520.688                                           60.5 352 
@@ -4918,7 +4918,7 @@
                                                                                 
 
  2020  1 1  656 40.0 L  35.996  51.752  9.0       7 0.0 3.5l                   1
- Action:ARG 22-06-19 14:49 OP:OBSP STATUS:               ID:20200101065640     I
+ Action:ARG 22-07-04 18:17 OP:OBSP STATUS:               ID:20200101065640     I
  STAT SP IPHASW D HRMM SECON CODA AMPLIT PERI AZIMU VELO AIN AR TRES W  DIS CAZ7
  TVCN    EP   0    65650.411                                           49.6  54 
  TVCN    ES   0    65656.683                                           49.6  54 

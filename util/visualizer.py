@@ -1,25 +1,25 @@
 import os
 
 import proplot as plt
-from numpy import abs, arange, array, corrcoef, loadtxt, sqrt
+from numpy import abs, arange, array, corrcoef, loadtxt
 from obspy.geodetics.base import degrees2kilometers as d2k
 from pandas import DataFrame, read_csv
 from util.summarizer import summarize
+from util.extra import distanceDiff
 
+# def distanceDiff(xa, xb, ya, yb):
+#     """Compute distance between two lists of points
 
-def distanceDiff(xa, xb, ya, yb):
-    """Compute distance between two lists of points
+#     Args:
+#         xa (array): X array of first points
+#         xb (array): X array of second points
+#         ya (array): Y array of first points
+#         yb (array): Y array of second points
 
-    Args:
-        xa (array): X array of first points
-        xb (array): X array of second points
-        ya (array): Y array of first points
-        yb (array): Y array of second points
-
-    Returns:
-        array: an array contains distances
-    """
-    return sqrt((xa-xb)**2+(ya-yb)**2)
+#     Returns:
+#         array: an array contains distances
+#     """
+#     return sqrt((xa-xb)**2+(ya-yb)**2)
 
 
 def getMinMax(*inpList):
@@ -33,7 +33,7 @@ def getMinMax(*inpList):
     return Min, Max
 
 
-def loadData(resultPath, config):
+def loadData(resultPath, stationsDict, config):
     """Load input data
 
     Args:
@@ -55,7 +55,7 @@ def loadData(resultPath, config):
     report_select_unweighted["MAG"] = magnitudes
     report_select_weighted["MAG"] = magnitudes
     summarize(report_select_unweighted,
-              report_select_weighted, config, resultPath)
+              report_select_weighted, stationsDict, config, resultPath)
     return report_initial, report_select_unweighted, report_select_weighted
 
 
@@ -70,7 +70,7 @@ def plotSeismicityMap(resultPath, stationsDict, config):
     print("+++ Plotting seismicity map ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
-        resultPath, config)
+        resultPath, stationsDict, config)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(
@@ -150,7 +150,7 @@ def plotHypocenterDiff(resultPath, stationsDict, config):
     print("+++ Plotting some statistics ...")
     # - Read input data
     report_initial, report_select_unweighted, report_select_weighted = loadData(
-        resultPath, config)
+        resultPath, stationsDict, config)
     sta = DataFrame(stationsDict).T
     # - Setting global min, max of data
     xMin, xMax = getMinMax(

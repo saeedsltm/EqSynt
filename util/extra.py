@@ -1,4 +1,5 @@
 import time
+from numpy import sqrt
 
 
 def decoratorTimer(decimal, logger):
@@ -30,3 +31,18 @@ def mean(a):
         float: mean of the list
     """
     return sum(a)/len(a)
+
+
+def distanceDiff(xa, xb, ya, yb):
+    """Compute distance between two lists of points
+
+    Args:
+        xa (array): X array of first points
+        xb (array): X array of second points
+        ya (array): Y array of first points
+        yb (array): Y array of second points
+
+    Returns:
+        array: an array contains distances
+    """
+    return sqrt((xa-xb)**2+(ya-yb)**2)

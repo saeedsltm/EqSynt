@@ -1,4 +1,8 @@
 import os
+from statistics import mean
+from pandas import DataFrame
+from util.extra import distanceDiff
+from obspy.geodetics.base import degrees2kilometers as d2k
 
 
 def countNP(df, df_metrics, key, column):
@@ -46,7 +50,7 @@ def computeClass(df_un, df_w, c, config):
     return df_un["ORT"].size, df_un["ORT"].size/Neq_un*100.0, df_w["ORT"].size, df_w["ORT"].size/Neq_w*100.0
 
 
-def summarize(df_un, df_w, config, resultPath):
+def summarize(df_un, df_w, stationsDict, config, resultPath):
     """Make a statistical summary between unweighted and weighted catalogs
 
     Args:
@@ -94,8 +98,28 @@ def summarize(df_un, df_w, config, resultPath):
     for metric in metrics_df_w.keys():
         metrics_df_w[metric] = eval(metrics_df_w[metric])
 
+    station_df = DataFrame(stationsDict).T
+
+    nSta = station_df["Lat"].size
+    nEvt = df_un["Lat"].size
+    mDistEvt = d2k(mean([mean(distanceDiff(x, df_un["Lon"], y, df_un["Lat"]))
+                         for x, y in zip(df_un["Lon"], df_un["Lat"])]))
+    mDistSta = d2k(mean([mean(distanceDiff(x, station_df["Lon"], y, station_df["Lat"]))
+                         for x, y in zip(station_df["Lon"], station_df["Lat"])]))
+    mDistEvtSta = mean(df_un["ADS"])
+
     with open(os.path.join(resultPath, "summary.dat"), "w") as f:
-        f.write("Statistics:\n")
+        f.write("----Problem status:\n")
+        f.write("Number of events: {nEvt:.0f}\n".format(nEvt=nEvt))
+        f.write("Number of stations: {nSta:.0f}\n".format(nSta=nSta))
+        f.write("Average distance between events (km): {mDistEvt:.2f}\n".format(
+            mDistEvt=mDistEvt))
+        f.write("Average distance between stations (km): {mDistSta:.2f}\n".format(
+            mDistSta=mDistSta))
+        f.write(
+            "Average distance between events-stations pair (km): {mDistEvtSta:.1f}\n".format(mDistEvtSta=mDistEvtSta))
+
+        f.write("----Statistics:\n")
         f.write("".center(50, "="))
         f.write("| Events relocated without weighting scheme |".center(40, "="))
         f.write("| Events relocated using weighting scheme |".center(40, "="))

@@ -1,4 +1,10 @@
-Statistics:
+----Problem status:
+Number of events: 250
+Number of stations: 10
+Average distance between events (km): 43.69
+Average distance between stations (km): 105.38
+Average distance between events-stations pair (km): 92.5
+----Statistics:
 ==================================================| Events relocated without weighting scheme || Events relocated using weighting scheme |
 +++ Number(%) of event with ERH<2.0km:                                              0(0.0)                                  0(0.0)
 +++ Number(%) of event with ERH<5.0km:                                              5(2.0)                                97(38.8)

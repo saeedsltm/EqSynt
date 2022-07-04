@@ -1,5 +1,5 @@
 {
-    "/Comment#001": "+++ Define study region",
+    "/Comment#001": "============================ Define study region",
     "Region": {
         "LonMin": 50.00,
         "LonMax": 54.00,
@@ -7,18 +7,18 @@
         "LatMax": 38.00
     },
     "TravelTimeGenerator": {
-        "flag": true,
-        "numXGrid": 500,
-        "numZGrid": 70,
-        "velocityXGridIntervals": 1.0,
-        "velocityYGridIntervals": 1.0,
-        "velocityZGridIntervals": 1.0,
-        "decimationFactor": 0
+        "Flag": true,
+        "NumXGrid": 500,
+        "NumZGrid": 70,
+        "XGridIntervals": 1.0,
+        "YGridIntervals": 1.0,
+        "ZGridIntervals": 1.0,
+        "DecimationFactor": 0
     },
     "/Comment#002": "============================ Full Synthetic Scenario (FSS)",
     "FSS": {
-        "flag": true,
-        "/Comment#002_01": "+++ Define station coordinate",
+        "Flag": true,
+        "/Comment#002_01": "+++ Define station information",
         "Station": {
             "SeedRandomID": 6,
             "StationFile": "",
@@ -71,9 +71,9 @@
                 "N"
             ],
             "VpVs": 1.75,
-            "xNear": 75.0,
-            "xFar": 500.0,
-            "trialDepth": 10.0
+            "XNear": 75.0,
+            "XFar": 500.0,
+            "TrialDepth": 10.0
         },
         "/Comment#002_03": "+++ Define catalog of events",
         "Catalog": {
@@ -100,8 +100,8 @@
     },
     "/Comment#003": "============================ Real-Case Synthetic Scenario (RSS)",
     "RSS": {
-        "flag": false,
-        "/Comment#003_01": "+++ Define input files for station, model and catalog",
+        "Flag": false,
+        "/Comment#003_01": "+++ Define input files for station & model and catalog",
         "Inputs": {
             "EqFile": "select.out",
             "StationFile": "STATION0.HYP"
@@ -109,13 +109,7 @@
     },
     "/Comment#004": "============================ ForwardPass Settings (FPS)",
     "FPS": {
-        "/Comment#004_01": "+++ Travel Time Grid",
-        "VGGRID": {
-            "xNum": 201,
-            "yNum": 201,
-            "zNum": 90
-        },
-        "/Comment#004_02": "+++ How much the forward velocity model should differ from initial model (in percent)?",
+        "/Comment#004_01": "+++ How much difference between the initial and forward velocity models (in percent)?",
         "ErrorOnVelocityModel": {
             "Flag": true,
             "Seed": 1,
@@ -146,9 +140,9 @@
     "FGS": {
         "VelocityMin": 3.0,
         "VelocityMax": 7.0,
-        "HistERHMax": 30.0,
+        "HistERHMax": 20.0,
         "HistERHInc": 1.0,
-        "HistERZMax": 30.0,
+        "HistERZMax": 20.0,
         "HistERZInc": 1.0,
         "HistInsetERHMin": -5.0,
         "HistInsetERHMax": 5.0,
